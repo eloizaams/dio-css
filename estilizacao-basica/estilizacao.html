@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilizacao.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Estilização básica em css</title>
+</head>
+<body>
+    <header>
+        <h1>Trilha CSS</h1>
+        
+        <button #="voltar"><a href="../index.html">Voltar</a></button>
+      </header>
+      <main>
+        <article id="cores">
+            <h2>Cores</h2>
+            <p>Existem várias formas de se definirem cores utilizando o CSS.</p>
+            <section>
+                <h3>Cores Pré-definidas</h3>
+                <p class="pre-definidas">Os navegadores disponibilizam cerca de 140 cores pré-definidas que podem ser referenciadas utilizando nomes, como por exemplo <code id="blue">blue</code>, <code id="red">red</code>, <code id="lightgreen">lightgreen</code>.</p>
+                <a href="https://www.w3schools.com/tags/ref_colornames.asp">Nomes de cores disponíveis</a>
+                <p>A palavra-chave <strong>transparent</strong> em CSS é usada para definir a transparência completa de um elemento ou cor. Quando aplicada, faz com que o elemento ou a cor se torne totalmente invisível, permitindo que o conteúdo ou o fundo atrás dele seja visível. Isso é útil para criar sobreposições ou para ocultar elementos sem removê-los do layout.</p>
+                <p>A propriedade <strong>opacity</strong> em CSS controla o nível de transparência de um elemento. O valor de <code>opacity</code> varia de 0 a 1, onde 0 representa total transparência (o elemento é invisível) e 1 representa total opacidade (o elemento é completamente visível). Valores intermediários, como 0.5, fazem o elemento ser parcialmente transparente.</p>
+                <div id="externa">
+                    <div id="interna01">
+                        <p>transparente</p>
+                    </div>
+                    <div id="interna02">
+                        <p>opaca 50%</p>
+                    </div>
+                </div>
+                <p>A palavra reservada <strong>currentColor</strong> refere-se à cor atual do texto de um elemento. Ao usar <code>currentColor</code>, você pode garantir que a cor aplicada a propriedades como <code>border</code>, <code>background</code>, ou <code>box-shadow</code> corresponda à cor do texto do elemento. Isso é útil para manter a consistência nas cores de um design e facilita a manutenção de estilos, pois qualquer alteração na cor do texto também será refletida automaticamente nas outras propriedades que usam currentColor. </p>
+             </section>
+                <div id="currentcolor"><p>Exemplo de currentColor: <br> texto e borda com a mesma cor</p></div>
+
+            </section>
+            <section>
+                <h3>RGB e RGBA</h3>
+                <p>O modelo de cores <strong>RGB</strong> (Red, Green, Blue) é utilizado em telas digitais para criar uma ampla gama de cores combinando diferentes intensidades de vermelho, verde e azul. Cada cor primária no modelo RGB pode variar de 0 a 255, onde 0 representa a ausência de cor e 255 a intensidade máxima. A combinação desses valores resulta em uma cor específica, como <code id="rgb-255-0-0">rgb(255, 0, 0)</code> para vermelho puro.</p>
+
+                <p> O modelo <strong>RGBA</strong> é uma extensão do RGB que inclui um quarto valor, o A (Alpha), que controla a opacidade da cor. O valor alfa varia de 0 a 1, onde 0 representa total transparência e 1 total opacidade. Isso permite criar efeitos de sobreposição e transparência em elementos gráficos, como em <code id="rgba-255-0-0-05">rgba(255, 0, 0, 0.5)</code>, que resultaria em um vermelho semitransparente.</p>
+                <figure>
+                    <img id="rgb-img" src="../img/rgb.jpg" alt="Círculos de cores RGB">
+                    <figcaption>Círculos de cores RGB</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>Hexadecimal</h3>
+                <p>Cores <strong>hexadecimais</strong> são representadas por um código de seis dígitos em CSS, começando com o símbolo <code>#</code>. Esses códigos são divididos em três pares de dois dígitos que correspondem aos valores das cores vermelho, verde e azul (RGB). Cada par pode variar de <code>00</code> a <code>FF</code> (0 a 255 em decimal), permitindo uma ampla gama de cores. Por exemplo, o código <code id="ff5733">#FF5733</code> representa um tom específico de laranja.</p>
+                <p>Cores <strong>hexadecimais transparentes</strong> adicionam um valor de opacidade à representação hexadecimal, utilizando um código de oito dígitos. Os primeiros seis dígitos definem a cor, enquanto os últimos dois (que variam de <code>00</code> a <code>FF</code>) representam a opacidade, onde 00 é totalmente transparente e FF é totalmente opaco. Por exemplo, <code id="ff573380">#FF573380</code> representa a mesma cor laranja com 50% de transparência.</p>
+            </section>
+            <section>
+                <h3>HSL e HSLA</h3>
+                <p>O modelo de cores <strong></strong> (Hue, Saturation, Lightness) define cores com base em três componentes: matiz (hue), saturação e luminosidade. O <strong>matiz</strong> é o valor de cor base, expresso em graus de 0 a 360 no círculo de cores (como vermelho a 0°, verde a 120° e azul a 240°). <strong>Saturação </strong>refere-se à intensidade da cor, variando de 0% (cinza) a 100% (cor pura), enquanto <strong>luminosidade </strong>ajusta o brilho da cor, de 0% (preto) a 100% (branco). </p>
+                <div id="img-hsl">
+                    <figure>
+                        <img id="rgb-img" src="../img/hsl.png" alt="Roda de cores HSL">
+                        <figcaption>Roda de cores </figcaption>
+                    </figure>
+                    <figure>
+                        <img id="rgb-img" src="../img/hsl2.png" alt="Roda de cores HSL">
+                        <figcaption>Roda de cores HSL</figcaption>
+                    </figure>
+                </div>
+                <p> O modelo <strong>HSLA</strong> é uma extensão do HSL que adiciona um componente <strong>HSLA</strong> para controlar a opacidade. O valor alfa varia de 0 a 1, onde 0 é completamente transparente e 1 é totalmente opaco. Por exemplo, hsla(120, 100%, 50%, 0.3) representa uma cor verde com 30% de opacidade. Isso permite aplicar efeitos de transparência e sobreposição mais flexíveis em design web.</p>
+            </section>
+        </article>
+        <article id="imagens">
+            <h2>Imagens</h2>
+            <section>
+                <h3>Propriedade Object-Fit</h3>
+                <p>A propriedade <code>object-fit</code> ("ajuste de objeto") em CSS é usada para controlar como o conteúdo de um elemento substituto, como uma imagem ou vídeo, se ajusta ao seu contêiner. Ela define como o conteúdo deve ser redimensionado e posicionado dentro de seu elemento pai, que tem um tamanho fixo. Os valores comuns incluem: </p>
+                <ul>
+                    <li>
+                        <p><code>fill</code>  redimensiona a imagem para cobrir o contêiner, podendo distorcer a imagem. É o valor default dessa propriedade.</p>
+                        <div class="object-fit">
+                            <img src="../img/girassol.jpeg" id="fill">
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>contain</code> ajusta a imagem para caber no contêiner mantendo a proporção.</p>
+                        <div class="object-fit">
+                            <img src="../img/girassol.jpeg" id="contain">
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>cover</code>   preenche o contêiner, podendo cortar partes da imagem.</p>
+                        <div class="object-fit">
+                            <img src="../img/girassol.jpeg" id="cover">
+                        </div>
+                    </li>
+                    <li>
+                        <p> <code>none</code> não aplica redimensionamento. Esta propriedade é particularmente útil para manter a integridade visual de imagens e vídeos em layouts responsivos.</p>
+                        <div class="object-fit">
+                            <img src="../img/girassol.jpeg" id="none">
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>scale-down</code>  ajusta o conteúdo de um elemento substituto (como imagens e vídeos) para que ele se ajuste ao contêiner sem distorção, mantendo a proporção original. Se o conteúdo for menor que o contêiner, ele é exibido em seu tamanho original. Se for maior, é reduzido apenas o suficiente para caber dentro do contêiner, garantindo que não haja ampliação além do tamanho original. Isso permite uma apresentação eficaz e proporcional do conteúdo, sem esticamento ou distorção.</p>
+                        <div class="object-fit">
+                            <img src="../img/girassol.jpeg" id="scale-down">
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Propriedade Object-Position</h3>
+                <p>A propriedade <code>object-position</code> define o alinhamento do conteúdo dentro de um contêiner com um object-fit aplicado. Ela permite ajustar a posição do conteúdo substituto dentro de seu contêiner, especificando onde o conteúdo deve ser alinhado em relação às bordas do contêiner. Os valores padrão incluem <code>center</code>,<code> top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, e combinações desses valores (por exemplo, top right). Combinando object-position com object-fit, é possível refinar como o conteúdo é exibido dentro de um espaço definido, melhorando a apresentação e a adequação do conteúdo visual a diferentes tamanhos de contêineres.</p>
+                <p>Além das palavras-chave, também é possível usar valores em unidades de comprimento ou porcentagens, como <code>object-position: 50% 50%</code> para centralizar o conteúdo, ou <code>object-position: 10px 20px</code> para um alinhamento mais personalizado. Isso oferece flexibilidade para controlar exatamente onde o conteúdo aparece dentro de seu contêiner.</p>
+                <div class="object-fit">
+                    <img src="../img/girassol.jpeg" id="obj-position">
+                </div>
+            </section>
+        </article>
+        <article id="fundo">
+            <h2>Fundos</h2>
+            <section>
+                <p>O fundo dos elementos em CSS é gerenciado pela propriedade <strong>background</strong>, que oferece grande flexibilidade para definir cores, imagens, gradientes e padrões como fundo de qualquer elemento. Usando <code>background-color</code>, você pode definir uma cor sólida, enquanto <code>background-image</code> permite inserir imagens. Propriedades adicionais, como <code>background-repeat</code>, <code>background-position</code>, e <code>background-size</code>, controlam como a imagem se repete, é posicionada e redimensionada dentro do elemento. Além disso, você pode combinar múltiplas camadas de fundo para criar designs complexos, empilhando várias imagens e cores em um único elemento. Essa versatilidade torna o background uma ferramenta poderosa para estilização visual no design web.</p>
+                <div id="image">
+                    <p>background-image</p>
+                </div>
+                <p>A função <strong>linear-gradient()</strong> em CSS é usada para criar gradientes de transição suave entre duas ou mais cores ao longo de uma linha reta. Esse gradiente pode ser aplicado como fundo de um elemento, substituindo a necessidade de imagens externas para criar efeitos visuais sofisticados.</p>
+                <p>O <code>linear-gradient()</code> permite especificar a direção do gradiente, que pode ser definida por ângulos (como 45deg para diagonal) ou palavras-chave (como to right para um gradiente da esquerda para a direita). Além disso, você pode adicionar quantas cores desejar, com transições suaves entre elas, e também ajustar os pontos de parada (stops) para controlar precisamente onde cada cor começa e termina ao longo do gradiente.</p>
+                <div id="gradient">
+                    <p>linear-gradient()</p>
+                </div>
+                <p>A função <strong>radial-gradient()</strong> em CSS cria um gradiente de transição suave que se expande a partir de um ponto central, irradiando em círculos ou elipses em direção às bordas do elemento. Ao contrário do <code>linear-gradient()</code>, que segue uma linha reta, o <code>radial-gradient()</code> se propaga em todas as direções a partir do centro ou de um ponto especificado. Você pode definir o ponto de origem, o tamanho do gradiente, e as cores com seus respectivos pontos de transição, criando efeitos visuais circulares ou elípticos que são ideais para fundos, botões e outros elementos de design que requerem uma variação de cor mais natural e radial.</p>
+                <div id="radial">
+                    <p>radial-gradient()</p>
+                </div>
+                <p>A função <strong>repeating-linear-gradient()</strong> e sua variante <strong>repeating-radial-gradient()</strong> em CSS permitem criar padrões repetitivos de gradientes, tanto lineares quanto radiais. Esses gradientes funcionam de forma semelhante aos gradientes normais, mas repetem a sequência de cores indefinidamente, preenchendo todo o espaço disponível no elemento. Isso é útil para criar texturas, listras e outros padrões decorativos sem a necessidade de imagens externas. Ao definir os pontos de parada das cores, o gradiente se repetirá a partir do final do ciclo, criando um efeito contínuo que pode ser ajustado em termos de direção, tamanho e densidade do padrão.</p>
+                <div id="repeating">
+                    <p>repeating-linear-gradient()</p>
+                </div>
+                <p>Alguns sites oferecem modelos prontos de padrões.</p>
+                <a href="https://css-pattern.com/" 
+                >Modelos de padrões CSS</a>
+                <div id="padroes">
+                    <p>padrões</p>
+                </div>
+            </section>
+            <section id="size">
+                <h3>Redimensionando as imagens de fundo dos elementos</h3>
+                <p>A propriedade <code>background-size</code> em CSS3 é usada para controlar o tamanho da imagem de fundo de um elemento.</p>
+
+                <ul>
+                    <li>
+                        <p>
+                        <code>auto</code>: Mantém o tamanho original da imagem.
+                        </p>
+                        <div id="sem-redimensionar" class="background-image">
+                            <p>Imagem sem redimensionar</p>
+                        </div>
+
+                    <li>
+                        <p><code>cover</code>: Redimensiona a imagem para cobrir completamente o contêiner, podendo cortar partes dela.</p>
+                        <div id="cobrir" class="background-image">
+                            <p>Imagem cobrindo o contêiner</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>contain</code>: Redimensiona a imagem para caber dentro do contêiner, mantendo a proporção sem cortes.</p>
+                        <div id="conter" class="background-image">
+                            <p>Imagem ajustada ao contêiner</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>length</code> (ex: <code>100px 50px</code>): Define a largura e altura da imagem com valores específicos.</p>
+                        <div id="tamanho-fixo" class="background-image">
+                            <p>Imagem com tamanho específico</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>percentage</code> (ex: <code>50% 100%</code>): Define o tamanho da imagem em porcentagem em relação ao tamanho do contêiner.</p>
+                        <div id="percentagem" class="background-image">
+                            <p>Imagem com tamanho percentual</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>initial</code>: Define o valor inicial padrão.</p>
+                        <div id="valor-inicial" class="background-image">
+                            <p>Imagem com valor inicial padrão</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>inherit</code>: Herda o valor do elemento pai.</p>
+                        <div id="herdado" class="background-image">
+                            <p>Imagem herdada do pai</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>camadas: Define várias imagens de fundo separando-as por vírgulas. A primeira imagem listada será desenhada sobre as outras, e as imagens seguintes ficarão por trás..</p>
+                        <div id="camadas" class="background-image">
+                            <p>Camadas de imagens</p>
+                        </div>
+                    </li>
+                </ul>
+                
+            </section>
+            <section >
+                <h3>Repetição das imagens de fundo</h3>
+                <p>A propriedade <code>background-repeat</code> controla a repetição de uma imagem de fundo em um elemento.</p>
+
+                <ul>
+                    <li>
+                        <p><code>repeat</code> faz com que a imagem de fundo se repita horizontal e verticalmente para cobrir toda a área do elemento.</p>
+                        <div id="repeat" class="background-image">
+                        <p>Imagem repetida</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>repeat-x</code> faz com que a imagem de fundo se repita apenas na direção horizontal.</p>
+                        <div id="repeat-x" class="background-image">
+                        <p>Imagem repetida horizontalmente</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>repeat-y</code> faz com que a imagem de fundo se repita apenas na direção vertical.</p>
+                        <div id="repeat-y" class="background-image">
+                        <p>Imagem repetida verticalmente</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>no-repeat</code> faz com que a imagem de fundo não se repita, aparecendo apenas uma vez.</p>
+                        <div id="no-repeat" class="background-image">
+                        <p>Imagem não repetida</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>space</code> faz com que a imagem de fundo seja repetida o máximo possível sem cortá-la, ajustando o espaço entre as repetições.</p>
+                        <div id="space" class="background-image">
+                        <p>Imagem repetida com espaço</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p><code>round</code> faz com que a imagem de fundo seja redimensionada proporcionalmente para caber um número inteiro de vezes, sem deixar espaços em branco.</p>
+                        <div id="round" class="background-image">
+                        <p>Imagem repetida com ajuste</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Colocando dois valores pode-se controlar o comportamento horizontal e vertical separadamente.</p>
+                        <div id="eixos" class="background-image">
+                        <p>Imagem repetida de acordo com o eixo.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section >
+                <h3>Posicionamento das Imagens de Fundo</h3>
+                <p>A propriedade <strong>background-position</strong> define a posição da imagem de fundo dentro de um elemento. Você pode especificar a posição usando valores de comprimento, porcentagem ou palavras-chave.</p>
+
+                <ul>
+                    <li>
+                        <p>Para posicionar a imagem de fundo no canto superior esquerdo do elemento, você pode usar a sintaxe <code>left top</code>.</p>
+                        <div id="position-left-top" class="background-image">
+                            <p>Imagem posicionada no canto superior esquerdo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para posicionar a imagem de fundo no centro do elemento, use a sintaxe <code>center center</code>.</p>
+                        <div id="position-center-center" class="background-image">
+                            <p>Imagem posicionada no centro</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para posicionar a imagem de fundo no canto inferior direito do elemento, use <code>right bottom</code>.</p>
+                        <div id="position-right-bottom" class="background-image">
+                            <p>Imagem posicionada no canto inferior direito</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Você também pode usar valores de comprimento para definir a posição da imagem. Por exemplo, <code>10px 20px</code> posiciona a imagem 10 pixels da borda esquerda e 20 pixels da borda superior.</p>
+                        <div id="position-px" class="background-image">
+                            <p>Imagem posicionada a 10px da esquerda e 20px do topo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Se desejar usar porcentagens, como <code>50% 50%</code>, a imagem será posicionada no centro do elemento em termos percentuais.</p>
+                        <div id="position-percent" class="background-image">
+                            <p>Imagem posicionada no centro em termos percentuais</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section >
+                <h3>Propriedade Background Attachment</h3>
+                <p>A propriedade <strong>background-attachment</strong> controla como a imagem de fundo é fixada em relação ao viewport ou ao elemento. Pode ser usada para criar efeitos de paralaxe ou de rolagem de fundo.</p>
+
+                <ul>
+                    <li>
+                        <p>Para manter a imagem de fundo fixa em relação ao viewport enquanto o conteúdo é rolado, use a sintaxe <code>fixed</code>.</p>
+                     
+                        <div id="attachment-fixed" class="background-image">
+                            <p>Imagem de fundo fixa</p>
+                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptates dignissimos officiis cum commodi veritatis amet delectus porro vel recusandae repudiandae repellat atque, maiores praesentium magni est, ex, natus fugiat!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para que a imagem de fundo se mova junto com o conteúdo do elemento, use a sintaxe <code>scroll</code>. Este é o comportamento padrão.</p>
+                        <div id="attachment-scroll" class="background-image">
+                            <p>Imagem de fundo rolável</p>
+                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptates dignissimos officiis cum commodi veritatis amet delectus porro vel recusandae repudiandae repellat atque, maiores praesentium magni est, ex, natus fugiat!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para que a imagem de fundo se comporte de forma semelhante ao <code>scroll</code>, mas com um comportamento diferente em alguns navegadores, você pode usar <code>local</code>. Isso é mais útil para elementos com rolagem interna.</p>
+                        <div id="attachment-local" class="background-image">
+                            <p>Imagem de fundo com anexo local</p>
+                            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia voluptates dignissimos officiis cum commodi veritatis amet delectus porro vel recusandae repudiandae repellat atque, maiores praesentium magni est, ex, natus fugiat!</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </section>
+            <section >
+                <h3>Propriedade Background Origin</h3>
+                <p>A propriedade <strong>background-origin</strong> especifica o local a partir do qual a imagem de fundo é posicionada dentro do elemento. Pode ser usada para ajustar a posição da imagem de fundo em relação ao conteúdo, bordas e preenchimento do elemento.</p>
+
+                <ul>
+                    <li>
+                        <p>Para posicionar a imagem de fundo em relação à área do conteúdo do elemento, use a sintaxe <code>content-box</code>.</p>
+                        <div id="origin-content" class="background-image">
+                            <p>Imagem de fundo originada no conteúdo</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para posicionar a imagem de fundo em relação à área de preenchimento do elemento (incluindo o preenchimento), use a sintaxe <code>padding-box</code>.</p>
+                        <div id="origin-padding" class="background-image">
+                            <p>Imagem de fundo originada no preenchimento</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para posicionar a imagem de fundo em relação à área da borda do elemento (incluindo a borda), use a sintaxe <code>border-box</code>.</p>
+                        <div id="origin-border" class="background-image">
+                            <p>Imagem de fundo originada na borda</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section >
+                <h3>Propriedade Background Clip</h3>
+                <p>A propriedade <strong>background-clip</strong> especifica a área dentro da qual a imagem de fundo é desenhada. Pode ser usada para ajustar a imagem de fundo em relação ao conteúdo, preenchimento ou borda do elemento.</p>
+
+                <ul>
+                    <li>
+                        <p>Para limitar a imagem de fundo à área do conteúdo do elemento, use a sintaxe <code>content-box</code>.</p>
+                        <div id="clip-content">
+                            trilha de css
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para limitar a imagem de fundo à área de preenchimento do elemento (incluindo o preenchimento), use a sintaxe <code>padding-box</code>.</p>
+                        <div id="clip-padding">
+                            trilha de css
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para limitar a imagem de fundo à área da borda do elemento (incluindo a borda), use a sintaxe <code>border-box</code>.</p>
+                        <div id="clip-border">
+                            trilha de css
+                        </div>
+                    </li>
+                    <li>
+                        <p>Para aplicar um fundo somente ao texto dentro de um elemento, use a sintaxe <code>text</code>.</p>
+                        <div id="clip-text">
+                            trilha de css
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section >
+                <h3>Mesclagem</h3>
+                <p>A propriedade <code>background-blend-mode</code> controla como as camadas de fundo se misturam.</p>
+                <ul id="list">
+                    <li id="blend-mode-item-multiply">
+                        <p>Multiply</p>
+                    </li>
+                    <li id="blend-mode-item- screen">
+                        <p>Screen</p>
+                    </li>
+                    <li id="blend-mode-item-overlay">
+                        <p>Overlay</p>
+                    </li>
+                    <li id="blend-mode-item-darken">
+                        <p>Darken</p>
+                    </li>
+                    <li id="blend-mode-item-lighten">
+                        <p>Lighten</p>
+                    </li>
+                    <li id="blend-mode-item-color-dodge">
+                        <p>Color Dodge</p>
+                    </li>
+                    <li id="blend-mode-item-color-burn">
+                        <p>Color Burn</p>
+                    </li>
+                    <li id="blend-mode-item-color-saturation">
+                        <p>Saturationn</p>
+                    </li>
+                </ul>
+
+            </section>
+            <section >
+                <h3>Propriedade Background</h3>
+                <p>A propriedade <strong>background</strong> em CSS3 é uma maneira abreviada de definir várias propriedades relacionadas ao fundo de um elemento em uma única linha. Ela permite especificar a cor, a imagem, o posicionamento, o tamanho e o comportamento do fundo do elemento. A ordem dos valores segue a sintaxe: cor, imagem, posição, tamanho, repetição, anexo, origem, recorte e modo de mistura.</p>
+            </section>
+        </article>
+
+        <article id="bordas">
+            <h2>Bordas</h2>
+            <p>A propriedade <strong>border</strong> em CSS permite que você adicione bordas aos elementos HTML. Ela é composta por três propriedades principais: largura da borda (<code>border-width</code> ), estilo da borda (<code>border-style</code> ) e cor da borda (<code>border-color</code> ). Cada uma dessas propriedades pode ser ajustada individualmente ou combinada usando a propriedade abreviada <code>border</code>.</p>
+            
+            <section>
+                <h3>Tamanho da borda</h3>
+                <p>A propriedade <strong> border-width</strong> em CSS é utilizada para definir a espessura da borda de um elemento. Ela pode ser aplicada de maneira uniforme ou para lados específicos (superior, direito, inferior, esquerdo).</p>
+                <!-- Borda com tamanho uniforme -->
+                <div id="border-uniform">
+                    <p>Borda com tamanho uniforme</p>
+                </div>
+
+                <!-- Borda com tamanhos diferentes para cada lado -->
+                <div id="border-different-sides">
+                    <p>Borda com tamanhos diferentes</p>
+                </div>
+
+                <!-- Borda com valores predefinidos (thin, medium, thick) -->
+                <div id="border-predefined">
+                    <p>Borda com valores predefinidos</p>
+                </div>
+            </section>
+            <section>
+                <h3>Estilo da borda</h3>
+                <p>A propriedade <strong>border-style</strong> em CSS define o estilo das bordas de um elemento. Existem vários estilos predefinidos, como sólido, tracejado, pontilhado, etc.</p>
+                <!-- Borda sólida -->
+                <div id="border-solid">
+                    <p>solid</p>
+                </div>
+
+                <!-- Borda tracejada -->
+                <div id="border-dashed">
+                    <p>dashed</p>
+                </div>
+
+                <!-- Borda pontilhada -->
+                <div id="border-dotted">
+                    <p>dotted</p>
+                </div>
+
+                <!-- Borda dupla -->
+                <div id="border-double">
+                    <p>double</p>
+                </div>
+
+                 <!-- Borda tridimensional -->
+                 <div id="border-groove">
+                    <p>groove</p>
+                </div>
+
+                 <!-- Borda elevada -->
+                 <div id="border-ridge">
+                    <p>ridge</p>
+                </div>
+
+                 <!-- Borda afundada -->
+                 <div id="border-inset">
+                    <p>inset</p>
+                </div>
+
+                <!-- Borda saindo da tela -->
+                <div id="border-outset">
+                    <p>outset</p>
+                </div>
+
+                <!-- Borda em diferentes lados -->
+                <div id="border-sides">
+                    <p>Borda com diferentes lados</p>
+                </div>
+
+                <!-- Borda arredondada -->
+                <div id="border-rounded">
+                    <p>border-radius</p>
+                </div>
+            </section>
+            <section>
+                <h3>Cor da borda</h3>
+                <p>A propriedade <strong>border-color</strong> em CSS define a cor das bordas de um elemento. Ela pode ser aplicada a todas as bordas simultaneamente ou a cada lado individualmente (usando <code>border-top-color</code>, <code>border-right-color</code>, etc.). Os valores aceitos incluem cores nomeadas (<code>red</code>, <code>blue</code> ), valores hexadecimais (<code>#FF0000</code>), RGB (<code>rgb(255, 0, 0)</code>) ou HSL (<code>hsl(0, 100%, 50%)</code>). Caso não seja definida, a cor da borda herdará o valor da propriedade <code>color</code> do texto. Essa propriedade oferece flexibilidade na personalização visual das bordas.</p>
+            </section>
+            <section>
+                <h3>Arredondando os Cantos com a Propriedade Border Radius</h3>
+                <p>A propriedade <strong>border-radius</strong> é usada para arredondar os cantos de elementos. O valor define o raio da curva aplicada em cada canto.</p>
+                <div id="box-border-1">Box 1: No Border Radius</div>
+                <div id="box-border-2">Box 2: Border Radius 15px</div>
+                <div id="box-border-3">Box 3: Border Radius 50%</div>
+                <div id="box-border-4">Box 4: Border Radius 2 valores: 30px 10px</div>
+                <div id="box-border-5">Box 5: Border Radius com barra: 100px/30px </div>
+            </section>
+            <section>
+                <h3>Propriedade Border Image</h3>
+                <p>A propriedade <strong>border-image</strong> permite que você aplique uma imagem como borda de um elemento. Essa técnica é útil para criar designs personalizados e dinâmicos sem a necessidade de bordas tradicionais. A propriedade tem várias subpropriedades que controlam como a imagem é cortada, redimensionada, posicionada e repetida ao redor do elemento.</p>
+                <ul>
+                    <li>
+                        <p><code>border-image-source</code>: Define a imagem que será usada como borda.
+                            </p>
+                            <div id="box-image-source"></div>
+                            <div id="box-image-source-2"></div>
+                    </li>
+                    <li>
+                        <p>A propriedade <code>border-image-slice</code> no CSS define como uma imagem é dividida para criar as bordas de um elemento. A imagem é cortada em nove partes: quatro bordas laterais, quatro cantos e o centro. A quantidade de imagem cortada de cada lado pode ser controlada usando valores numéricos.</p>
+                        <img src="../img/slice.png">
+                        <h4>Valores da Propriedade `border-image-slice`</h4>
+                        <ul>
+                            <li>
+                                <p><strong>Um Valor:</strong> <code>border-image-slice: 60;</code> - Aplica o mesmo valor a todos os lados da imagem.</p>
+                                <div class="example-box example-1">
+                                </div>
+                            </li>
+                            <li>
+                                <p><strong>Dois Valores:</strong> <code>border-image-slice: 60 30;</code> - O primeiro valor é para o topo e a base, o segundo valor para as laterais direita e esquerda.</p>
+                                <div class="example-box example-2">
+                                </div>
+                            </li>
+                            <li>
+                                <p><strong>Três Valores:</strong> <code>border-image-slice: 60 40 20;</code> - O primeiro valor é para o topo, o segundo para as laterais, e o terceiro para a base.</p>
+                                <div class="example-box example-3">     
+                                </div>
+                            </li>
+                            <li>
+                                <p><strong>Quatro Valores:</strong> <code>border-image-slice: 60 45 30 15;</code> - Cada valor corresponde a um lado específico da imagem.</p>
+                                <div class="example-box example-4">                                
+                                </div>
+                            </li>
+                            <li>
+                                <p><strong>fill:</strong> <code>border-image-slice: fill;</code> - Aplica a região central da imagem da borda no fundo.</p>
+                                <div class="example-box example-5">                   
+                                </div>
+                            </li>
+                        </ul>
+                        
+                       
+                       
+                    </li>
+                    <li>
+                        <p> <code>border-image-width</code>: Define a largura da borda que será preenchida pela imagem.
+                            </p>
+                            <div id="box-image-width"></div>
+                    </li>
+                    <li>
+                        <p><code>border-image-outset</code>: Expande a borda além da área original do elemento.
+                            </p>
+                            <div id="box-image-outset"></div>
+                    </li>
+                    <li>
+                        <p>
+                            <code>border-image-repeat</code>: Define o comportamento  da imagem da borda 
+                        </p>
+                        <h4>Valores da Propriedade `border-image-repeat`</h4>
+                        <ul>
+                            <li>
+                                <strong>repeat:</strong> A imagem da borda é repetida ao longo da borda, cortando a imagem se necessário.
+                                <div class="container repeat">repeat</div>
+                            </li>
+                    
+                            <li>
+                                <strong>stretch:</strong> A imagem da borda é esticada para cobrir toda a área da borda, sem repetição.
+                                <div class="container stretch">stretch</div>
+                            </li>
+                    
+                            <li>
+                                <strong>round:</strong> A imagem da borda é repetida e ajustada para caber exatamente ao longo da borda, redimensionando as repetições.
+                                <div class="container round">round</div>
+                            </li>
+                    
+                            <li>
+                                <strong>space:</strong> A imagem da borda é repetida e espaços uniformes são inseridos entre as repetições, sem cortar a imagem.
+                                <div class="container space">space</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><code>border-image</code> permite aplicar uma imagem às bordas de um elemento, oferecendo controle sobre como a imagem será cortada, repetida e ajustada ao redor do conteúdo. Ela combina várias propriedades individuais em uma única linha de código para facilitar a aplicação. Sua sintaxe completa é a seguinte:</p>
+                        <p>
+                            <code>border-image: &lt;source&gt; &lt;slice&gt; / &lt;width&gt; / &lt;outset&gt; &lt;repeat&gt;;</code>
+                        </p>
+
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+        <article id="fontes"><h2>Fontes</h2></article>
+        <article id="textos"><h2>Textos</h2></article>
+        <article id="sombras"><h2>Sombras</h2></article>
+        <article id="outros"><h2>Outros</h2></article>
+      </main>
+</body>
+</html>

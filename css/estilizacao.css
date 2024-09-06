@@ -1,0 +1,621 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header,
+article {
+  background-color: aliceblue;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+h1 {
+  background: darkblue;
+  color: lightgreen;
+}
+
+h2,
+h3,
+h4 {
+  color: darkblue;
+}
+
+.pre-definidas code {
+  color: #fff;
+  padding: 0px 5px;
+}
+code {
+  font-family: monospace;
+  font-size: 1em;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+#blue {
+  background: blue;
+}
+#red {
+  background: red;
+}
+#lightgreen {
+  background: lightgreen;
+}
+
+.color-list {
+  list-style: none;
+  padding: 0;
+}
+.color-item {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+#currentcolor {
+  color: tomato;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid currentColor;
+}
+#ff5733 {
+  background-color: #ff5733;
+}
+
+#ff573380 {
+  background-color: #ff573380;
+}
+
+#externa {
+  width: 150px;
+  padding: 10px;
+  background: palevioletred;
+  text-align: center;
+  margin: auto;
+}
+#interna01,
+#interna02 {
+  border: 1px solid #333;
+  margin: 10px;
+}
+#interna01 {
+  background-color: transparent;
+  border: 1px solid #333;
+}
+#interna02 {
+  opacity: 0.5;
+}
+
+#rgb-255-0-0 {
+  background-color: rgb(255, 0, 0);
+}
+#rgba-255-0-0-05 {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+figure {
+  margin: auto;
+  width: 150px;
+}
+figure img {
+  width: inherit;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+  font-size: 12px;
+}
+#img-hsl {
+  display: flex;
+  justify-content: space-between;
+}
+
+.object-fit {
+  width: 150px;
+  height: 180px;
+  border: 5px solid #333;
+}
+.object-fit img {
+  width: 100%;
+  height: 100%;
+}
+#fill {
+  object-fit: fill;
+}
+#contain {
+  object-fit: contain;
+}
+#cover {
+  object-fit: cover;
+}
+#none {
+  object-fit: none;
+}
+#scale-down {
+  object-fit: none;
+}
+
+#obj-position {
+  object-fit: cover;
+  object-position: 50px -50px;
+}
+
+#fundo div {
+  width: 200px;
+  height: 200px;
+
+  margin: 10px auto;
+}
+#fundo div p {
+  color: darkblue;
+  background-color: #fff8;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px;
+}
+#image {
+  background-image: url("../img/luz.jpeg");
+}
+
+#gradient {
+  background: linear-gradient(to right, navy, lightblue);
+}
+#radial {
+  background: radial-gradient(navy, lightblue);
+}
+#repeating {
+  background: repeating-linear-gradient(
+    to top,
+    navy 0 20px,
+    lightblue 20px 40px
+  );
+}
+#padroes {
+  --s: 64px; /* control the size*/
+  --c1: #c02942;
+  --c2: #53777a;
+  --c3: #ecd078;
+  --c4: #d95b43;
+
+  background: radial-gradient(var(--c1) 24%, #0000 25%),
+    radial-gradient(var(--c2) 30%, #0000 32%) calc(var(--s) / 2)
+      calc(var(--s) / 2),
+    repeating-conic-gradient(from 30deg, var(--c3) 0 30deg, var(--c4) 0 90deg);
+  background-size: var(--s) var(--s);
+}
+.background-image {
+  border: solid 1px darkblue;
+  background-image: url("../img/paisagem.jpg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+#sem-redimensionar {
+  background-size: auto;
+}
+
+#cobrir {
+  background-size: cover;
+}
+#conter {
+  background-size: contain;
+}
+#tamanho-fixo {
+  background-size: 100px 50px;
+}
+#percentagem {
+  background-size: 50% 100%;
+}
+#valor-inicial {
+  background-size: initial;
+}
+#herdado {
+  background-size: inherit;
+}
+#camadas {
+  background-image: url("../img/moldura.png"), url("../img/paisagem.jpg");
+  background-size: 100% 100%, 100% 100%;
+}
+#repeat {
+  background-size: 40%;
+  background-repeat: repeat;
+}
+#repeat-x {
+  background-size: 80%;
+  background-repeat: repeat-x;
+}
+#repeat-y {
+  background-size: 80%;
+  background-repeat: repeat-y;
+}
+#no-repeat {
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+#space {
+  background-size: 60%;
+  background-repeat: space;
+}
+#round {
+  background-size: 60%;
+  background-repeat: round;
+}
+#eixos {
+  background-size: 40%;
+  background-repeat: space round;
+}
+#position-left-top {
+  background-position: left top;
+}
+
+#position-center-center {
+  background-position: center center;
+}
+
+#position-right-bottom {
+  background-position: right bottom;
+}
+
+#position-px {
+  background-position: 10px 20px;
+}
+
+#position-percent {
+  background-position: 50% 50%;
+}
+#attachment-fixed,
+#attachment-scroll,
+#attachment-local {
+  background-size: cover;
+  overflow: auto;
+}
+#attachment-fixed {
+  background-attachment: fixed;
+}
+
+#attachment-scroll {
+  background-attachment: scroll;
+}
+
+#attachment-local {
+  background-attachment: local;
+}
+
+#origin-content,
+#origin-padding,
+#origin-border {
+  border: 15px dashed palegreen;
+  padding: 20px;
+  background-size: 100% 100%; /* Ajuste conforme necessário */
+  background-position: center; /* Centraliza a imagem */
+  color: white; /* Apenas para contraste do texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#origin-content {
+  background-origin: content-box;
+}
+
+#origin-padding {
+  background-origin: padding-box;
+}
+
+#origin-border {
+  background-origin: border-box;
+}
+
+#clip-content,
+#clip-padding,
+#clip-border,
+#clip-text {
+  border: 10px dashed gainsboro;
+  color: bisque;
+  background-color: #2ecedd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  overflow: hidden; /* Para garantir que a imagem não ultrapasse o elemento */
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 900;
+
+  --s: 82px; /* control the size*/
+  --c1: #ff847c;
+  --c2: #e84a5f;
+  --c3: #fecea8;
+  --c4: #99b898;
+
+  background: conic-gradient(
+      from 45deg at 75% 75%,
+      var(--c3) 90deg,
+      var(--c1) 0 180deg,
+      #0000 0
+    ),
+    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg, #0000 0),
+    conic-gradient(from -45deg at 50% 100%, #0000 180deg, var(--c3) 0),
+    conic-gradient(
+      from -45deg,
+      var(--c1) 90deg,
+      var(--c2) 0 225deg,
+      var(--c4) 0
+    );
+  background-size: var(--s) var(--s);
+}
+#clip-content {
+  background-clip: content-box;
+}
+
+#clip-padding {
+  background-clip: padding-box;
+}
+
+#clip-border {
+  background-clip: border-box;
+}
+#clip-text {
+  color: transparent;
+  background-clip: text;
+}
+#blend-mode-example {
+  width: 100%;
+  height: 100vh;
+  border: 5px dashed rgba(255, 0, 0, 0.5);
+  background-image: url("../img/girassol.jpeg");
+  background-color: rgba(255, 0, 0, 0.5); /* Cor de fundo com transparência */
+  background-blend-mode: screen; /* Modo de mistura */
+  background-size: contain;
+  background-position: center;
+}
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+[id^="blend"] {
+  margin: 10px;
+  width: 30%;
+  height: 200px;
+  background-image: url("../img/fundo.avif");
+  background-color: rgba(0, 255, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  list-style: none;
+}
+#blend-mode-item-multiply {
+  background-blend-mode: multiply;
+}
+
+#blend-mode-item-screen {
+  background-blend-mode: screen;
+}
+
+#blend-mode-item-overlay {
+  background-blend-mode: overlay;
+}
+
+#blend-mode-item-darken {
+  background-blend-mode: darken;
+}
+
+#blend-mode-item-lighten {
+  background-blend-mode: lighten;
+}
+
+#blend-mode-item-color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+#blend-mode-item-color-burn {
+  background-blend-mode: color-burn;
+}
+
+#blend-mode-item-color-saturation {
+  background-blend-mode: saturation;
+}
+[id^="border"] {
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+/* Exemplo de borda sólida */
+#border-solid {
+  border: 4px solid #000;
+}
+
+/* Exemplo de borda tracejada */
+#border-dashed {
+  border: 4px dashed #008000;
+}
+
+/* Exemplo de borda pontilhada */
+#border-dotted {
+  border: 4px dotted #ff0000;
+}
+
+/* Exemplo de borda dupla */
+#border-double {
+  border: 6px double #0000ff;
+}
+/* Exemplo de borda tridimensional */
+#border-groove {
+  border: 10px groove goldenrod;
+}
+
+/* Exemplo de borda elevada */
+#border-ridge {
+  border: 10px ridge lightcoral;
+}
+/* Exemplo de borda afundada */
+#border-inset {
+  border: 10px inset cornflowerblue;
+}
+/* Exemplo de borda saindo da tela */
+#border-outset {
+  border: 10px outset gray;
+}
+
+/* Borda aplicada em diferentes lados */
+#border-sides {
+  border-top: 4px solid #ff00ff;
+  border-right: 6px dashed #000;
+  border-bottom: 8px double #008000;
+  border-left: 4px dotted #ff0000;
+}
+
+/* Borda arredondada */
+#border-rounded {
+  border: 4px solid #000;
+  border-radius: 15px; /* arredondamento da borda */
+}
+
+/* Exemplo de borda com tamanho uniforme */
+#border-uniform {
+  border-width: 8px;
+  border-style: solid;
+  border-color: #000; /* Borda preta sólida */
+}
+
+/* Exemplo de borda com tamanhos diferentes para cada lado */
+#border-different-sides {
+  border-top-width: 2px;
+  border-right-width: 6px;
+  border-bottom-width: 10px;
+  border-left-width: 4px;
+  border-style: solid;
+  border-color: #ff0000; /* Borda vermelha sólida */
+}
+
+/* Exemplo de borda com valores predefinidos */
+#border-predefined {
+  border-width: thick;
+  border-style: solid;
+  border-color: #008000; /* Borda verde sólida */
+}
+
+[id^="box-border"] {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-align: center;
+}
+#box-border-1 {
+  border-radius: 0;
+}
+#box-border-2 {
+  border-radius: 15px;
+}
+#box-border-3 {
+  border-radius: 50%;
+}
+#box-border-4 {
+  border-radius: 30px 10px;
+}
+#box-border-5 {
+  border-radius: 100px/30px;
+}
+.container,
+.example-box,
+[id^="box-image"] {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #555;
+  background-image: url(../img/border.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border: 15px solid transparent;
+  border-image-source: url("../img/border.png");
+  border-image-slice: 100;
+  border-image-repeat: repeat;
+  border-width: 20px;
+}
+
+#box-image-source-2 {
+  border-image-repeat: none;
+  background-image: none;
+  border-image-source: linear-gradient(lightblue, lightgreen);
+  border-image-slice: 5;
+}
+
+#box-image-slice {
+  border-image-slice: 60;
+  border-image-width: 10px;
+  border-image-repeat: stretch;
+}
+
+#box-image-width {
+  border-image-width: 40px;
+}
+
+#box-image-outset {
+  margin: 50px;
+  border-image-repeat: round;
+  border-image-width: 40px;
+  border-image-outset: 40px 20px;
+}
+
+.example-1 {
+  border-image-slice: 100;
+}
+.example-2 {
+  border-image-slice: 100 50;
+}
+.example-3 {
+  border-image-slice: 100 66 33;
+}
+.example-4 {
+  border-image-slice: 100 75 50 25;
+}
+.example-5 {
+  border-image-slice: 100 fill;
+}
+
+.example-box img {
+  max-width: 50%;
+}
+
+/* Exemplos de valores para border-image-repeat */
+.repeat {
+  border-image-slice: 100;
+  border-image-repeat: repeat; /* Repetição da imagem ao longo da borda */
+}
+
+.stretch {
+  border-image-repeat: stretch; /* Estica a imagem para cobrir toda a borda */
+}
+
+.round {
+  border-image-repeat: round; /* Repete a imagem ajustando para caber exatamente */
+}
+
+.space {
+  border-image-slice: 100;
+  border-image-repeat: space; /* Repete a imagem adicionando espaço entre as repetições */
+}
