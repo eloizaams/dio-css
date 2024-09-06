@@ -1,5 +1,9 @@
+@import url(styles.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: darkblue;
 }
 header,
 article {
@@ -618,4 +622,279 @@ figcaption {
 .space {
   border-image-slice: 100;
   border-image-repeat: space; /* Repete a imagem adicionando espaço entre as repetições */
+}
+
+/* Fontes */
+.exemplo-font-times-new-roman {
+  font-family: "Times New Roman";
+  font-size: 18px;
+}
+.exemplo-font-georgia {
+  font-family: Georgia;
+  font-size: 18px;
+}
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+[class^="exemplo-"] {
+  color: lightcoral;
+}
+/* Exemplo de font-size */
+.exemplo-font-size {
+  font-size: 24px;
+}
+
+/* Exemplo de font-weight */
+.exemplo-font-weight {
+  font-weight: bold;
+
+}
+
+.exemplo-font-arial {
+  font-family: Arial;
+  font-size: 18px;
+}
+.fontes-img img {
+  width: 300px;
+  margin: auto;
+}
+
+.exemplo-font-monospace {
+  font-family: monospace;
+  font-size: 18px;
+}
+.exemplo-font-lobster {
+  font-family: "lobster", cursive;
+  font-size: 20px;
+}
+
+
+@font-face {
+  font-family: suse;
+  src: local(), url("../font/SUSE-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: suse;
+  src: local(), url("../font/SUSE-Light.ttf");
+  font-weight: lighter;
+}
+
+[class^="exemplo-font-face-"] {
+  font-family: suse;
+  font-size: 18px;
+}
+.exemplo-font-face-light{
+font-weight: lighter;
+}
+.exemplo-font-face-bold {
+  font-weight: bold;
+}
+.exemplo-font-roboto{
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+/* Exemplos de palavras-chave para font-size */
+.exemplo-font-xx-small {
+  font-size: xx-small;
+}
+
+.exemplo-font-x-small {
+  font-size: x-small;
+}
+
+.exemplo-font-small {
+  font-size: small;
+}
+
+.exemplo-font-medium {
+  font-size: medium; /* O tamanho padrão */
+}
+
+.exemplo-font-large {
+  font-size: large;
+}
+
+.exemplo-font-x-large {
+  font-size: x-large;
+}
+
+.exemplo-font-xx-large {
+  font-size: xx-large;
+}
+
+.exemplo-font-smaller {
+  font-size: smaller; /* Menor que o tamanho herdado */
+}
+
+.exemplo-font-larger {
+  font-size: larger; /* Maior que o tamanho herdado */
+}
+
+/* Exemplos de valores para font-style */
+.exemplo-font-normal {
+  font-style: normal; /* Estilo padrão sem inclinação */
+}
+
+.exemplo-font-italic {
+  font-style: italic; /* Fonte inclinada (itálica) */
+}
+
+.exemplo-font-oblique {
+  font-style: oblique; /* Fonte inclinada, mas de forma diferente do "italic" */
+}
+
+.exemplo-font-normal-oblique {
+  font-style: oblique, normal; /* Usará "oblique", mas se não disponível, cairá em "normal" */
+}
+
+/* Exemplos de valores para font-weight */
+.exemplo-font-weight-normal {
+  font-weight: normal; /* Equivalente a 400 */
+}
+
+.exemplo-font-weight-bold {
+  font-weight: bold; /* Equivalente a 700 */
+}
+
+.exemplo-font-weight-bolder {
+  font-weight: bolder; /* Mais pesado que o valor herdado */
+}
+
+.exemplo-font-weight-lighter {
+  font-weight: lighter; /* Mais leve que o valor herdado */
+}
+
+.exemplo-font-weight-100 {
+  font-weight: 100; /* Extremamente leve */
+}
+
+.exemplo-font-weight-200 {
+  font-weight: 200; /* Muito leve */
+}
+
+.exemplo-font-weight-300 {
+  font-weight: 300; /* Leve */
+}
+
+.exemplo-font-weight-400 {
+  font-weight: 400; /* Normal (padrão) */
+}
+
+.exemplo-font-weight-500 {
+  font-weight: 500; /* Mediano */
+}
+
+.exemplo-font-weight-600 {
+  font-weight: 600; /* Levemente negrito */
+}
+
+.exemplo-font-weight-700 {
+  font-weight: 700; /* Negrito (bold) */
+}
+
+.exemplo-font-weight-800 {
+  font-weight: 800; /* Muito negrito */
+}
+
+.exemplo-font-weight-900 {
+  font-weight: 900; /* Extremamente negrito */
+}
+
+/* Exemplo de font-variant */
+.exemplo-font-variant {
+  font-variant: small-caps;
+}
+/* Exemplos de valores para font-stretch */
+
+/* Estende a fonte ao máximo */
+.exemplo-font-ultra-expanded {
+  font-stretch: ultra-expanded;
+}
+
+/* Estende a fonte de forma extra */
+.exemplo-font-extra-expanded {
+  font-stretch: extra-expanded;
+}
+
+/* Fonte expandida */
+.exemplo-font-expanded {
+  font-stretch: expanded;
+}
+
+/* Fonte semi-expandida */
+.exemplo-font-semi-expanded {
+  font-stretch: semi-expanded;
+}
+
+/* Fonte normal, sem alterações */
+.exemplo-font-normal {
+  font-stretch: normal; /* Valor padrão */
+}
+
+/* Fonte semi-condensada */
+.exemplo-font-semi-condensed {
+  font-stretch: semi-condensed;
+}
+
+/* Fonte condensada */
+.exemplo-font-condensed {
+  font-stretch: condensed;
+}
+
+/* Fonte extra-condensada */
+.exemplo-font-extra-condensed {
+  font-stretch: extra-condensed;
+}
+
+/* Fonte ultra-condensada */
+.exemplo-font-ultra-condensed {
+  font-stretch: ultra-condensed;
+}
+
+/* Exemplo de line-height */
+/* Exemplos de valores para line-height */
+
+/* Valor padrão */
+.exemplo-font-line-height-normal {
+  line-height: normal; /* Valor padrão do navegador */
+  margin-bottom: 20px;
+}
+
+/* Altura da linha igual à altura da fonte */
+.exemplo-font-line-height-1 {
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+/* Altura da linha 1.5 vezes a altura da fonte */
+.exemplo-font-line-height-1-5 {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Altura da linha 2 vezes a altura da fonte */
+.exemplo-font-line-height-2 {
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+/* Altura da linha 150% da altura da fonte */
+.exemplo-font-line-height-percentage {
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+div > pre {
+  background-color: #f4f4f4;
+}
+
+/* Exemplo de propriedade resumida font */
+.exemplo-font {
+  font: italic small-caps bold 24px/2 "Georgia", serif;
+  
 }

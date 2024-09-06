@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilizacao.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
+   
+    <!-- Usar o @import no css é melhor do que usar o link para a fonte aqui -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <title>Estilização básica em css</title>
 </head>
 <body>
@@ -580,16 +582,213 @@
                     </li>
                     <li>
                         <p><code>border-image</code> permite aplicar uma imagem às bordas de um elemento, oferecendo controle sobre como a imagem será cortada, repetida e ajustada ao redor do conteúdo. Ela combina várias propriedades individuais em uma única linha de código para facilitar a aplicação. Sua sintaxe completa é a seguinte:</p>
-                        <p>
-                            <code>border-image: &lt;source&gt; &lt;slice&gt; / &lt;width&gt; / &lt;outset&gt; &lt;repeat&gt;;</code>
-                        </p>
+                        <div>
+<pre><code>
+    border-image: &lt;source&gt; &lt;slice&gt; / &lt;width&gt; / &lt;outset&gt; &lt;repeat&gt;
 
+</code></pre>
+                        </div>
                     </li>
                 </ul>
             </section>
-
         </article>
-        <article id="fontes"><h2>Fontes</h2></article>
+        <article id="fontes">
+            <h2>Fontes</h2>
+            <section>
+                <h3>Família de fontes</h3>
+                <p>Na tipografia exitem os chamados <strong>tipos genéricos</strong>, tmabém conhecidos como <strong>grupos de fontes</strong>, que são:</p>
+                <ul>
+                    <li>
+                        <h4>Serif</h4>
+                        <p>As fontes <Strong>serifadas</Strong> são compostas por pequenos traços e prolongamentos que ficam no fim de cada letra, conhecidos como serifas.</p>
+                        <p><i>Exemplo: </i><span class="exemplo-font-times-new-roman">Times New Roman</span> e <span class="exemplo-font-georgia">Georgia</span></p>
+                        <figure class="fontes-img">
+                            <img src="../img/serif.jpg" >
+                        </figure>
+                    </li>
+                    <li>
+                        <h4>Sans-Serif</h4>
+                        <p>As fontes <strong>sem serifa</strong>,que são fontes que não possuem os traços e prolongamentos no fim das letras.</p>
+                        <p><i>Exemplo: </i><span class="exemplo-font-arial">Arial</span></p>
+                        <figure class="fontes-img">
+                            <img src="../img/sans-serif.jpg" >
+                        </figure>
+                    </li>
+                    <li>
+                        <h4>Display</h4>
+                        <p>As fontes <strong>enfeitadas</strong> são consideradas tipografias comemorativas. Muitas vezes nem representam letras, mas sim símbolos. Esta é a famosa fonte para ver, utilizada em textos curtos, publicidade, casamentos (também é usado aqui, mas as melhores são handwriting) e artes diversas para chamar a atenção.</p>
+                        <figure class="fontes-img">
+                            <img src="../img/display.jpg" >
+                        </figure>
+                    </li>
+                    <li>
+                        <h4>Handwriting</h4>
+                        <p>As fontes <strong>manuscritas</strong> se assemelham com a escrita à mão, conheciadas como cursivas. Normalmente utilizadas para passar a sensação de humanização. </p>
+                        <figure class="fontes-img">
+                            <img src="../img/handwriting.jpg" >
+                        </figure>
+                    </li>
+                    <li>
+                        <h4>Monospace</h4>
+                        <p>As fontes <strong>monoespaçadas</strong> são definidas por toda família de fontes que todos os caracteres ocupam a mesma largura.</p>
+                        <p><i>Exemplo: </i><span class="exemplo-font-monospace">Monospace</span></p>
+                        <figure class="fontes-img">
+                            <img src="../img/monospace.jpg" >
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Onde Encontrar Fontes Personalizadas?</h3>
+                <p>Fontes personalizadas podem ser encontradas em vários sites como Google Fonts, Adobe Fonts e outros repositórios de fontes gratuitos ou pagos. Um exemplo é o Google Fonts:</p>
+                <a href="https://fonts.google.com" target="_blank">Visitar Google Fonts</a>
+            </section>
+        
+            <section>
+                <h3>Personalizando as Fontes do Nosso Site</h3>
+                <p>Podemos aplicar fontes personalizadas usando serviços como o Google Fonts. Aqui está um exemplo de como aplicar a fonte <strong>Lobster</strong> ao nosso site:</p>
+               <div>
+<pre> <code>
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"&gt;
+    </code></pre>
+               </div>
+                <p class="exemplo-font-lobster">Este texto usa a fonte Lobster.</p>
+            </section>
+        
+            <section>
+                <h3>Aplicando Fontes Personalizadas com @Font-Face</h3>
+                <p>Com a regra <strong>@font-face</strong>, podemos carregar fontes diretamente do nosso servidor</p>
+                <p>O uso do <code>local()</code> antes da url da fonte é para que, caso a fonte já esteja instalada localmente, não precisa reinstalar</p>
+                <p>O uso do <code>font-weight</code> faz com que ao aplicar essa palavra reservada o estilo seja o que foi configurado.</p>
+                <div>
+    <pre><code>
+        @font-face {
+            font-family: 'MinhaFonte';
+            src: local(), url('minhafonte.tff');
+            font-weight: bold;
+        }
+    </code></pre>
+                </div>
+                <p class="exemplo-font-face-light">Exemplo de texto com a fonte personalizada com o @font-face light.</p>
+                <p
+                class="exemplo-font-face-bold">Exemplo de texto com a fonte personalizada com o @font-face bold.</p>
+            </section>
+        
+            <section>
+                <h3>Aplicando Fontes Personalizadas com @import url()</h3>
+                <p>Através da regra <strong>@import</strong>, também podemos incluir fontes. Quando for adicionar o @import ao arquivo css, ele deve ficar no topo do arquivo. Exemplo:</p>
+                <div>
+<pre><code>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+</code></pre>
+                </div>
+                <p class="exemplo-font-roboto">Este texto usa a fonte Roboto.</p>
+            </section>
+        
+            <section>
+                <h3>Alterando o Tamanho das Fontes com Font-Size</h3>
+                <p>Podemos alterar o tamanho das fontes com a propriedade <strong>font-size</strong>. Exemplo:</p>
+                <p class="exemplo-font-size">Este texto tem tamanho de 24px.</p>
+                <p>Podemos também usar palavras chaves para definir os tamanho da fonte, nesca caso o tamanho da fonte será ajustado em relação ao padrão do navegador do usuário.</p>
+                <p class="exemplo-font-xx-small">Este texto está com o tamanho de fonte "xx-small".</p>
+                <p class="exemplo-font-x-small">Este texto está com o tamanho de fonte "x-small".</p>
+                <p class="exemplo-font-small">Este texto está com o tamanho de fonte "small".</p>
+                <p class="exemplo-font-medium">Este texto está com o tamanho de fonte "medium" (padrão).</p>
+                <p class="exemplo-font-large">Este texto está com o tamanho de fonte "large".</p>
+                <p class="exemplo-font-x-large">Este texto está com o tamanho de fonte "x-large".</p>
+                <p class="exemplo-font-xx-large">Este texto está com o tamanho de fonte "xx-large".</p>
+                <p class="exemplo-font-smaller">Este texto está com o tamanho de fonte "smaller" (menor que o do elemento pai).</p>
+                <p class="exemplo-font-larger">Este texto está com o tamanho de fonte "larger" (menor que o elemento pai).</p>
+            </section>
+        
+            <section>
+                <h3>Estilo de Fontes (Font-Style)</h3>
+                <p>A propriedade <strong>font-style</strong> define se o texto será normal, itálico ou oblíquo. Exemplos:</p>
+              
+                <p class="exemplo-font-normal">Este texto usa o estilo de fonte "normal".</p>
+                <p class="exemplo-font-italic">Este texto usa o estilo de fonte "italic".</p>
+                <p class="exemplo-font-oblique">Este texto usa o estilo de fonte "oblique".</p>
+                <p class="exemplo-font-normal-oblique">Este texto usa o estilo "oblique", mas se não estiver disponível, será "normal".</p>
+            
+            </section>
+        
+            <section>
+                <h3>Espessura das Fontes com Font-Weight</h3>
+                <p>Com <strong>font-weight</strong>, podemos ajustar a espessura da fonte. Ela aceita valores de 100 a 900. Exemplos:</p>
+                <p class="exemplo-font-weight-normal">Este texto tem peso "normal" (400).</p>
+                <p class="exemplo-font-weight-bold">Este texto tem peso "bold" (700).</p>
+                <p class="exemplo-font-weight-bolder">Este texto tem peso "bolder".</p>
+                <p class="exemplo-font-weight-lighter">Este texto tem peso "lighter".</p>
+                <p class="exemplo-font-weight-100">Este texto tem peso "100".</p>
+                <p class="exemplo-font-weight-200">Este texto tem peso "200".</p>
+                <p class="exemplo-font-weight-300">Este texto tem peso "300".</p>
+                <p class="exemplo-font-weight-400">Este texto tem peso "400" (normal).</p>
+                <p class="exemplo-font-weight-500">Este texto tem peso "500".</p>
+                <p class="exemplo-font-weight-600">Este texto tem peso "600".</p>
+                <p class="exemplo-font-weight-700">Este texto tem peso "700" (bold).</p>
+                <p class="exemplo-font-weight-800">Este texto tem peso "800".</p>
+                <p class="exemplo-font-weight-900">Este texto tem peso "900".</p>
+            </section>
+        
+            <section>
+                <h3>Variação das Fontes com Font-Variant</h3>
+                <p>A propriedade <strong>font-variant</strong> permite exibir o texto em maiúsculas pequenas. Exemplo:</p>
+                <p class="exemplo-font-variant">Este texto usa small-caps.</p>
+            </section>
+        
+            <section>
+                <h3>Propriedade Font-Stretch</h3>
+                <p>A propriedade <strong>font-stretch</strong> ajusta a largura das letras. Só funciona se a fonte possuir essas configurações. Exemplo:</p>
+                <p class="exemplo-font-ultra-condensed">Este texto usa "ultra-condensed".</p>
+                <p class="exemplo-font-extra-condensed">Este texto usa "extra-condensed".</p>
+                <p class="exemplo-font-condensed">Este texto usa "condensed".</p>
+                <p class="exemplo-font-semi-condensed">Este texto usa "semi-condensed".</p>
+                <p class="exemplo-font-normal">Este texto usa "normal" (padrão).</p>
+                <p class="exemplo-font-semi-expanded">Este texto usa "semi-expanded".</p>
+                <p class="exemplo-font-expanded">Este texto usa "expanded".</p>
+                <p class="exemplo-font-extra-expanded">Este texto usa "extra-expanded".</p>
+                <p class="exemplo-font-ultra-expanded">Este texto usa "ultra-expanded".</p>
+            </section>
+        
+            <section>
+                <h3>Customizando a Altura da Linha com Line-Height</h3>
+                <p>A altura da linha pode ser ajustada com a propriedade <strong>line-height</strong>. Exemplo:</p>
+                <p class="exemplo-font-line-height-normal">
+                    Este texto usa "normal" como valor de `line-height`. O espaçamento entre linhas é o padrão.
+                </p>
+            
+                <p class="exemplo-font-line-height-1">
+                    Este texto usa um `line-height` de 1, o que significa que não há espaço extra entre as linhas, apenas o necessário para o texto em si.
+                </p>
+            
+                <p class="exemplo-font-line-height-1-5">
+                    Este texto usa um `line-height` de 1.5, aumentando o espaço entre as linhas para facilitar a leitura.
+                </p>
+            
+                <p class="exemplo-font-line-height-2">
+                    Este texto usa um `line-height` de 2, o que significa que o espaço entre as linhas é duas vezes a altura da fonte.
+                </p>
+            
+                <p class="exemplo-font-line-height-percentage">
+                    Este texto usa um `line-height` de 150%, o que significa que o espaço entre as linhas é 150% da altura da fonte.
+                </p>
+            </section>
+        
+            <section>
+                <h3>Propriedade Resumida Font</h3>
+                <p>Podemos aplicar várias propriedades de fonte em uma única linha usando a propriedade resumida <strong>font</strong>. A ordem dos parâmetros deve ser:</p>
+                <ol>
+                    <li><strong>font-style</strong> (opcional): Define o estilo da fonte. Ex: <code>italic</code> ou <code>normal</code>.</li>
+                    <li><strong>font-variant</strong> (opcional): Define a variante da fonte. Ex: <code>normal</code> ou <code>small-caps</code>.</li>
+                    <li><strong>font-weight</strong> (opcional): Define o peso (espessura) da fonte. Ex: <code>bold</code> ou valores numéricos como <code>700</code>.</li>
+                    <li><strong>font-size</strong> (obrigatório): Define o tamanho da fonte. Ex: <code>16px</code>, <code>1em</code>.</li>
+                    <li><strong>line-height</strong> (opcional): Define a altura da linha, separada por uma barra <code>/</code>. Ex: <code>1.5</code> ou <code>150%</code>.</li>
+                    <li><strong>font-family</strong> (obrigatório): Define a família de fontes, com uma lista de fontes alternativas. Ex: <code>"Arial", sans-serif</code>.</li>
+                </ol>
+                <p class="exemplo-font">Este texto usa a propriedade resumida font.</p>
+            </section>
+        </article>
         <article id="textos"><h2>Textos</h2></article>
         <article id="sombras"><h2>Sombras</h2></article>
         <article id="outros"><h2>Outros</h2></article>
