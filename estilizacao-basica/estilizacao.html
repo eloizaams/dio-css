@@ -789,7 +789,197 @@
                 <p class="exemplo-font">Este texto usa a propriedade resumida font.</p>
             </section>
         </article>
-        <article id="textos"><h2>Textos</h2></article>
+        <article id="textos">
+            <h2>Textos</h2>
+             <!-- Propriedade Text-Transform -->
+        <section>
+            <h3>Propriedade Text-Transform</h3>
+            <p>A propriedade <code>text-transform</code> controla a capitalização do texto. Pode ser usada para transformar o texto em maiúsculas, minúsculas ou capitalizar cada palavra.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p class="exemplo-text-transform-uppercase">Texto em maiúsculas: <code>text-transform: uppercase;</code></p>
+            <p class="exemplo-text-transform-lowercase">Texto em minúsculas: <code>text-transform: lowercase;</code></p>
+            <p class="exemplo-text-transform-capitalize">Texto capitalizado: <code>text-transform: capitalize;</code></p>
+        </section>
+
+        <!-- Propriedade Text-Align -->
+        <section>
+            <h3>Propriedade Text-Align</h3>
+            <p>A propriedade <code>text-align</code> define o alinhamento horizontal do texto dentro de um elemento. Pode ser usada para alinhar o texto à esquerda, direita, centro ou justificar.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p class="exemplo-text-align-left">Texto alinhado à esquerda: <code>text-align: left;</code></p>
+            <p class="exemplo-text-align-center">Texto centralizado: <code>text-align: center;</code></p>
+            <p class="exemplo-text-align-right">Texto alinhado à direita: <code>text-align: right;</code></p>
+            <p class="exemplo-text-align-justify">Texto justificado: <code>text-align: justify;</code> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, quos delectus iusto accusantium aut ab culpa totam vitae illo impedit a maxime at consectetur eveniet ducimus molestiae non, omnis quod?</p>
+        </section>
+
+        <!-- Propriedade Text-Decoration -->
+        <section>
+            <h3>Propriedade Text-Decoration</h3>
+            <p>A propriedade <code>text-decoration</code> controla a decoração do texto, como sublinhado, sobrelinhado ou riscado.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p class="exemplo-text-decoration-underline">Texto sublinhado: <code>text-decoration: underline;</code></p>
+            <p class="exemplo-text-decoration-line-through">Texto riscado: <code>text-decoration: line-through;</code></p>
+            <p class="exemplo-text-decoration-overline">Texto com sobrelinha: <code>text-decoration: overline;</code></p>
+            <p>O <code>text-decoration</code> é uma propriedade abreviada de:</p>
+            <ul>
+                <li>
+                    <h4>Propriedade Text-Decoration-Line</h4>
+                    <p>A propriedade <code>text-decoration-line</code> define o tipo de linha que será aplicado ao texto. Os valores comuns são:</p>
+                    <ul>
+                        <li><code>underline</code>: sublinha o texto.</li>
+                        <li><code>overline</code>: adiciona uma linha acima do texto.</li>
+                        <li><code>line-through</code>: adiciona uma linha no meio do texto.</li>
+                        <li><code>none</code>: remove qualquer decoração.</li>
+                    </ul>
+                    <p>Exemplos:</p>
+                    <p class="text-decoration-line-underline">Texto sublinhado.</p>
+                    <p class="text-decoration-line-overline">Texto com linha acima.</p>
+                    <p class="text-decoration-line-line-through">Texto com linha no meio.</p>
+                </li>
+                <li>
+                    <h4>Propriedade Text-Decoration-Style</h4>
+                    <p>A propriedade <code>text-decoration-style</code> define o estilo da linha de decoração do texto. Os valores possíveis são:</p>
+                    <ul>
+                        <li><code>solid</code>: linha sólida (padrão).</li>
+                        <li><code>double</code>: linha dupla.</li>
+                        <li><code>dotted</code>: linha pontilhada.</li>
+                        <li><code>dashed</code>: linha tracejada.</li>
+                        <li><code>wavy</code>: linha ondulada.</li>
+                    </ul>
+                    <p>Exemplos:</p>
+                    <p class="text-decoration-style-solid">Texto com linha sólida.</p>
+                    <p class="text-decoration-style-double">Texto com linha dupla.</p>
+                    <p class="text-decoration-style-dotted">Texto com linha pontilhada.</p>
+                </li>
+                <li>
+                    <h4>Propriedade Text-Decoration-Color</h4>
+                    <p>A propriedade <code>text-decoration-color</code> define a cor da linha de decoração. Ela aceita qualquer valor de cor válido, como nomes de cores, valores hexadecimais, RGB, etc.</p>
+                    <p>Exemplos:</p>
+                    <p class="text-decoration-color-red">Texto com linha vermelha.</p>
+                    <p class="text-decoration-color-blue">Texto com linha azul.</p>
+                    <p class="text-decoration-color-green">Texto com linha verde.</p>
+                </li>
+                <li>
+                    <h4>Propriedade Text-Decoration-Thickness</h4>
+                    <p>A propriedade <code>text-decoration-thickness</code> define a espessura da linha de decoração do texto. Pode ser especificada em valores como <code>thin</code>, <code>medium</code>, <code>thick</code> ou através de valores em pixels, porcentagem, etc.</p>
+                    <p>Exemplos:</p>
+                    <p class="text-decoration-thickness-thin">Texto com linha fina.</p>
+                    <p class="text-decoration-thickness-medium">Texto com linha média.</p>
+                    <p class="text-decoration-thickness-thick">Texto com linha grossa.</p>
+
+                </li>
+            </ul>
+        </section>
+
+        <!-- Propriedade Text-Indent -->
+        <section>
+            <h3>Propriedade Text-Indent</h3>
+            <p>A propriedade <code>text-indent</code> define a indentação da primeira linha de um parágrafo. Pode ser usada para criar um recuo no início do texto.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p class="exemplo-text-indent">Parágrafo com recuo: <code>text-indent: 30px;</code></p>
+        </section>
+
+        <!-- Propriedades Letter-Spacing e Word-Spacing -->
+        <section>
+            <h3>Propriedades Letter-Spacing e Word-Spacing</h3>
+            <p>A propriedade <code>letter-spacing</code> ajusta o espaçamento entre caracteres, enquanto <code>word-spacing</code> ajusta o espaçamento entre palavras.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p class="exemplo-letter-spacing">Espaçamento entre letras: <code>letter-spacing: 2px;</code></p>
+            <p class="exemplo-word-spacing">Espaçamento entre palavras: <code>word-spacing: 10px;</code></p>
+        </section>
+
+        <!-- Propriedade White-Space -->
+        <section>
+            <h3>Propriedade White-Space</h3>
+            <p>A propriedade <code>white-space</code> controla como os espaços em branco no texto são tratados. Pode ser usada para impedir a quebra de linha automática ou preservar os espaços em branco.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p><code>white-space: normal;</code>
+            </p>
+            <div class="exemplo-white-space-normal"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span></div>
+            <p><code>white-space: nowrap;</code></p>
+            <div class="exemplo-white-space-nowrap"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span>
+            </div>
+            <p><code>white-space: pre;</code></p>
+            <div class="exemplo-white-space-pre"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span>
+            </div>
+            <p><code>white-space: line;</code></p>
+            <div class="exemplo-white-space-line"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span>
+            </div>
+             <p><code>white-space: pre-line;</code></p>
+            <div class="exemplo-white-space-pre-line"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span>
+            </div>
+            <p><code>white-space: pre-wrap;</code></p>
+            <div class="exemplo-white-space-pre-wrap"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span>
+            </div>
+            <p><code>white-space: break-spaces;</code></p>
+            <div class="exemplo-white-space-break-spaces"><span> Lorem        ipsum dolor sit amet consectetur, adipisicing elit. 
+                Reprehenderit dolores doloribus                  recusandae aut eos inventore ex 
+                consequatur tempora consequuntur minus doloremque nesciunt in numquam quo, debitis           provident rem? Veniam, nesciunt? </span>
+            </div>
+        </section>
+
+        <!-- Propriedade Word-Wrap -->
+        <section>
+            <h3>Propriedade Word-Wrap</h3>
+            <p>A propriedade <code>word-wrap</code> permite que as palavras sejam quebradas e continuadas na próxima linha quando necessário, para evitar estouro do conteúdo.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p><code>word-wrap: break-word;</code></p>
+            <div class="exemplo-word-wrap-normal">
+                <span>paralelepípedo além palavras exageradamente</span>
+            </div>
+            <p><code>word-wrap: break-word;</code></p>
+            <div class="exemplo-word-wrap-break-word">
+                <span>paralelepípedo além palavras exageradamente</span>
+            </div>
+        </section>
+
+        <!-- Propriedade Word-Break -->
+        <section>
+            <h3>Propriedade Word-Break</h3>
+            <p>A propriedade <code>word-break</code> define como as quebras de linha ocorrem dentro das palavras, permitindo quebrar em qualquer ponto ou apenas em lugares apropriados.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p><code>word-break: normal;</code></p>
+            <div class="exemplo-word-break-normal"">
+                <span>paralelepípedo além palavras exageradamente</span>
+            </div>
+            <p><code>word-break: break-all;</code></p>
+            <div class="exemplo-word-break-break-all">
+                <span>paralelepípedo além palavras exageradamente</span>
+            </div>
+            <p><code>word-break: keep-all;</code></p>
+        </section>
+
+        <!-- Propriedade Writing-Mode -->
+        <section>
+            <h3>Propriedade Writing-Mode</h3>
+            <p>A propriedade <code>writing-mode</code> define a direção do texto, permitindo escrita horizontal, vertical e mista.</p>
+            <p><strong>Exemplos:</strong></p>
+            <p class="exemplo-writing-mode-horizontal">Texto na orientação horizontal: <code>writing-mode: horizontal-tb;</code></p>
+            <p class="exemplo-writing-mode-vertical">Texto na orientação vertical: <code>writing-mode: vertical-rl;</code></p>
+        </section>
+
+        <!-- Propriedade Text-Overflow -->
+        <section>
+            <h3>Propriedade Text-Overflow</h3>
+            <p>A propriedade <code>text-overflow</code> define como o texto que excede os limites de um elemento deve ser exibido, permitindo truncamento ou adição de reticências.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p class="exemplo-text-overflow-clip">Este texto será cortado no final sem indicar que houve corte.</p>
+            <p class="exemplo-text-overflow-ellipsis">Este texto será cortado no final e substituído por reticências...</p>
+       
+        </section>
+        </article>
         <article id="sombras"><h2>Sombras</h2></article>
         <article id="outros"><h2>Outros</h2></article>
       </main>

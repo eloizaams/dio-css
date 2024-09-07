@@ -1,5 +1,5 @@
 @import url(styles.css);
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -21,6 +21,9 @@ h2,
 h3,
 h4 {
   color: darkblue;
+}
+p {
+  text-indent: 20px;
 }
 
 .pre-definidas code {
@@ -641,6 +644,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
+[class^="text-decoration"],
 [class^="exemplo-"] {
   color: lightcoral;
 }
@@ -652,7 +656,6 @@ a:hover {
 /* Exemplo de font-weight */
 .exemplo-font-weight {
   font-weight: bold;
-
 }
 
 .exemplo-font-arial {
@@ -673,7 +676,6 @@ a:hover {
   font-size: 20px;
 }
 
-
 @font-face {
   font-family: suse;
   src: local(), url("../font/SUSE-Bold.ttf");
@@ -689,14 +691,14 @@ a:hover {
   font-family: suse;
   font-size: 18px;
 }
-.exemplo-font-face-light{
-font-weight: lighter;
+.exemplo-font-face-light {
+  font-weight: lighter;
 }
 .exemplo-font-face-bold {
   font-weight: bold;
 }
-.exemplo-font-roboto{
-  font-family: 'Roboto';
+.exemplo-font-roboto {
+  font-family: "Roboto";
   font-size: 18px;
 }
 /* Exemplos de palavras-chave para font-size */
@@ -896,5 +898,197 @@ div > pre {
 /* Exemplo de propriedade resumida font */
 .exemplo-font {
   font: italic small-caps bold 24px/2 "Georgia", serif;
-  
+}
+
+/* Text */
+/* Exemplos para text-transform */
+.exemplo-text-transform-uppercase {
+  text-transform: uppercase;
+}
+.exemplo-text-transform-lowercase {
+  text-transform: lowercase;
+}
+.exemplo-text-transform-capitalize {
+  text-transform: capitalize;
+}
+
+/* Exemplos para text-align */
+.exemplo-text-align-left {
+  text-align: left;
+}
+.exemplo-text-align-center {
+  text-align: center;
+}
+.exemplo-text-align-right {
+  text-align: right;
+}
+.exemplo-text-align-justify {
+  text-align: justify;
+}
+
+/* Exemplos para text-decoration */
+.exemplo-text-decoration-underline {
+  text-decoration: underline;
+}
+.exemplo-text-decoration-line-through {
+  text-decoration: line-through;
+}
+.exemplo-text-decoration-overline {
+  text-decoration: overline;
+}
+
+/* Exemplo para text-indent */
+.exemplo-text-indent {
+  text-indent: 30px;
+}
+
+/* Exemplos para letter-spacing e word-spacing */
+.exemplo-letter-spacing {
+  letter-spacing: 2px;
+}
+.exemplo-word-spacing {
+  word-spacing: 10px;
+}
+
+/* Propriedade Text-Decoration-Line */
+.text-decoration-line-underline {
+  text-decoration-line: underline;
+}
+
+.text-decoration-line-overline {
+  text-decoration-line: overline;
+}
+
+.text-decoration-line-line-through {
+  text-decoration-line: line-through;
+}
+
+/* Propriedade Text-Decoration-Style */
+.text-decoration-style-solid {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.text-decoration-style-double {
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
+
+.text-decoration-style-dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+/* Propriedade Text-Decoration-Color */
+.text-decoration-color-red {
+  text-decoration-line: underline;
+  text-decoration-color: red;
+}
+
+.text-decoration-color-blue {
+  text-decoration-line: underline;
+  text-decoration-color: blue;
+}
+
+.text-decoration-color-green {
+  text-decoration-line: underline;
+  text-decoration-color: green;
+}
+
+/* Propriedade Text-Decoration-Thickness */
+.text-decoration-thickness-thin {
+  text-decoration-line: underline;
+  text-decoration-thickness: thin;
+}
+
+.text-decoration-thickness-medium {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+
+.text-decoration-thickness-thick {
+  text-decoration-line: underline;
+  text-decoration-thickness: 5px;
+}
+[class^="exemplo-white-space"] {
+  width: 300px;
+  background-color: chartreuse;
+  margin-left: 30px;
+}
+
+[class^="exemplo-white-space"] span {
+  background-color: seagreen;
+  color: white;
+}
+.exemplo-white-space-nomral {
+  white-space: normal;
+}
+
+/* Exemplos para white-space */
+.exemplo-white-space-nowrap {
+  white-space: nowrap;
+}
+.exemplo-white-space-pre {
+  white-space: pre;
+}
+
+.exemplo-white-space-line {
+  white-space: line;
+}
+.exemplo-white-space-pre-line {
+  white-space: pre-line;
+}
+.exemplo-white-space-pre-wrap {
+  white-space: pre-wrap;
+}
+.exemplo-white-space-break-spaces {
+  white-space: break-spaces;
+}
+
+/* Exemplos para word-wrap */
+[class^="exemplo-word"] {
+  width: 70px;
+  background-color: lightseagreen;
+  margin-left: 30px;
+}
+.exemplo-word-wrap-normal {
+  word-wrap: normal;
+}
+.exemplo-word-wrap-break-word {
+  word-wrap: break-word;
+}
+
+/* Exemplos para word-break */
+.exemplo-word-break-normal {
+  word-break: normal;
+}
+.exemplo-word-break-break-all {
+  word-break: break-all;
+}
+
+/* Exemplos para writing-mode */
+.exemplo-writing-mode-horizontal {
+  writing-mode: horizontal-tb;
+}
+.exemplo-writing-mode-vertical {
+  writing-mode: vertical-lr;
+}
+/* Propriedade Text-Overflow */
+[class^=exemplo-text-overflow]{
+  width: 300px;
+  white-space: nowrap;  /* Impede a quebra de linha */
+  overflow: hidden;     /* Esconde o texto excedente */
+  border: 1px solid #293F6A;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Text-Overflow: clip */
+.exemplo-text-overflow-clip {
+  text-overflow: clip;  /* O texto excedente é cortado */
+}
+
+/* Text-Overflow: ellipsis */
+.exemplo-text-overflow-ellipsis {
+  text-overflow: ellipsis;  /* O texto excedente é substituído por "..." */
 }
