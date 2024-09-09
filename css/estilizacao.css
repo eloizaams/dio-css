@@ -5,25 +5,9 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: darkblue;
 }
-header,
-article {
-  background-color: aliceblue;
-  padding: 15px;
-  margin: 15px 0;
-}
 
-h1 {
-  background: darkblue;
-  color: lightgreen;
-}
 
-h2 {
-  color: lightseagreen;
-}
-h3,
-h4 {
-  color: darkblue;
-}
+
 p {
   text-indent: 20px;
   text-align: justify;
@@ -33,13 +17,7 @@ p {
   color: #fff;
   padding: 0px 5px;
 }
-code {
-  font-family: monospace;
-  font-size: 1em;
-  background-color: #f4f4f4;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
+
 
 #blue {
   background: blue;

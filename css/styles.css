@@ -1,8 +1,28 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 h1 {
   background: darkblue;
   color: lightgreen;
+}
+
+h2 {
+  color: lightseagreen;
+}
+h3,
+h4 {
+  color: darkblue;
+}
+code {
+  font-family: monospace;
+  font-size: 1em;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+header,
+article {
+  background-color: aliceblue;
+  padding: 15px;
+  margin: 15px 0;
 }

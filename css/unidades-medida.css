@@ -1,0 +1,176 @@
+@import url(styles.css);
+
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: darkblue;
+}
+main {
+  padding: 1rem;
+}
+
+article {
+  margin-bottom: 4rem;
+}
+li{
+    list-style: none;
+    background-color: coral;
+    width: 20em;
+    border-radius: 1em;
+    padding:0.5em;
+    margin: 1em;
+    color:#fff;
+}
+
+.exemplo {
+  margin-bottom: 20px;
+}
+
+.box {
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+.px {
+  background-color: #f0a567;
+  width: 200px;
+  height: 100px;
+}
+
+.pt {
+  background-color: #58f08e;
+  width: 200pt;
+  height: 100pt;
+}
+
+.cm {
+  background-color: #d3c1ff;
+  width: 10cm;
+  height: 5cm;
+}
+[class^="em"] {
+  padding: 10px;
+}
+.em1 {
+  background-color: #fc9c9c;
+  font-size: 16px;
+}
+.em2 {
+  background-color: lightblue;
+  font-size: 2em;
+}
+.em3 {
+  background-color: lightgreen;
+  font-size: 2em;
+}
+
+.em4 {
+  background-color: lightslategray;
+  font-size: 30px;
+  width: 10em = 300px;
+}
+
+.externa {
+  width: 400´x;
+  height: 200px;
+  border: 2px solid #000;
+}
+.percent {
+  background-color: #ff6347;
+  width: 50%;
+  height: 25%;
+  margin: 0;
+}
+
+.vw {
+  background-color: #32cd32;
+  width: 50vw;
+  height: 25vh;
+}
+.pixel-example {
+  margin-bottom: 30px;
+}
+
+.pixel-example h3 {
+  margin: 0 0 10px;
+}
+
+.pixel {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #000;
+  margin: 100px;
+}
+
+.physical-pixel {
+  background-color: #ff6347;
+  /* Simulando um pixel físico (não escalado) */
+}
+
+.logical-pixel {
+  background-color: #32cd32;
+  /* Simulando um pixel lógico (escalado) */
+  transform: scale(2);
+}
+
+
+/* Exemplo de calc() */
+.calc-example {
+    width: calc(100% - 60px);
+    height: 100px;
+    background-color: #FFD700;
+    margin: 20px 0;
+    padding: 10px;
+    color: #293F6A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Exemplo de max() */
+.max-example {
+    height: max(100px, 30vh);
+    background-color: #32CD32;
+    margin: 20px 0;
+    padding: 10px;
+    color: #293F6A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Exemplo de min() */
+.min-example {
+    width: min(50%, 300px);
+    height: 100px;
+    background-color: #1E90FF;
+    margin: 20px 0;
+    padding: 10px;
+    color: #293F6A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Exemplo de clamp() */
+.clamp-example {
+    width: clamp(200px, 50%, 400px);
+    height: 100px;
+    background-color: #FF6347;
+    margin: 20px 0;
+    padding: 10px;
+    color: #293F6A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
