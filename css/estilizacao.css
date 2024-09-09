@@ -17,13 +17,16 @@ h1 {
   color: lightgreen;
 }
 
-h2,
+h2 {
+  color: lightseagreen;
+}
 h3,
 h4 {
   color: darkblue;
 }
 p {
   text-indent: 20px;
+  text-align: justify;
 }
 
 .pre-definidas code {
@@ -1046,7 +1049,8 @@ div > pre {
 }
 
 /* Exemplos para word-wrap */
-[class^="exemplo-word"] {
+[class^="exemplo-word-break"],
+[class^="exemplo-word-wrap"] {
   width: 70px;
   background-color: lightseagreen;
   margin-left: 30px;
@@ -1074,21 +1078,207 @@ div > pre {
   writing-mode: vertical-lr;
 }
 /* Propriedade Text-Overflow */
-[class^=exemplo-text-overflow]{
+[class^="exemplo-text-overflow"] {
   width: 300px;
-  white-space: nowrap;  /* Impede a quebra de linha */
-  overflow: hidden;     /* Esconde o texto excedente */
-  border: 1px solid #293F6A;
+  white-space: nowrap; /* Impede a quebra de linha */
+  overflow: hidden; /* Esconde o texto excedente */
+  border: 1px solid #293f6a;
   padding: 10px;
   margin-bottom: 20px;
 }
 
 /* Text-Overflow: clip */
 .exemplo-text-overflow-clip {
-  text-overflow: clip;  /* O texto excedente é cortado */
+  text-overflow: clip; /* O texto excedente é cortado */
 }
 
 /* Text-Overflow: ellipsis */
 .exemplo-text-overflow-ellipsis {
-  text-overflow: ellipsis;  /* O texto excedente é substituído por "..." */
+  text-overflow: ellipsis; /* O texto excedente é substituído por "..." */
+}
+[class^="box-shadow"] {
+  width: 200px;
+  height: 100px;
+
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Estilos gerais para os exemplos */
+.box-shadow-exemplo {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para o deslocamento horizontal  */
+.box-shadow-offset-h {
+  box-shadow: 10px 0 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o deslocamento vertical */
+.box-shadow-offset-v {
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o desfoque */
+.box-shadow-blur {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para a expansão */
+.box-shadow-spread {
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para a cor */
+.box-shadow-color {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Exemplo completo com todos os parâmetros */
+.box-shadow-exemplo-completo {
+  width: 200px;
+  height: 100px;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.4);
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  text-align: center;
+  line-height: 100px;
+}
+/* Sombra Inset */
+.box-shadow-inset {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Estilos gerais para os exemplos */
+.filter-drop-shadow-basic{
+  width: 500px;
+  height: 200px;
+  margin-bottom: 20px;
+
+  background-size: cover;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+.filter-drop-shadow-basic img{
+  width: 150px;
+  filter: drop-shadow(20px 20px 5px gray);
+}
+
+[class^="text-shadow"] {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: palevioletred
+}
+/* Exemplo de deslocamento horizontal (offset-x) */
+.text-shadow-offset-x {
+  text-shadow: 10px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Exemplo de deslocamento vertical (offset-y) */
+.text-shadow-offset-y {
+  text-shadow: 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Exemplo de raio de desfoque (blur-radius) */
+.text-shadow-blur {
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Exemplo de cor (color) */
+.text-shadow-color {
+  text-shadow: 5px 5px 5px red;
+}
+/* Estilo para caixas com opacity */
+.opacity-50, .opacity-30 {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-color: #FF6347; /* Cor de fundo sólida */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Transparência de 50% */
+.opacity-50 {
+  opacity: 0.5;
+}
+
+/* Transparência de 30% */
+.opacity-30 {
+  opacity: 0.3;
+}
+
+/* Estilo para caixas com RGBA */
+.rgba-70, .rgba-40 {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fundo com transparência de 70% */
+.rgba-70 {
+  background-color: rgba(255, 99, 71, 0.7); /* Cor com transparência */
+}
+
+/* Fundo com transparência de 40% */
+.rgba-40 {
+  background-color: rgba(255, 99, 71, 0.4); /* Cor com transparência */
+}
+
+/* Estilos para as caixas de overflow */
+[class^="overflow-"] {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #EFF2EC;
+  border: 1px solid #293F6A;
+  color: #000;
+}
+
+/* Exemplo de overflow: visible */
+.overflow-visible {
+  overflow: visible;
+  background-color: #FFDDC1;
+}
+
+/* Exemplo de overflow: hidden */
+.overflow-hidden {
+  overflow: hidden;
+  background-color: #C1FFD7;
+}
+
+/* Exemplo de overflow: scroll */
+.overflow-scroll {
+  overflow: scroll;
+  background-color: #D3C1FF;
+}
+
+/* Exemplo de overflow: auto */
+.overflow-auto {
+  overflow: auto;
+  background-color: #FFC1C1;
+}
+
+/* Texto longo para testar overflow */
+[clas^="overflow-"]::after {
+  content: "Este é um texto muito longo para demonstrar como funciona o comportamento de overflow quando o conteúdo excede o tamanho do contêiner. A propriedade overflow é útil para controlar o layout.";
 }

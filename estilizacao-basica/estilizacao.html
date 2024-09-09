@@ -980,8 +980,175 @@
        
         </section>
         </article>
-        <article id="sombras"><h2>Sombras</h2></article>
-        <article id="outros"><h2>Outros</h2></article>
+        <article id="sombras">
+            <h2>Sombras</h2>
+            <p>
+            O uso de sombras é uma das características mais úteis do CSS, pois permite adicionais de estilização e visualizações ao seu conteúdo. A sombra pode ser aplicada aos elementos HTML usando as propriedades <code>box-shadow</code>, <code>text-shadow</code>, ou <code>text-decoration-shadow</code>.
+            </p>
+            <section>
+                <h3>Box Shadow</h3>
+                <p>Os parâmetros utilizados são:</p>
+                <ul>
+                    <li>
+                        <h4>1. Deslocamento Horizontal</h4>
+                        <p>O primeiro valor define o deslocamento da sombra na direção horizontal. Valores positivos deslocam a sombra para a direita, enquanto valores negativos deslocam para a esquerda.</p>
+                        <div class="box-shadow-exemplo">
+                            <p class="box-shadow-offset-h">Deslocamento Horizontal: 10px</p>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <h4>2. Deslocamento Vertical</h4>
+                        <p>O segundo valor define o deslocamento da sombra na direção vertical. Valores positivos deslocam a sombra para baixo, enquanto valores negativos deslocam para cima.</p>
+                        <div class="box-shadow-exemplo">
+                            <p class="box-shadow-offset-v">Deslocamento Vertical: 10px</p>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <h4>3. Desfoque</h4>
+                        <p>O terceiro valor define o raio de desfoque da sombra. Um valor maior resulta em uma sombra mais difusa e suave. Um valor de 0px cria uma sombra com bordas nítidas.</p>
+                        <div class="box-shadow-exemplo">
+                            <p class="box-shadow-blur">Desfoque: 15px</p>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <h4>4. Expansão</h4>
+                        <p>O quarto valor opcional define a expansão da sombra. Valores positivos fazem a sombra se expandir além das bordas do elemento, enquanto valores negativos fazem a sombra encolher.</p>
+                        <div class="box-shadow-exemplo">
+                            <p class="box-shadow-spread">Expansão: 10px</p>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <h4>5. Cor</h4>
+                        <p>O último valor define a cor da sombra. Pode ser qualquer valor de cor válido em CSS, como nomes de cores, valores hexadecimais ou RGB.</p>
+                        <div class="box-shadow-exemplo">
+                            <p class="box-shadow-color">Cor: rgba(0, 0, 0, 0.5)</p>
+                        </div>
+                    </li>
+            
+                    <li>
+                        <h4>Exemplo Completo</h4>
+                        <p>Combinação dos parâmetros:</p>
+                        <div class="box-shadow-exemplo-completo">Sombra Completa</div>
+                    </li>
+                    <li>
+                        <h4>Exemplo: Sombra Inset</h4>
+                        <p>O parãmetro <code>inset</code> adicionado à declaração do <code>box-shadow</code> cria uma sombra interna dentro do elemento, o que pode dar a impressão de eu efeito de afundamento ou recuo.</p>
+                        <div class="box-shadow-exemplo">
+                            <p class="box-shadow-inset">Sombra inset</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>1. Sombra com Filter Drop-Shadow</h4>
+                        <p> A propriedade <code>filter: drop-shadow</code> faz com que o drop shadow seja aplicado ao próprio conteúdo do elemento e não apenas à sua caixa</p>
+                        <div class="filter-drop-shadow-basic">Sombra com filter: drop-shadow
+                            <img src="../img/moldura.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+                
+        
+             
+            </section>
+            <section>
+                <h3>Text Shadow</h3>
+                <p>A propriedade <code>text-shadow</code> em CSS é usada para aplicar sombras ao texto. Ela aceita múltiplos valores, permitindo definir a posição, o desfoque e a cor da sombra. </p>
+                <ul>
+                    <li>
+                        <h4>1. Deslocamento Horizontal (offset-x)</h4>
+                        <p>A sombra é deslocada horizontalmente, em relação ao texto.</p>
+                        <p class="text-shadow-offset-x">Sombra deslocada horizontalmente</p>
+                    </li>
+            
+                    <li>
+                        <h4>2. Deslocamento Vertical (offset-y)</h4>
+                        <p>A sombra é deslocada verticalmente, em relação ao texto.</p>
+                        <p class="text-shadow-offset-y">Sombra deslocada verticalmente</p>
+                    </li>
+            
+                    <li>
+                        <h4>3. Raio de Desfoque (blur-radius)</h4>
+                        <p>A sombra é suavizada pelo valor de desfoque.</p>
+                        <p class="text-shadow-blur">Sombra com desfoque</p>
+                    </li>
+            
+                    <li>
+                        <h4>4. Cor (color)</h4>
+                        <p>A cor da sombra pode ser definida com diferentes valores de cor.</p>
+                        <p class="text-shadow-color">Sombra com cor personalizada</p>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        <article id="outros">
+            <h2>Outros</h2>
+            <h3>Aplicando Transparência aos Elementos</h3>
+            <section>
+                <h4>1. Aplicando Transparência com Opacity</h4>
+                <p>A propriedade <code>opacity</code> define a opacidade de um elemento e afeta tanto o conteúdo quanto o fundo.</p>
+                <div class="opacity-50">Transparência de 50%</div>
+                <div class="opacity-30">Transparência de 30%</div>
+            </section>
+    
+            <section>
+                <h4>2. Aplicando Transparência com RGBA</h4>
+                <p>O uso de <code>rgba()</code> permite aplicar transparência apenas à cor de fundo ou de borda, sem afetar o conteúdo do elemento.</p>
+                <div class="rgba-70">Fundo com transparência de 70%</div>
+                <div class="rgba-40">Fundo com transparência de 40%</div>
+            </section>
+            <h3>Propriedade Overflow</h3>
+            <p>A propriedade <code>overflow </code>em CSS é usada para controlar o comportamento de um conteúdo que ultrapassa o tamanho do contêiner. Ela pode ter vários valores, cada um determinando o que acontecerá quando o conteúdo for maior que o elemento.</p>
+            <section>
+                <h3>1. Valor Default: Visible</h3>
+                <p>O valor <code>visible</code> faz com que o conteúdo excedente seja exibido fora do contêiner. É o comportamento padrão.</p>
+                <div class="overflow-visible">Conteúdo excedente é visível fora da caixa.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium enim ex officiis nulla sint repudiandae.</p>
+                </div>
+            </section>
+    
+            <section>
+                <h3>2. Valor Hidden</h3>
+                <p>O valor <code>hidden</code> oculta o conteúdo que ultrapassa o tamanho do contêiner.</p>
+                <div class="overflow-hidden">Conteúdo excedente é oculto.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium enim ex officiis nulla sint repudiandae.</p>
+                </div>
+            </section>
+    
+            <section>
+                <h3>3. Valor Scroll</h3>
+                <p>O valor <code>scroll</code> exibe barras de rolagem, independentemente de o conteúdo exceder o contêiner ou não.</p>
+                <div class="overflow-scroll">Conteúdo com barra de rolagem.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium enim ex officiis nulla sint repudiandae incidunt molestiae.</p>
+                </div>
+            </section>
+    
+            <section>
+                <h3>4. Valor Auto</h3>
+                <p>O valor <code>auto</code> exibe barras de rolagem apenas quando o conteúdo excede o tamanho do contêiner.</p>
+                <div class="overflow-auto">Conteúdo com barra de rolagem automática.
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium enim ex officiis nulla sint repudiandae incidunt molestiae.</p>
+                </div>
+            </section>
+            <h3>Redefinindo as Propriedades Padrões dos Navegadores</h3>
+            <p>Os navegadores aplicam estilos padrões aos elementos HTML, como margens, espaçamentos e formatação de texto. Esses estilos podem variar entre diferentes navegadores, afetando a consistência visual de uma página. Para evitar essas inconsistências, utilizamos um "CSS Reset", que redefine ou normaliza essas propriedades.</p>
+            <p> Existem várias formas de redefinir as propriedades padrões:</p>
+            <section>
+                <h4>1. Reset Básico</h4>
+                <p>O reset CSS básico remove as margens e espaçamentos padrões aplicados pelos navegadores. Isso garante que a estilização seja consistente entre navegadores diferentes.</p>
+              
+            </section>
+    
+            <section>
+                <h4>2. Normalização com Normalize.css</h4>
+                <p>O <code>normalize.css</code> é uma ferramenta para normalizar os estilos padrão dos navegadores, mantendo uma base mais previsível.</p>
+          
+            </section>
+               
+               
+        </article>
       </main>
 </body>
 </html>
