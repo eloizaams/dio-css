@@ -1,23 +1,10 @@
 @import url(styles.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-* {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: darkblue;
-}
-
-
-
 p {
   text-indent: 20px;
   text-align: justify;
 }
-
-.pre-definidas code {
-  color: #fff;
-  padding: 0px 5px;
-}
-
 
 #blue {
   background: blue;
@@ -40,7 +27,8 @@ p {
 }
 
 #currentcolor {
-  color: tomato;
+  color: greenyellow;
+
   text-align: center;
   width: 300px;
   padding: 10px;
@@ -49,10 +37,12 @@ p {
 }
 #ff5733 {
   background-color: #ff5733;
+  color: #f1f1f1;
 }
 
 #ff573380 {
   background-color: #ff573380;
+  color: #f1f1f1;
 }
 
 #externa {
@@ -77,9 +67,11 @@ p {
 
 #rgb-255-0-0 {
   background-color: rgb(255, 0, 0);
+  color: #f1f1f1;
 }
 #rgba-255-0-0-05 {
   background-color: rgba(255, 0, 0, 0.5);
+  color: #f1f1f1;
 }
 
 figure {
@@ -103,7 +95,7 @@ figcaption {
 .object-fit {
   width: 150px;
   height: 180px;
-  border: 5px solid #333;
+  border: 5px solid #33a8db;
 }
 .object-fit img {
   width: 100%;
@@ -133,8 +125,10 @@ figcaption {
 #fundo div {
   width: 200px;
   height: 200px;
-
   margin: 10px auto;
+  border: #2ecedd 2px solid;
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+  background-color: #f1f1f1;
 }
 #fundo div p {
   color: darkblue;
@@ -174,10 +168,14 @@ figcaption {
   background-size: var(--s) var(--s);
 }
 .background-image {
-  border: solid 1px darkblue;
   background-image: url("../img/paisagem.jpg");
   background-size: 80%;
   background-repeat: no-repeat;
+}
+.background-image span {
+  color: white; /* Cor do texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  background-color: transparent;
 }
 #sem-redimensionar {
   background-size: auto;
@@ -423,12 +421,12 @@ figcaption {
 }
 /* Exemplo de borda sólida */
 #border-solid {
-  border: 4px solid #000;
+  border: 4px solid #fff;
 }
 
 /* Exemplo de borda tracejada */
 #border-dashed {
-  border: 4px dashed #008000;
+  border: 4px dashed #51eb51;
 }
 
 /* Exemplo de borda pontilhada */
@@ -455,20 +453,20 @@ figcaption {
 }
 /* Exemplo de borda saindo da tela */
 #border-outset {
-  border: 10px outset gray;
+  border: 10px outset #33a8db;
 }
 
 /* Borda aplicada em diferentes lados */
 #border-sides {
   border-top: 4px solid #ff00ff;
-  border-right: 6px dashed #000;
-  border-bottom: 8px double #008000;
+  border-right: 6px dashed #fff;
+  border-bottom: 8px double #51eb51;
   border-left: 4px dotted #ff0000;
 }
 
 /* Borda arredondada */
 #border-rounded {
-  border: 4px solid #000;
+  border: 4px solid #fff;
   border-radius: 15px; /* arredondamento da borda */
 }
 
@@ -476,7 +474,7 @@ figcaption {
 #border-uniform {
   border-width: 8px;
   border-style: solid;
-  border-color: #000; /* Borda preta sólida */
+  border-color: #fff;
 }
 
 /* Exemplo de borda com tamanhos diferentes para cada lado */
@@ -493,7 +491,7 @@ figcaption {
 #border-predefined {
   border-width: thick;
   border-style: solid;
-  border-color: #008000; /* Borda verde sólida */
+  border-color: #51eb51; /* Borda verde sólida */
 }
 
 [id^="box-border"] {
@@ -502,6 +500,7 @@ figcaption {
   margin: 20px auto;
   padding: 10px;
   background-color: lightpink;
+  color: #293f6a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -617,17 +616,10 @@ figcaption {
   font-family: Georgia;
   font-size: 18px;
 }
-a {
-  color: #0056b3;
-  text-decoration: none;
-}
 
-a:hover {
-  text-decoration: underline;
-}
 [class^="text-decoration"],
 [class^="exemplo-"] {
-  color: lightcoral;
+  color: rgb(237, 161, 161);
 }
 /* Exemplo de font-size */
 .exemplo-font-size {
@@ -1033,6 +1025,13 @@ div > pre {
   background-color: lightseagreen;
   margin-left: 30px;
 }
+
+[class^="exemplo-word-break"] span,
+[class^="exemplo-word-wrap"] span {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
 .exemplo-word-wrap-normal {
   word-wrap: normal;
 }
@@ -1060,7 +1059,7 @@ div > pre {
   width: 300px;
   white-space: nowrap; /* Impede a quebra de linha */
   overflow: hidden; /* Esconde o texto excedente */
-  border: 1px solid #293f6a;
+  border: 1px solid #33a9db;
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -1091,39 +1090,38 @@ div > pre {
   width: 200px;
   height: 100px;
   margin-bottom: 20px;
-  border: 1px solid #ddd;
 }
 
 /* Estilo para o deslocamento horizontal  */
 .box-shadow-offset-h {
-  box-shadow: 10px 0 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 0 0 rgba(51, 169, 219, 0.3);
 }
 
 /* Estilo para o deslocamento vertical */
 .box-shadow-offset-v {
-  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 0 rgba(51, 169, 219, 0.3);
 }
 
 /* Estilo para o desfoque */
 .box-shadow-blur {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(51, 169, 219, 0.9);
 }
 
 /* Estilo para a expansão */
 .box-shadow-spread {
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 10px rgba(51, 169, 219, 0.3);
 }
 
 /* Estilo para a cor */
 .box-shadow-color {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px 15px rgba(51, 169, 219, 0.4);
 }
 
 /* Exemplo completo com todos os parâmetros */
 .box-shadow-exemplo-completo {
   width: 200px;
   height: 100px;
-  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px 10px 15px 5px rgba(51, 169, 219, 0.4);
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   text-align: center;
@@ -1131,10 +1129,10 @@ div > pre {
 }
 /* Sombra Inset */
 .box-shadow-inset {
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 4px 4px 8px rgba(51, 169, 219, 0.9);
 }
 /* Estilos gerais para os exemplos */
-.filter-drop-shadow-basic{
+.filter-drop-shadow-basic {
   width: 500px;
   height: 200px;
   margin-bottom: 20px;
@@ -1146,10 +1144,9 @@ div > pre {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
 }
 
-.filter-drop-shadow-basic img{
+.filter-drop-shadow-basic img {
   width: 150px;
   filter: drop-shadow(20px 20px 5px gray);
 }
@@ -1157,21 +1154,21 @@ div > pre {
 [class^="text-shadow"] {
   font-size: 18px;
   margin-bottom: 20px;
-  color: palevioletred
+  color: rgb(237, 161, 161);
 }
 /* Exemplo de deslocamento horizontal (offset-x) */
 .text-shadow-offset-x {
-  text-shadow: 10px 0 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 10px 0 0 rgba(255, 255, 255, 0.8);
 }
 
 /* Exemplo de deslocamento vertical (offset-y) */
 .text-shadow-offset-y {
-  text-shadow: 0 10px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 10px 0 rgba(255, 255, 255, 0.8);
 }
 
 /* Exemplo de raio de desfoque (blur-radius) */
 .text-shadow-blur {
-  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.8);
 }
 
 /* Exemplo de cor (color) */
@@ -1179,11 +1176,12 @@ div > pre {
   text-shadow: 5px 5px 5px red;
 }
 /* Estilo para caixas com opacity */
-.opacity-50, .opacity-30 {
+.opacity-50,
+.opacity-30 {
   width: 200px;
   height: 100px;
   margin-bottom: 20px;
-  background-color: #FF6347; /* Cor de fundo sólida */
+  background-color: #ff6347; /* Cor de fundo sólida */
   color: #fff;
   display: flex;
   align-items: center;
@@ -1201,7 +1199,8 @@ div > pre {
 }
 
 /* Estilo para caixas com RGBA */
-.rgba-70, .rgba-40 {
+.rgba-70,
+.rgba-40 {
   width: 200px;
   height: 100px;
   margin-bottom: 20px;
@@ -1227,33 +1226,33 @@ div > pre {
   height: 100px;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #EFF2EC;
-  border: 1px solid #293F6A;
+  background-color: #eff2ec;
+  border: 1px solid #293f6a;
   color: #000;
 }
 
 /* Exemplo de overflow: visible */
 .overflow-visible {
   overflow: visible;
-  background-color: #FFDDC1;
+  background-color: #ffddc1;
 }
 
 /* Exemplo de overflow: hidden */
 .overflow-hidden {
   overflow: hidden;
-  background-color: #C1FFD7;
+  background-color: #c1ffd7;
 }
 
 /* Exemplo de overflow: scroll */
 .overflow-scroll {
   overflow: scroll;
-  background-color: #D3C1FF;
+  background-color: #d3c1ff;
 }
 
 /* Exemplo de overflow: auto */
 .overflow-auto {
   overflow: auto;
-  background-color: #FFC1C1;
+  background-color: #ffc1c1;
 }
 
 /* Texto longo para testar overflow */

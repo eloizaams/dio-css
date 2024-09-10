@@ -1,0 +1,278 @@
+@import url(styles.css);
+
+ul li:before {
+  list-style: none;
+  content: none;
+}
+ul li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+/* Exemplo de display: block */
+.exemplo-block {
+  display: block;
+  background-color: #eff2ec;
+  color: #293f6a;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%; /* Ocupa toda a largura do container */
+  border: 1px solid #293f6a;
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+/* Exemplo de display: inline */
+.exemplo-inline {
+  display: inline;
+  background-color: #eff2ec;
+  color: #293f6a;
+  padding: 5px;
+  border: 1px solid #293f6a;
+  margin: 0 5px; /* Espaço entre os spans */
+  text-align: center;
+}
+
+/* Exemplo de display: inline-block */
+.exemplo-inline-block {
+  display: inline-block;
+  background-color: #eff2ec;
+  color: #293f6a;
+  padding: 10px;
+  margin: 10px 5px;
+  width: 150px; /* Permite ajustar a largura */
+  height: 50px; /* Permite ajustar a altura */
+  text-align: center;
+  border: 1px solid #293f6a;
+}
+
+/* Exemplo de display: none */
+.exemplo-none {
+  display: none; /* Elemento oculto, não será exibido */
+}
+
+/* Exemplo de visibility: hidden */
+.exemplo-hidden {
+  visibility: hidden; /* Elemento oculto, não será exibido */
+}
+/* Alinhamento horizontal */
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+
+span {
+  border: 1px solid #f1f1f1;
+  width: 100px; /* Definido para facilitar visualização do alinhamento vertical */
+  height: 50px;
+  margin: 10px;
+  padding: 5px;
+  /* Forçar todos na mesma linha */
+}
+img {
+  width: 50px;
+  border: 1px solid #f1f1f1;
+}
+
+/* Alinhamento vertical */
+.top {
+  vertical-align: top;
+}
+.middle {
+  vertical-align: middle;
+}
+.bottom {
+  vertical-align: bottom;
+}
+
+p {
+  margin: 20px 0;
+}
+.alinhamento-texto {
+  text-align: center; /* Alinha o texto dentro do contêiner */
+}
+
+.alinhamento-inline {
+  display: inline;
+  background-color: #eff2ec;
+  color: #293f6a;
+  padding: 5px;
+  border: 1px solid #293f6a;
+  margin: 0 5px;
+  vertical-align: middle; /* Alinha verticalmente com base do texto */
+}
+.flexbox {
+  display: flex;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  width: 500px;
+  justify-content: center;
+}
+
+.flexbox span {
+  width: 100px;
+  height: 50px;
+}
+
+.flex-1 {
+  border: 3px solid tomato;
+  border-radius: 10px;
+  background-color: rgba(255, 99, 71, 0.75);
+}
+
+.flex-2 {
+  border: 3px solid rgb(78, 198, 150);
+  border-radius: 10px;
+  background-color: rgba(78, 198, 150, 0.75);
+}
+
+.flex-3 {
+  border: 3px solid rgb(227, 196, 59);
+  border-radius: 10px;
+  background-color: rgba(227, 196, 59, 0.75);
+}
+
+.grid {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 100px 150px; /* Define as colunas: 100px e 150px */
+  grid-template-rows: 50px 50px; /* Define as linhas: 50px cada */
+  gap: 10px; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza o grid horizontalmente */
+  align-content: center; /* Centraliza o grid verticalmente */
+}
+
+.grid-1 {
+  border: 3px solid tomato;
+  border-radius: 10px;
+  background-color: rgba(255, 99, 71, 0.75);
+  grid-column: 1; /* Posiciona na primeira coluna */
+  grid-row: 1; /* Primeira linha */
+}
+
+.grid-2 {
+  border: 3px solid rgb(78, 198, 150);
+  border-radius: 10px;
+  background-color: rgba(78, 198, 150, 0.75);
+  grid-column: 1; /* Continua na primeira coluna */
+  grid-row: 2; /* Segunda linha */
+}
+
+.grid-3 {
+  border: 3px solid rgb(227, 196, 59);
+  border-radius: 10px;
+  background-color: rgba(227, 196, 59, 0.75);
+  grid-column: 2; /* Segunda coluna */
+  grid-row: 1 / span 2; /* Ocupa a primeira e a segunda linha */
+}
+
+.example {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #dba033;
+}
+
+/* Position Static */
+.static-example {
+  position: static;
+}
+
+/* Position Relative */
+.relative-example {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  background-color: #33a8db;
+}
+
+/* Position Absolute */
+.absolute-example {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #ffcc00;
+  width: 200px;
+  height: 100px;
+}
+
+/* Position Fixed */
+.fixed-example {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff6347;
+  padding: 20px;
+  width: 200px;
+}
+
+/* Position Sticky */
+.sticky-example {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  background-color: #8fbc8f;
+  padding: 20px;
+  border: 2px solid #333;
+}
+
+/* Z-Index */
+.z-index-container {
+  position: relative;
+  height: 200px;
+}
+
+.z-index-low {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 150px;
+  height: 100px;
+  background-color: #add8e6;
+  z-index: 1;
+}
+
+.z-index-high {
+  position: absolute;
+  top: 70px;
+  left: 100px;
+  width: 150px;
+  height: 100px;
+  background-color: #ff69b4;
+  z-index: 10;
+}
+
+.pai {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.pai img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.filho {
+  text-transform: uppercase;
+  color: #444;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+  top: 135px;
+  left: 10%;
+}

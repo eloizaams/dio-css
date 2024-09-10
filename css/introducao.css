@@ -1,19 +1,5 @@
 @import url(styles.css);
 
-* {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-h1 {
-  background: darkblue;
-  color: lightgreen;
-}
-
-h2 {
-  color: darkblue;
-  background: lightgreen;
-}
-
 div {
   background: lightblue;
   color: darkblue;
@@ -21,15 +7,31 @@ div {
 
 li {
   background-color: lightgreen;
+  border-radius: 5px;
+  color: #333;
+  padding: 5px;
+  margin: 5px 0;
+}
+li p {
+  color: #333;
+}
+li p strong {
+  color: #333;
 }
 #bem-vindo {
   background: palevioletred;
   color: white;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 20px;
 }
 
 #entender-css {
   background: hotpink;
   color: white;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 20px;
 }
 
 .seletores-mais-comuns {

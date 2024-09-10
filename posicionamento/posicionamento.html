@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/posicionamento.css" />
+    <title>Posicionamento em css</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <img
+            src="../img/css.svg"
+            title="Logotipo Trilha de CSS DIO"
+            alt="Logotipo Trilha de CSS DIO"
+          />
+        </div>
+        <h1>Trilha CSS</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Introdução</a></li>
+            <li><a href="#">Estilização Básica</a></li>
+            <li><a href="#">Unidades de Medidas</a></li>
+            <li><a href="#">Posicionamento</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <h2>Propriedades de exibição</h2>
+        <section>
+          <h3>Propriedade Display</h3>
+          <p>
+            Determina como as caixas dos elementos devem se comportar no momento
+            de serem exibidas na tela.
+          </p>
+          <p>Todo elemento HTML já vem com um valor de display como padrão.</p>
+        </section>
+        <section class="block">
+          <h3>Display Block</h3>
+          <h4>O que é display: block?</h4>
+          <p>
+            A propriedade <code>display: block</code> faz com que um elemento
+            ocupe toda a largura disponível de seu elemento pai, criando uma
+            "quebra de linha" antes e depois de si mesmo. Isso significa que o
+            próximo elemento a ser renderizado na página será exibido em uma
+            nova linha.
+          </p>
+          <p>
+            Elementos como <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code> e
+            <code>&lt;h1&gt;</code> são exemplos de elementos de nível de bloco
+            (block-level elements) que, por padrão, possuem a propriedade
+            <code>display: block</code>.
+          </p>
+          <p>
+            Aqui estão algumas das principais características de um elemento com
+            <code>display: block</code>:
+          </p>
+          <ul>
+            <li>Ocupa toda a largura disponível de seu container.</li>
+            <li>
+              Empurra o conteúdo seguinte para a próxima linha (quebra de
+              linha).
+            </li>
+            <li>
+              A largura e altura podem ser ajustadas usando propriedades CSS
+              como <code>width</code> e <code>height</code>.
+            </li>
+            <li>
+              Respeita margens e padding, que afetam o espaçamento ao redor do
+              elemento.
+            </li>
+          </ul>
+
+          <h4>Exemplo de display: block</h4>
+          <div class="exemplo-block">Eu sou um elemento block!</div>
+          <p>
+            Observe como o elemento <code>div</code> acima ocupa toda a largura
+            disponível.
+          </p>
+        </section>
+        <section>
+          <h3>Display Inline</h3>
+          <h4>O que é display: inline?</h4>
+          <p>
+            A propriedade <code>display: inline</code> faz com que um elemento
+            ocupe apenas o espaço necessário para o seu conteúdo, sem forçar uma
+            quebra de linha. Diferentemente dos elementos com
+            <code>display: block</code>, os elementos inline não permitem ajuste
+            de altura e largura.
+          </p>
+          <p>
+            Exemplos comuns de elementos inline incluem
+            <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, e
+            <code>&lt;strong&gt;</code>.
+          </p>
+          <p>
+            Principais características de elementos com
+            <code>display: inline</code>:
+          </p>
+          <ul>
+            <li>Ocupa apenas o espaço necessário para o conteúdo.</li>
+            <li>Não força uma nova linha no layout.</li>
+            <li>
+              Não permite ajuste de <code>width</code> e <code>height</code>.
+            </li>
+          </ul>
+
+          <h4>Exemplo de display: inline</h4>
+          <p>
+            Veja o exemplo de texto com elementos <code>inline</code>:
+            <span class="exemplo-inline">Eu sou inline!</span>
+            <span class="exemplo-inline">Eu também sou inline!</span>
+          </p>
+          <p>
+            Os elementos <code>span</code> acima estão na mesma linha, sem
+            quebra.
+          </p>
+        </section>
+        <section>
+          <h3>Display Inline-Block</h3>
+          <h4>O que é display: inline-block?</h4>
+          <p>
+            A propriedade <code>display: inline-block</code> combina
+            características dos elementos <code>block</code> e
+            <code>inline</code>. Assim como elementos inline, um elemento
+            <code>inline-block</code> não força uma quebra de linha, mas, ao
+            contrário dos elementos <code>inline</code>, ele permite o ajuste de
+            largura e altura.
+          </p>
+          <p>Alguns exemplos de quando <code>inline-block</code> é útil:</p>
+          <ul>
+            <li>
+              Quando você deseja que vários elementos fiquem em uma linha, mas
+              ainda quer ajustar sua altura e largura.
+            </li>
+            <li>
+              Permite combinar layout flexível com alinhamento inline, como
+              botões ou imagens com textos ao lado.
+            </li>
+          </ul>
+
+          <h4>Exemplo de display: inline-block</h4>
+          <p>
+            Veja o exemplo de elementos com <code>inline-block</code>:
+            <span class="exemplo-inline-block">Eu sou inline-block!</span>
+            <span class="exemplo-inline-block"
+              >Eu também sou inline-block!</span
+            >
+          </p>
+          <p>
+            Os elementos <code>span</code> acima estão na mesma linha, mas
+            permitem ajuste de largura e altura.
+          </p>
+        </section>
+        <section>
+          <h3>Display None</h3>
+          <h4>O que é display: none?</h4>
+          <p>
+            A propriedade <code>display: none</code> faz com que um elemento não
+            seja exibido na página. Ele é completamente removido do fluxo de
+            layout, ou seja, ele não ocupa nenhum espaço na página, como se não
+            existisse. Diferentemente de <code>visibility: hidden</code>, que
+            apenas esconde o elemento mas ainda o deixa ocupando espaço, o
+            <code>display: none</code> remove o elemento tanto visualmente
+            quanto do fluxo de layout.
+          </p>
+          <p>
+            Alguns usos comuns para <code>display: none</code> incluem esconder
+            elementos temporariamente até que uma ação do usuário os exiba, como
+            em menus dropdown ou modais.
+          </p>
+          <p>Principais características de <code>display: none</code>:</p>
+          <ul>
+            <li>O elemento não é renderizado na tela.</li>
+            <li>Ele não ocupa espaço no layout da página.</li>
+            <li>
+              Útil para esconder e exibir elementos dinamicamente com
+              JavaScript.
+            </li>
+          </ul>
+
+          <h4>Exemplo de display: none</h4>
+          <p>Veja o exemplo abaixo com um elemento que será escondido:</p>
+          <div class="exemplo-none">
+            Este elemento está oculto e não ocupa espaço.
+          </div>
+          <p>
+            Acima deste parágrafo está a div que foi escondida com
+            <code>display: none</code>
+          </p>
+          <h4>Exemplo de visibility: hidden</h4>
+          <p>Veja o exemplo abaixo com um elemento que será escondido:</p>
+          <div class="exemplo-hidden">
+            Este elemento está oculto e ocupa espaço.
+          </div>
+          <p>
+            Acima deste parágrafo está a div que foi escondida com
+            <code>visibility: hidden</code>
+          </p>
+        </section>
+        <section>
+          <h3>Alinhamento de Elementos Inline</h3>
+          <p>
+            O alinhamento de elementos inline pode ser ajustado usando a
+            propriedade <code>text-align</code> no contêiner pai. Esta
+            propriedade alinha o conteúdo dos elementos inline horizontalmente.
+            Além disso, a propriedade <code>vertical-align</code> pode ser usada
+            para ajustar o alinhamento vertical dos elementos inline dentro de
+            uma linha.
+          </p>
+          <p>Aqui estão os principais valores de <code>text-align</code>:</p>
+          <div class="text-align-left">
+            <span><code>left</code>: Alinha à esquerda.</span>
+          </div>
+          <div class="text-align-center">
+            <span><code>center</code>: Centraliza.</span>
+          </div>
+          <div class="text-align-right">
+            <span><code>right</code>: Alinha à direita.</span>
+          </div>
+
+          <p>E alguns valores de <code>vertical-align</code>:</p>
+          <div>
+            <p><code>top</code>: Alinha o topo dos elementos da linha.</p>
+            <div>
+              <img src="../img/css.svg" class="top" />
+              <span>Item 1</span>
+              <span>Item 2</span>
+            </div>
+            <p><code>middle</code>: Alinha os elementos ao meio.</p>
+            <div>
+              <img src="../img/css.svg" class="middle" />
+              <span>Item 1</span>
+              <span>Item 2</span>
+            </div>
+            <p><code>bottom</code>: Alinha a base dos elementos da linha.</p>
+            <div>
+              <img src="../img/css.svg" class="bottom" />
+              <span>Item 1</span>
+              <span>Item 2</span>
+            </div>
+          </div>
+
+          <h4>Exemplo de Alinhamento de Elementos Inline</h4>
+          <p class="alinhamento-texto">
+            Texto alinhado com
+            <span class="alinhamento-inline">elemento inline</span> e
+            <span class="alinhamento-inline">outro elemento inline</span> dentro
+            de uma linha.
+          </p>
+        </section>
+        <section>
+          <h3>Display: flex</h3>
+          <p>
+            O <strong>Flexbox</strong> é uma forma de organizar os elemntos em
+            uma página dentro de containers de forma dinâmica, organizando os
+            elementos eu uma única dimensão: ou horizontalmente (as linhas) ou
+            verticalmente (em colunas).
+          </p>
+          <div class="flexbox">
+            <span class="flex-1"></span>
+            <span class="flex-2"></span>
+            <span class="flex-3"></span>
+          </div>
+        </section>
+        <section>
+          <h3>Display: grid</h3>
+          <p>
+            O <strong>Grid Layout</strong> é uma forma de organizar os elemntos
+            em uma página dentro de containers de forma dinâmica, organizando os
+            elementos eu duas dimensões: horizontal e vertical, definindo linhas
+            e colunas para que os conteúdos da página sejam posicionados
+            seguindo uma grade.
+          </p>
+          <div class="grid"></div>
+            <span class="grid-1"></span>
+            <span class="grid-2"></span>
+            <span class="grid-3"></span>
+          </div>
+        </section>
+      </article>
+      <article>
+        <h2>Posicionando elementos</h2>
+        <section>
+            <h3>Position Static</h3>
+            <p>
+                <code>position: static;</code> é o valor padrão de posicionamento dos elementos HTML. Os elementos são posicionados de acordo com o fluxo normal da página, sem ajustes de posição. Eles não respondem às propriedades de topo, esquerda, direita ou abaixo.
+            </p>
+            <div class="example static-example">
+                Este elemento tem <code>position: static</code>.
+            </div>
+        </section>
+    
+        <section>
+            <h3>Position Relative</h3>
+            <p>
+                Com <code>position: relative;</code>, o elemento é posicionado em relação à sua posição original no fluxo da página. O espaço que ele ocupa permanece, mas ele pode ser movido usando as propriedades <code>top</code>, <code>left</code>, <code>right</code>, e <code>bottom</code>.
+            </p>
+            <div class="example relative-example">
+                Este elemento foi movido usando <code>position: relative</code>.
+            </div>
+        </section>
+    
+        <section>
+            <h3>Position Absolute</h3>
+            <p>
+                O <code>position: absolute;</code> retira o elemento do fluxo normal da página e o posiciona em relação ao seu elemento pai mais próximo com <code>position: relative</code>, <code>absolute</code> ou <code>fixed</code>. Caso nenhum elemento pai tenha um desses valores, o elemento será posicionado em relação ao <code>body</code>.
+                <p>No exemplo abaixo o texto foi posicionado em cima da imagem.</p>
+            </p>
+            <div class="example absolute-example">
+                Este elemento foi posicionado com <code>position: absolute</code>.
+            </div>
+         <div class="pai">
+            <img src="../img/breakfast.jpeg">
+            <p class="filho">Breakfast</p>
+         </div>
+        </section>
+
+        <section>
+            <h3>Position Sticky</h3>
+            <p>
+                O <code>position: sticky;</code> permite que o elemento fique "grudado" em uma posição específica ao rolar a página, mas volta para sua posição original quando não é mais necessário. Ele se comporta como <code>relative</code> até que o usuário role a página para uma certa posição, e então se torna <code>fixed</code>.
+            </p>
+            <p>Para que ele funcione é preciso aplicar uma propriedade <code>top</code>.</p>
+            <div class="example sticky-example">
+                Este elemento tem <code>position: sticky</code>. Role a página para ver o efeito.
+            </div>
+        </section>
+
+        <section>
+            <h3>Position Fixed</h3>
+            <p>
+                O <code>position: fixed;</code> posiciona o elemento em relação à janela do navegador. O elemento fica fixo na tela, mesmo quando o usuário rola a página.
+            </p>
+            <div class="example fixed-example">
+                Este elemento foi posicionado com <code>position: fixed</code>. Role a página para ver seu comportamento.
+            </div>
+        </section>
+    
+        <section>
+            <h3>Z-Index</h3>
+            <p>
+                A propriedade <code>z-index</code> controla a ordem de empilhamento dos elementos posicionados. Elementos com <code>z-index</code> mais alto ficam sobre aqueles com <code>z-index</code> menor. Apenas elementos com <code>position</code> diferente de <code>static</code> podem ter <code>z-index</code> aplicado.
+            </p>
+            <div class="z-index-container">
+                <div class="example z-index-low">Z-Index: 1</div>
+                <div class="example z-index-high">Z-Index: 10</div>
+            </div>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+      </p>
+    </footer>
+  </body>
+</html>
