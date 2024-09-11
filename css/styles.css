@@ -110,20 +110,32 @@ header nav {
   z-index: 1000;
   background-color: rgb(17, 17, 17);
   box-shadow: 0 -10px 10px rgba(17, 17, 17, 0.6);
+  display: flex;
 }
-
+header nav ul {
+  display: flex;
+  flex: auto;
+  padding: 10px;
+  gap: 10px;
+}
 header nav ul li {
   z-index: 1050;
-  display: inline-block;
-  margin: 10px;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: space-around;
 }
 header nav ul li a {
   z-index: 1100;
-  /* text-shadow: 1px 1px #ffffffeb; */
   color: #f1f1f1;
   font-size: 1.2rem;
 }
 
+header nav ul li a:hover {
+  color: #68bbde;
+}
 h2 {
   font-size: 1.5rem;
   color: #33a8db;
