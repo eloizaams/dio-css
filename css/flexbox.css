@@ -12,8 +12,7 @@ ul li {
 .container-inline-flex,
 .example-container,
 .example-wrap,
-.example-combination,
-.example-flex-basis {
+.example-combination {
   display: flex;
   gap: 10px;
   background-color: #b049cc;
@@ -40,9 +39,6 @@ ul li {
 .example-combination {
   flex-flow: column wrap;
   height: 200px;
-}
-
-.example-flex-basis {
 }
 
 .item {
