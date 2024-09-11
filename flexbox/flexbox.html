@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
+    <link rel="stylesheet" href="../css/flexbox.css" />
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <img
+            src="../img/css.svg"
+            title="Logotipo Trilha de CSS DIO"
+            alt="Logotipo Trilha de CSS DIO"
+          />
+        </div>
+        <h1>Trilha CSS</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Introdução</a></li>
+          <li><a href="#">Estilização</a></li>
+          <li><a href="#">Medidas</a></li>
+          <li><a href="#">Posições</a></li>
+          <li><a href="#">Flexbox</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section>
+          <h2>Flexbox</h2>
+          <p>
+            Flexbox é um layout do CSS que permite alinhar elementos de uma
+            maneira mais flexível do que com a utilização de float ou position.
+          </p>
+          <p>
+            Flexbox divide o conteúdo em um grid, onde cada item é um
+            "container" flexível. Os containers podem ser alinhados
+            horizontalmente e verticalmente com os eixos do flexbox.
+          </p>
+        </section>
+      </article>
+      <article>
+        <section>
+          <h3>Entendendo Os Conceitos Do Flexbox</h3>
+          <p>
+            Flexbox é uma técnica de layout que usa um modelo de caixa para
+            definir como os elementos são dispostos no espaço disponível.
+          </p>
+          <p>
+            Permite posicionar os elementos dentro de outro elemento
+            (<i>container</i>).
+          </p>
+          <p>
+            Os elementos dentro do <i>container</i> são conhecidos como itens.
+          </p>
+          <figure id="img-container">
+            <img src="../img/container.png" >
+          </figure>
+          <h4>Display: Flex</h4>
+          <p>
+            A propriedade <code>display: flex</code> cria um contêiner flexível
+            que se estende para preencher o espaço disponível no bloco (elemento
+            pai), e os itens dentro desse contêiner são organizados conforme as
+            regras do Flexbox.
+          </p>
+          <div class="fundo-branco">
+            <div class="container-flex">
+              <div class="item">Item 1</div>
+              <div class="item">Item 2</div>
+              <div class="item">Item 3</div>
+            </div>
+          </div>
+
+          <h4>Display: Inline-Flex</h4>
+          <p>
+            A propriedade <code>display: inline-flex</code> cria um contêiner
+            flexível que se comporta como um elemento inline. Isso significa que
+            o contêiner flexível será exibido em linha com outros elementos e
+            não ocupará a largura total disponível.
+          </p>
+          <div class="fundo-branco">
+            <div class="container-inline-flex">
+              <div class="item">Item A</div>
+              <div class="item">Item B</div>
+              <div class="item">Item C</div>
+            </div>
+            <div class="container-inline-flex">
+              <div class="item">Item A</div>
+              <div class="item">Item B</div>
+              <div class="item">Item C</div>
+            </div>
+
+          </div>
+        </section>
+
+        <section>
+          <h3>Os Eixos Do Flexbox</h3>
+          <p>
+            O Flexbox tem dois eixos principais: o eixo principal e o eixo
+            transversal. O eixo principal é o eixo ao longo do qual os itens são
+            distribuídos, enquanto o eixo transversal é perpendicular ao eixo
+            principal.
+          </p>
+          <figure>
+            <img src="../img/eixos.png" />
+          </figure>
+          <p>Os ítens serão dispostos no leiaute seguindo ou o eixo principal ou o transversal.
+            <ul>
+              <li>
+                <p><strong>Eixo principal (main axis)</strong>: o eixo principal de um flex container é o eixo primário e ao longo dele são inseridos os flex items. <strong>Cuidado</strong>: O eixo principal não é necessariamente horizontal; vai depender da propriedade flex-direction.</p>
+                
+              </li>
+              <li>
+                <strong>main-start | main-end</strong>: os flex items são inseridos dentro do container começando pelo lado start, indo em direção ao lado end.
+              </li>
+              <li>
+                <strong>Tamanho principal</strong>: A largura ou altura de um flex item, dependendo da direção do container, é o tamanho principal do ítem. A propriedade de tamanho principal de um flex item pode ser tanto width quanto height, dependendo de qual delas estiver na direção principal.
+              </li>
+              <li>
+                <strong>Eixo transversal (cross axis)</strong>: O eixo perpendicular ao eixo principal é chamado de eixo transversal. Sua direção depende da direção do eixo principal.
+              </li>
+              <li>
+                <strong>cross-start | cross-end</strong>: Linhas flex são preenchidas com ítens e adicionadas ao container, começando pelo lado cross start do flex container em direção ao lado cross end.
+              </li>
+              <li>
+                <strong>cross size</strong>: A largura ou altura de um flex item, dependendo do que estiver na dimensão transversal, é o cross size do íten. A propriedade cross size pode ser tanto a largura quanto a altura do ítem, o que estiver na transversal.</p>
+              </li>
+            </ul>
+        </section>
+
+        <section>
+          <h3>
+            Definindo A Direção Do Flexbox Com A Propriedade Flex-Direction
+          </h3>
+          <p>
+            A propriedade <code>flex-direction</code> define a direção dos itens
+            ao longo do eixo principal. Os valores podem ser <code>row</code>,
+            <code>column</code>, <code>row-reverse</code> e
+            <code>column-reverse</code>.
+          </p>
+          <figure>
+            <img src="../img/direction.png">
+          </figure>
+
+        <section>
+          <h3>Quebra de Linhas e Colunas com Flex-Wrap</h3>
+          <p>
+            A propriedade <code>flex-wrap</code> define se os itens devem
+            quebrar para a próxima linha. Os valores podem ser
+            <code>nowrap</code>, <code>wrap</code>, e <code>wrap-reverse</code>.
+          </p>
+          <figure>
+            <img src="../img/wrap.png">
+          </figure>
+          <div class="fundo-branco">
+            <div class="example-wrap wrap-example">
+              <div class="item">Item 1</div>
+              <div class="item">Item 2</div>
+              <div class="item">Item 3</div>
+              <div class="item">Item 4</div>
+              <div class="item">Item 5</div>
+              <div class="item">Item 6</div>
+              <div class="item">Item 7</div>
+              <div class="item">Item 8</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Juntando a Propriedade Flex-Direction e Flex-Wrap em Flex-Flow</h3>
+          <p>
+            Você pode combinar <code>flex-direction</code> e
+            <code>flex-wrap</code> na propriedade <code>flex-flow</code>para criar layouts mais complexos. O valor padrão é <code>row nowrap</code>. Por exemplo, você pode usar <code>column</code> e <code>wrap</code> para
+            criar uma coluna que quebra em várias linhas.
+          </p>
+          <div class="fundo-branco">
+          <div class="example-combination">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+            <div class="item">Item 7</div>
+            <div class="item">Item 8</div>
+          </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Alinhando os Elementos no Eixo Principal com Justify-Content</h3>
+          <p>
+            A propriedade <code>justify-content</code> alinha os itens ao longo
+            do eixo principal. Os valores incluem <code>flex-start</code>, <code>flex-end</code>,
+            <code>center</code>, <code>space-between</code>, <code>space-around</code> e <code>space-evenly</code>.
+          </p>
+          <figure>
+            <img src="../img/justify.png">
+          </figure>
+        
+          <figure>
+            <img src="../img/space.png" >
+          </figure>
+        </section>
+        
+
+        <section>
+          <h3>Alinhando os Elementos no Eixo Transversal com Align-Items</h3>
+          <p>
+            A propriedade <code>align-items</code> alinha os itens ao longo do
+            eixo transversal. Os valores podem ser <code>flex-start</code>,
+            <code>center</code>, <code>flex-end</code>, <code>baseline</code>, e
+            <code>stretch</code>.
+          </p>
+          <figure>
+            <img src="../img/align-items.png" >
+          </figure>
+       
+        </section>
+
+        <section>
+          <h3>Alinhando as Linhas no Container com Align-Content</h3>
+          <p>
+            A propriedade <code>align-content</code> alinha as linhas do
+            container. Os valores podem ser <code>flex-start</code>,
+            <code>center</code>, <code>flex-end</code>,
+            <code>space-between</code>, <code>space-around</code>, e
+            <code>stretch</code>. Só tem efeito se o container tiver mais de uma linha.
+          </p>
+          <figure>
+            <img src="../img/align-content.png" >
+          </figure>
+     
+        </section>
+
+        <section>
+          <h3>Controlando os Espaços entre os Itens com Gap</h3>
+          <p>
+            A propriedade <code>gap</code> define o espaço entre os itens em um
+            container flexível. Pode ser usado para definir a distância entre
+            linhas e colunas.
+          </p>
+          <figure>
+            <img src="../img/gap.png" >
+          </figure>
+         
+        </section>
+
+        <section>
+          <h3>Ordenando os Itens Com a Propriedade Order</h3>
+          <p>
+            A propriedade <code>order</code> permite alterar a ordem dos itens
+            flexíveis. O valor padrão é 0, e valores positivos e negativos podem
+            ser usados para alterar a ordem de exibição dos itens.
+          </p>
+          <figure>
+            <img src="../img/items.png" >
+          </figure>
+        </section>
+
+        <section>
+          <h3>Propriedade Flex-Grow</h3>
+          <p>
+            A propriedade <code>flex-grow</code> define a capacidade de um item
+            de crescer em relação aos outros itens dentro do mesmo container. O
+            valor padrão é 0.
+          </p>
+          <figure>
+            <img src="../img/grow.png" >
+          </figure>
+          
+        </section>
+
+        <section>
+          <h3>Propriedade Flex-Shrink</h3>
+          <p>
+            A propriedade <code>flex-shrink</code> define a capacidade de um
+            item de encolher quando o espaço é reduzido. O valor padrão é 1.
+          </p>
+          <figure>
+            <img src="../img/shrink.png" >
+          </figure>
+        </section>
+
+        <section>
+          <h3>Propriedade Flex-Basis</h3>
+          <p>
+            A propriedade <code>flex-basis</code> define o tamanho inicial de um item antes do espaço disponível ser distribuído. Pode ser um valor em pixels, porcentagem, ou auto. Aceita também que o valor seja absoluto ou relativo.
+          </p>
+          <figure>
+            <img src="../img/flex-basis.png" >
+          </figure>
+          <p>Caso seja aplicado <code>flex-basis: 0</code>, o espaço extra  em volta do conteúdo não
+            será considerado. Se definirmos como <code>flex-basis: auto</code>, o espaço extra será
+            distribuído com base no que definimos na propriedade <code>flex-grow</code>.
+          </p>
+            <figure>
+              <img src="../img/flex-basis-2.png" >
+            </figure>
+            <p>
+              Se usarmos a propriedade <code>flex-basis</code> no item, ele irá sobrescrever o valor do
+              <code>width/height</code> do elemento. Porém, vai respeitar o <code>max-width/max-height</code> definido
+              para o elemento, assim como o <code>min-width/min-height</code>.
+            </p>
+            <figure>
+              <img src="../img/flex-basis-3.png" >
+            </figure>
+        </section>
+        <section>
+          <h3>Shorthand Flex</h3>
+          <p>Normalmente, as propriedades <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>
+            não são usadas de forma individual, mas sim através da propriedade abreviada <code>flex</code>.
+            Os valores de flex-grow, flex-shrink e flex-basis, são definidos, respectivamente, através da
+            propriedade flex.</p>
+            <figure>
+              <img src="../img/flex.png" >
+            </figure>
+        </section>
+        <section>
+          <h3>Propriedade Align-Self</h3>
+          <p>A propriedade <code>align-self</code> permite que nós possamos sobrescrever o alinhamento padrão aplicado em todos os itens de forma geral que foi definido pela propriedade align-items.</p>
+            <figure>
+              <img src="../img/align-self.png" >
+            </figure>
+        </section>
+        
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+      </p>
+    </footer>
+  </body>
+</html>

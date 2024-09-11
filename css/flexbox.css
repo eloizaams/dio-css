@@ -1,0 +1,67 @@
+@import url(styles.css);
+
+ul li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+.fundo-branco {
+  background-color: #fff;
+  padding: 20px;
+}
+.container-flex,
+.container-inline-flex,
+.example-container,
+.example-wrap,
+.example-combination,
+.example-flex-basis {
+  display: flex;
+  gap: 10px;
+  background-color: #b049cc;
+  box-shadow: inset 8px 8px 10px #9e08c8cb;
+  border: 2px solid #000;
+  border-radius: 8px;
+}
+
+.container-flex {
+  display: flex;
+}
+.container-flex .item {
+  flex-grow: 1;
+}
+.container-inline-flex {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.wrap-example {
+  flex-wrap: wrap;
+}
+
+.example-combination {
+  flex-flow: column wrap;
+  height: 200px;
+}
+
+.example-flex-basis {
+}
+
+.item {
+  background: #ef9139;
+  border: 2px groove #000;
+  box-shadow: inset 8px 8px 10px #febf77cb, 7px 7px 10px #0000005a;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 15px;
+}
+figure {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}
+img {
+  width: 80%;
+}
