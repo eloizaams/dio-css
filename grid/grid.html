@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
+    <link rel="stylesheet" href="../css/grid.css" />
+    <title>Grid</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="logo">
+          <img
+            src="../img/grid/css.svg"
+            title="Logotipo Trilha de CSS DIO"
+            alt="Logotipo Trilha de CSS DIO"
+          />
+        </div>
+        <h1>Trilha CSS</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../introducao/introducao.html">Introdução</a></li>
+          <li>
+            <a href="../estilizacao-basica/estilizacao.html">Estilização</a>
+          </li>
+          <li><a href="../unidades-medida\unidades-medida.html">Medidas</a></li>
+          <li><a href="../posicionamento/posicionamento.html">Posição</a></li>
+          <li><a href="../flexbox/flexbox.html">Flexbox</a></li>
+          <li><a href="../grid/grid.html">Grid</a></li>
+          <li><a href="../responsivo/responsivo.html">Responsivo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <section id="top">
+          <h2>CSS Grid Layout</h2>
+          <div class="flex">
+            <p>
+              Recurso que permite construir layouts bidimensionais, dividindo a
+              página em regiões e definindo onde cada elemento deve ficar.
+            </p>
+            <img src="../img/grid/grid.png" />
+          </div>
+        </section>
+
+        <section id="conceitos">
+          <h3>Entendendo os conceitos do Grid Layout</h3>
+          <p>
+            Grid Layout é uma técnica de layout de dois eixos, oferecendo mais
+            controle na distribuição dos elementos em linhas e colunas.
+          </p>
+        </section>
+
+        <section id="nomenclaturas">
+          <h3>Nomenclaturas do Grid</h3>
+          <p>
+            Alguns termos importantes incluem grid container, grid item, grid
+            line, grid cell, e grid area.
+          </p>
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid container</h4>
+              <p>
+                Elemento-pai que terá a propriedade
+                <code> display: grid</code> especificada. Ele irá “envolver”
+                todos os itens do grid.
+              </p>
+            </div>
+            <img src="../img/grid/grid-container.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid item</h4>
+              <p>Elementos que são filhos diretos do grid container.</p>
+            </div>
+            <img src="../img/grid/grid-item.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid columns</h4>
+              <p>
+                As faixas verticais dos itens do grid, são chamados de colunas
+                (<i>grid columns</i> ).
+              </p>
+            </div>
+            <img src="../img/grid/grid-columns.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid rows</h4>
+              <p>
+                As faixas horizontais dos itens do grid, são chamados de linhas
+                (<i>grid rows</i> ).
+              </p>
+            </div>
+            <img src="../img/grid/grid-rows.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid gaps</h4>
+              <p>
+                Espaços entre as linhas (<i>grid rows</i> ) e colunas (
+                <i>grid columns</i> ) do grid.
+              </p>
+            </div>
+            <img src="../img/grid/grid-gaps.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid lines</h4>
+              <p>
+                Divisórias que compõem a estrutura da grade. As linhas entre as
+                colunas são chamadas de <i>column lines</i> (linhas de coluna)
+                e, as que estão entre as faixas horizontais, são chamadas de
+                <i>row lines </i>(linhas de linha).
+              </p>
+            </div>
+            <img src="../img/grid/grid-rows.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>grid cell</h4>
+              <p>
+                São as células, ou seja, cada <i>“quadrado”</i> da grade, que
+                vai entre uma grid line e outra.
+              </p>
+            </div>
+            <img src="../img/grid/grid-cell.png" />
+          </div>
+        </section>
+
+        <section id="iniciando">
+          <h3>Iniciando com o CSS Grid</h3>
+          <p>
+            Para usar o CSS Grid, basta aplicar <code>display: grid</code> no
+            container desejado.
+          </p>
+
+          <div class="container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+          </div>
+          <p>Pode também adicionar <code>display:inline-grid</code></p>
+          <div class="container inline-grid">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+          </div>
+          <div class="container inline-grid">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+          </div>
+          <div class="container inline-grid">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+          </div>
+        </section>
+
+        <section id="colunas-linhas">
+          <h3>Adicionando colunas e linhas ao Grid</h3>
+          <p>
+            Usamos <code>grid-template-columns</code> e
+            <code>grid-template-rows</code> para definir as faixas do grid.
+          </p>
+          <h4>Exemplo:</h4>
+          <div class="code-example big-code">
+            <p>
+              <code class="grid-code"
+                >grid-template-columns:
+                <span class="valor">repeat(2, 1fr);</span
+                ><span> /* Duas colunas de tamanhos iguais */</span></code
+              >
+            </p>
+            <p>
+              <code class="grid-code">
+                grid-template-rows: <span class="valor">auto;</span>
+                <span>/* Altura automática baseada no conteúdo */</span>
+              </code>
+            </p>
+          </div>
+          <div class="container grid-exemplo-1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+          </div>
+          <div class="flex">
+            <div class="flex-left">
+              <h4>Unidade de medida fr</h4>
+              <p>
+                Criada para o CSS Grid, a unidade de medida
+                <code>fr</code> representa uma fração do espaço disponível no
+                container do grid.
+              </p>
+            </div>
+            <img src="../img/grid/grid-fr.png" />
+          </div>
+
+          <div class="flex">
+            <div class="flex-left">
+              <h4>Função repeat()</h4>
+              <p>
+                Permite repetir para todas, ou para algumas das faixas, o mesmo
+                valor para seu tamanho de coluna ou linha.
+              </p>
+            </div>
+            <img src="../img/grid/grid-repeat.png" id="img-repeat" />
+          </div>
+          <h4>
+            Outros valores para a função repeat: <code>auto-fill</code> e
+            <code>auto-fit</code>
+          </h4>
+          <p>
+            Ambas as funções são usadas com a propriedade
+            <code>grid-template-columns</code> ou
+            <code>grid-template-rows</code> para criar colunas ou linhas
+            repetitivas de acordo com o espaço disponível. Elas ajudam a
+            preencher o espaço disponível de forma inteligente, mas há uma
+            diferença sutil entre elas:
+          </p>
+          <p class="p-item">
+            <code>auto-fill</code>: Preenche o grid com o máximo de colunas (ou
+            linhas) que caibam no espaço disponível, independentemente de haver
+            conteúdo suficiente. Isso significa que, mesmo que alguns slots
+            fiquem vazios, o grid continua tentando "preencher" o espaço. É útil
+            quando você quer garantir que o layout preencha o espaço, mas não
+            necessariamente todos os slots terão conteúdo.
+          </p>
+          <div class="code-example big-code">
+            <p>
+              <code class="grid-code"
+                >grid-template-columns:
+                <span class="valor"
+                  >repeat(auto-fill, minmax(100px, 1fr));</span
+                ></code
+              >
+            </p>
+          </div>
+          <div class="container auto-fill">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+          </div>
+          <p class="p-item">
+            <code>auto-fit</code>: Comporta-se de maneira similar ao auto-fill,
+            mas "colapsa" as colunas ou linhas vazias, ajustando o layout para
+            caber exatamente os itens disponíveis, sem criar colunas ou linhas
+            vazias. é ideal quando você quer que os itens se ajustem exatamente
+            ao conteúdo disponível, sem criar slots vazios.
+          </p>
+          <div class="code-example big-code">
+            <p>
+              <code class="grid-code"
+                >grid-template-columns:
+                <span class="valor"
+                  >repeat(auto-fit, minmax(100px, 1fr));</span
+                ></code
+              >
+            </p>
+          </div>
+          <div class="container auto-fit">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+          </div>
+          <h4>Função minmax()</h4>
+          <p>
+            A função <code>minmax(min, max)</code> é usada para definir o
+            tamanho mínimo e máximo das colunas ou linhas. Quando combinada com
+            <code>repeat()</code> e <code>auto-fill</code> ou
+            <code>auto-fit</code>, ela cria um layout flexível, permitindo que
+            os itens do grid tenham um tamanho mínimo e se expandam até o
+            tamanho máximo disponível.
+          </p>
+          <p class="p-item">
+            Define um intervalo de valores para o tamanho das colunas ou linhas.
+            O primeiro parâmetro define o tamanho mínimo, enquanto o segundo
+            define o tamanho máximo. É muito útil para garantir que os elementos
+            do grid tenham um tamanho mínimo para serem legíveis, mas que também
+            se ajustem para ocupar o espaço extra, se houver.
+          </p>
+          <h4>
+            Uso do <code>min-content</code>, <code>max-content</code> e
+            <code>auto</code> no grid
+          </h4>
+
+          <p class="p-item">
+            <code>min-content</code> A menor largura possível do conteúdo, sem
+            quebras ou transbordamento. <code>max-content</code> O maior tamanho
+            que o conteúdo pode ter sem forçar quebras de linha.
+            <code>auto</code> O navegador decide o tamanho automaticamente,
+            baseado no conteúdo e no contêiner pai.
+          </p>
+          <div class="code-example big-code">
+            <p>
+              <code class="grid-code">
+                grid-template-columns:
+                <span class="valor"> min-content max-content auto;</span>
+              </code>
+            </p>
+          </div>
+          <div class="container min-content">
+            <div class="item">01 Trilha de CSS</div>
+            <div class="item">02</div>
+            <div class="item">03</div>
+            <div class="item">04</div>
+            <div class="item">05 Eloiza Souza</div>
+            <div class="item">06</div>
+            <div class="item">07</div>
+            <div class="item">08</div>
+            <div class="item">09</div>
+          </div>
+        </section>
+
+        <section id="grid-implicito-explicito">
+          <h3>Grid implícito e explícito</h3>
+          <p>
+            Quando define-se as colunas e linhas através das propriedades
+            <code>grid-template-columns</code> e
+            <code>grid-template-rows</code>, estamos criando um
+            <strong>grid explícito</strong>.
+          </p>
+          <p>
+            Mas, se os itens não couberem, o grid colocará um item fora desse
+            grid que definimos, criando o que chamamos de
+            <strong>grid implícito</strong> .
+          </p>
+          <h4>Propriedade <code>grid-auto-flow</code></h4>
+          <p>
+            É usada para controlar como os itens são automaticamente
+            posicionados no Grid Layout quando não são especificadas as posições
+            exatas para eles. Ela define se os itens serão colocados em
+            sequência por <strong>linha</strong> ou por
+            <strong>coluna</strong> e também pode ser usada para preencher o
+            espaço automaticamente. Seus valores podem ser:
+          </p>
+          <ol>
+            <li>
+              <code>row</code> (padrão): Os itens são posicionados de forma
+              automática seguindo a direção da linha, ou seja, eles são
+              colocados da esquerda para a direita e, quando atingem o final da
+              linha, começam uma nova linha.
+            </li>
+            <li>
+              <code>column</code>: Os itens são posicionados em colunas. Eles
+              são colocados de cima para baixo e, ao atingir o final da coluna,
+              começam uma nova coluna.
+            </li>
+            <li>
+              <code>dense</code>: Tenta preencher os espaços vazios dentro do
+              grid, rearranjando os itens para ocupar todos os espaços livres.
+            </li>
+            <li>
+              <code>row dense</code> ou <code>column dense</code>: Combina a
+              colocação de itens em linhas ou colunas com o preenchimento denso
+              de espaços vazios.
+            </li>
+          </ol>
+          <p>
+            As propriedades <code>grid-auto-columns</code> define a largura das
+            colunas que forem criadas automaticamente.
+          </p>
+          <p>Exemplo 1:</p>
+          <div class="code-example">
+            <p>
+              <code class="grid-code"
+                >grid-template-columns:
+                <span class="valor">repeat(5, 1fr);</span> <br />
+                grid-auto-flow: <span class="valor">row;</span>
+              </code>
+            </p>
+          </div>
+          <div class="container auto-flow-row">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+          </div>
+          <p>Exemplo 2:</p>
+          <div class="code-example">
+            <p>
+              <code class="grid-code"
+                >grid-template-columns:
+                <span class="valor">repeat(5, 1fr);</span><br />
+                grid-auto-columns: <span class="valor">200px;</span><br />
+                grid-auto-flow: <span class="valor">column;</span>
+              </code>
+            </p>
+          </div>
+          <div class="container auto-flow-column">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6 - Grid implícito</div>
+          </div>
+        </section>
+
+        <section id="alocacao-itens">
+          <h3>Alocando os itens do Grid nas posições específicas</h3>
+          <p>
+            Cada linha do grid possui um número para que possamos usar de
+            referência (exceto para grids implícitos)
+          </p>
+          <p>
+            Utilize <code>grid-column</code>, <code>grid-row</code> e
+            <code>grid-area</code>para controlar o posicionamento de cada item
+            no grid.
+          </p>
+          <p>
+            O valor a ser atribuído é o número correspondente à linha do grid.
+            Caso coloque <code>span nº</code> indica quantas células naquela
+            direção do grid o item irá ocupupar.
+          </p>
+          <p>
+            O <code>grid-area</code> pode ser utilizado para simplificar o
+            código.
+          </p>
+          <p>Exemplo 2:</p>
+          <div class="code-example big-code">
+            <p>
+              <code class="grid-code">
+                grid-column-start: <span class="valor">2;</span><br />
+                grid-column-end: <span class="valor">5;</span><br />
+                grid-row: <span class="valor">1 / span 3;</span>
+                <span>/* versão simplificada do grid- row */</span> <br />
+                <span>/* grid-area: 1 / 2 / span 3 / 5; */</span>
+              </code>
+            </p>
+          </div>
+          <div class="container grid-alocacao">
+            <div class="item item1">Item 1</div>
+          </div>
+        </section>
+
+        <section id="areas-grid">
+          <h3>Áreas do Grid</h3>
+          <p>
+            É possível nomear as áreas do grid e posicionar os itens dentro das
+            áreas específicas, as referenciando através do nome.
+          </p>
+          <div class="code-example">
+            <p>
+              <code class="grid-code">
+                grid-template-columns: <span class="valor">1fr 2fr;</span><br />
+                grid-template-rows:<span class="valor"
+                  >70px 70px 70px 70px;</span
+                ><br />
+                grid-template-areas: <br />
+                <span class="valor">"header header"</span><br />
+                <span class="valor">"menu content"</span><br />
+                <span class="valor"> "menu content"</span><br />
+                <span class="valor">"footer footer";</span>
+              </code>
+            </p>
+          </div>
+
+          <div class="container grid-areas">
+            <div class="item header">header</div>
+            <div class="item menu">menu</div>
+            <div class="item content">main</div>
+            <div class="item footer">footer</div>
+          </div>
+        </section>
+
+        <section id="grid-template-shorthand">
+          <h3>Shorthand grid-template</h3>
+          <p>
+            A propriedade <code>grid-template</code> permite combinar
+            <code>grid-template-columns</code>,
+            <code>grid-template-rows</code> e <code>grid-template-areas</code>.
+          </p>
+
+          <div class="code-example">
+            <p>
+              <code class="grid-code">
+                grid-template: <br />
+                <span class="valor">"header header" 70px</span><br />
+                <span class="valor">"menu content" auto</span><br />
+                <span class="valor">"footer footer" 70px / 1fr 2fr;</span><br />
+              </code>
+            </p>
+          </div>
+          <div class="container grid-shorthand-template">
+            <div class="item header">header</div>
+            <div class="item menu">menu</div>
+            <div class="item content">
+              main
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
+                laborum beatae obcaecati cumque, expedita odit dolore quas
+                repellendus nostrum saep.
+              </p>
+            </div>
+            <div class="item footer">footer</div>
+          </div>
+        </section>
+
+        <section id="espacamento-elementos">
+          <h3>Definindo os espaçamentos dos elementos do Grid</h3>
+
+          <div class="flex">
+            <div class="flex-left">
+              <p>
+                Utilize <code>grid-gap</code>, <code>row-gap</code> e
+                <code>column-gap</code> para definir os espaçamentos entre os
+                itens.
+              </p>
+            </div>
+            <img src="../img/grid/grid-gap.png" />
+          </div>
+        </section>
+
+        <section id="grid-shorthand">
+          <h3>Shorthand grid</h3>
+          <p>
+            O shorthand <code>grid</code> pode combinar diversas propriedades do
+            Grid em uma só.
+          </p>
+          <p>Exemplos:</p>
+          <div class="exemplos-grid">
+            <img src="../img/grid/grid-0.png" class="c1" />
+            <img src="../img/grid/grid-1.png" class="c2" />
+            <img src="../img/grid/grid-2.png" class="c3" />
+            <img src="../img/grid/grid-3.png" class="c4" />
+            <img src="../img/grid/grid-4.png" class="c5" />
+            <img src="../img/grid/grid-5.png" class="c6" />
+          </div>
+        </section>
+
+        <section id="alinhando-itens">
+          <h3>Alinhando os itens com justify-items e align-items</h3>
+          <p>
+            Estas propriedades controlam o alinhamento dos itens dentro de cada
+            célula do grid.
+          </p>
+          <p>Exemplos:</p>
+          <div class="justify-items">
+            <img src="../img/grid/justify-items.png" />
+            <img src="../img/grid/align-items.png" />
+          </div>
+        </section>
+
+        <section id="place-items">
+          <h3>Alinhando os itens da linha e coluna com place-items</h3>
+          <p>
+            Combine <code>justify-items</code> e <code>align-items</code> em uma
+            única propriedade: <code>place-items</code>.
+          </p>
+        </section>
+
+        <section id="justify-align-content">
+          <h3>
+            Alinhando o conteúdo do Grid com justify-content e align-content
+          </h3>
+          <p>
+            Estas propriedades alinham o conteúdo do grid ao longo do eixo
+            principal.
+          </p>
+          <p>Exemplos:</p>
+          <div class="justify-items">
+            <img src="../img/grid/justify-content.png" />
+            <img src="../img/grid/justify-content-2.png" />
+            <img src="../img/grid/align-content.png" />
+          </div>
+        </section>
+
+        <section id="place-content">
+          <h3>
+            Alinhando o conteúdo do Grid horizontalmente e verticalmente com
+            place-content
+          </h3>
+          <p>
+            Combine <code>justify-content</code> e
+            <code>align-content</code> usando <code>place-content</code>.
+          </p>
+        </section>
+
+        <section id="justify-align-self">
+          <h3>Alinhando itens específicos com justify-self e align-self</h3>
+          <p>
+            Permite alinhar itens individuais em uma célula específica do grid.
+          </p>
+          <p>Exemplos:</p>
+          <div class="justify-items">
+            <img src="../img/grid/justify-self.png" />
+            <img src="../img/grid/align-self.png" />
+          </div>
+        </section>
+
+        <section id="place-self">
+          <h3>
+            Alinhando itens específicos horizontalmente e verticalmente com
+            place-self
+          </h3>
+          <p>
+            Combine <code>justify-self</code> e <code>align-self</code> em uma
+            única propriedade: <code>place-self</code>.
+          </p>
+        </section>
+        <section id="links-uteis">
+          <h3>Links úteis</h3>
+          <ul>
+            <li>
+              <a href="https://cssgridgarden.com/">Grid Garden</a>
+            </li>
+            <li>
+              <a href="https://www.w3schools.com/css/css_grid.asp"
+                >CSS Grid Layout Module - W3Schools</a
+              >
+            </li>
+            <li>
+              <a href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+                >A Complete Guide to Grid</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_grid_layout"
+                >CSS Grid Layout</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.origamid.com/projetos/css-grid-layout-guia-completo/"
+                >Grid Guide (Origamid)</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p>Guia completo de CSS Grid Layout.</p>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+      </p>
+    </footer>
+  </body>
+</html>

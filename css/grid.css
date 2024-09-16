@@ -1,0 +1,342 @@
+@import url(styles.css);
+img {
+  margin: 0;
+}
+p {
+  justify-content: justify;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.flex img {
+  max-width: 30%;
+}
+#top p {
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.flex-left {
+  margin: 0;
+}
+.flex-left h4 {
+  color: #7dc7d8;
+}
+.flex-left p {
+  font-size: 1rem;
+}
+.container {
+  background-color: #b049cc;
+  box-shadow: inset 8px 8px 10px #9e08c8cb;
+  border: 2px solid #000;
+  border-radius: 8px;
+  margin: 1rem 10rem;
+  display: grid;
+}
+
+.item {
+  background: #ef9139;
+  border: 2px solid #000;
+  box-shadow: inset 8px 8px 10px #febf77cb, 7px 7px 10px #0000005a;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inline-grid {
+  display: inline-grid;
+  margin: 3rem;
+}
+/* Grid Exemplo 1: Adicionando colunas e linhas ao Grid */
+.grid-exemplo-1 {
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanhos iguais */
+  grid-template-rows: auto; /* Altura automática baseada no conteúdo */
+}
+.code-example {
+  width: 50%;
+  border-radius: 10px;
+  line-height: 1.3;
+  background-color: #333;
+  border-radius: 3px;
+  margin-top: 1rem;
+  padding: 10px 0;
+}
+.valor {
+  color: orange !important;
+}
+.big-code {
+  width: 80%;
+}
+.grid-code {
+  background-color: transparent;
+  color: rgb(0, 255, 247);
+  line-height: 1;
+  padding: 0;
+}
+
+.code-example p {
+  justify-content: flex-start;
+  width: 90%;
+}
+
+.code-example code span {
+  font-family: monospace;
+  font-size: 1em;
+  color: #4682b4;
+}
+#img-repeat {
+  max-width: 50%;
+}
+.auto-fill {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.p-item {
+  margin: 1rem;
+}
+.min-content {
+  grid-template-columns: min-content max-content auto;
+}
+.auto-flow-column {
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: 200px;
+  grid-auto-flow: column;
+  margin: 1rem 3rem;
+}
+.auto-flow-row {
+  grid-template-rows: repeat(5, 1fr);
+  grid-auto-flow: row;
+}
+
+/* Alocando itens nas posições específicas */
+.grid-alocacao {
+  grid-template-columns: repeat(2, 1fr) 4fr repeat(2, 1fr);
+  grid-template-rows: 50px 100px 80px;
+}
+
+.item1 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row: 1 / span 3;
+}
+
+/* Áreas do Grid */
+.grid-areas {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 70px 70px 70px 70px;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "menu content"
+    "footer footer";
+  gap: 0.3rem;
+  padding: 0.3rem;
+}
+
+.grid-areas div {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.header {
+  grid-area: header;
+  background: #5680fb;
+  box-shadow: inset 8px 8px 10px rgba(161, 176, 248, 0.796),
+    7px 7px 10px #0000005a;
+}
+
+.menu {
+  grid-area: menu;
+  background: #33f293;
+  box-shadow: inset 8px 8px 10px #abf9d2cb, 7px 7px 10px #0000005a;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+  box-shadow: inset 8px 8px 10px #f1e99acb, 7px 7px 10px #0000005a;
+  background: #f7e436;
+}
+
+/* Shorthand grid-template */
+.grid-shorthand-template {
+  grid-template:
+    "header header" 70px
+    "menu content" auto
+    "footer footer" 70px / 1fr 2fr;
+  gap: 0.3rem;
+  padding: 0.3rem;
+}
+
+/* Definindo os espaçamentos dos elementos do Grid */
+.grid-gap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px; /* Espaçamento entre linhas e colunas */
+}
+
+.grid-gap .item {
+  background: #ff69b4;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Shorthand grid */
+.grid-shorthand {
+  display: grid;
+  grid: auto-flow / repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-shorthand .item {
+  background: #ff6347;
+  padding: 20px;
+  text-align: center;
+}
+.exemplos-grid {
+  display: grid;
+  width: 100%;
+  gap: 15px;
+  grid:
+    "c1 c2" auto
+    "c3 c4" auto
+    "c5 c5" auto
+    "c6 c6" auto / 1fr 1fr;
+}
+.exemplos-grid img {
+  max-width: 100%;
+  place-items: center;
+  place-self: center;
+}
+.c1 {
+  grid-area: c1;
+}
+.c2 {
+  grid-area: c2;
+}
+.c3 {
+  grid-area: c3;
+}
+.c4 {
+  grid-area: c4;
+}
+.c5 {
+  grid-area: c5;
+  max-width: 50% !important;
+}
+.c6 {
+  grid-area: c6;
+}
+
+.justify-items img {
+  max-width: 100%;
+}
+
+/* Alinhando itens da linha e coluna com place-items */
+.grid-place-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px;
+  place-items: center center; /* Centraliza os itens horizontal e verticalmente */
+  gap: 10px;
+}
+
+.grid-place-items .item {
+  background: #00ced1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Alinhando o conteúdo do Grid com justify-content e align-content */
+.grid-justify-align-content {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 100px;
+  justify-content: space-between; /* Alinha o conteúdo horizontalmente */
+  align-content: center; /* Alinha o conteúdo verticalmente */
+}
+
+.grid-justify-align-content .item {
+  background: #ff4500;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Alinhando conteúdo com place-content */
+.grid-place-content {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: 100px;
+  place-content: center; /* Centraliza o conteúdo */
+}
+
+.grid-place-content .item {
+  background: #adff2f;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Alinhando itens específicos com justify-self e align-self */
+.grid-align-self {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: 150px;
+  gap: 10px;
+}
+
+.grid-align-self .item1 {
+  background: #8b008b;
+  justify-self: start; /* Alinha à esquerda */
+  align-self: start; /* Alinha no topo */
+}
+
+.grid-align-self .item2 {
+  background: #20b2aa;
+  justify-self: end; /* Alinha à direita */
+  align-self: end; /* Alinha na parte inferior */
+}
+
+.grid-align-self .item {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Alinhando itens específicos com place-self */
+.grid-place-self {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: 150px;
+  gap: 10px;
+}
+
+.grid-place-self .item1 {
+  background: #ff00ff;
+  place-self: center; /* Centraliza horizontal e verticalmente */
+}
+
+.grid-place-self .item2 {
+  background: #ba55d3;
+  place-self: end; /* Alinha no canto inferior direito */
+}
+
+.grid-place-self .item {
+  padding: 20px;
+  text-align: center;
+}
