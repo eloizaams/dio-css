@@ -10,20 +10,35 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img
-          src="../img/css.svg"
-          title="Logotipo Trilha de CSS DIO"
-          alt="Logotipo Trilha de CSS DIO"
-        />
+      <div class="container-header">
+        <div class="logo">
+          <img
+            src="../img/css.svg"
+            title="Logotipo Trilha de CSS DIO"
+            alt="Logotipo Trilha de CSS DIO"
+          />
+        </div>
+        <h1>Trilha CSS</h1>
       </div>
-      <h1>Trilha CSS</h1>
-     
-      <button #="voltar"><a href="../index.html">Voltar</a></button>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../introducao/introducao.html">Introdução</a></li>
+          <li>
+            <a href="../estilizacao-basica/estilizacao.html">Estilização</a>
+          </li>
+          <li><a href="../unidades-medida\unidades-medida.html">Medidas</a></li>
+          <li><a href="../posicionamento/posicionamento.html">Posição</a></li>
+          <li><a href="../flexbox/flexbox.html">Flexbox</a></li>
+          <li><a href="../grid/grid.html">Grid</a></li>
+          <li><a href="../responsivo/responsivo.html">Responsivo</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <article class="introducao">
-        <h2>Introdução do CSS</h2>
+      <article id="introducao">
+       <section>
+        <h2>Introdução ao CSS</h2>
         <p id="bem-vindo">Bem vindo!</p>
         <p id="entender-css">Vamos entender o CSS!</p>
         <h3>Propriedades e valores</h3>
@@ -53,8 +68,10 @@
             </li>
           </ul>
         </div>
+       </section>
       </article>
-      <article class="seletores">
+      <article id="seletores">
+       <section>
         <h2>Seletores CSS</h2>
         <div>
           <ul>
@@ -113,34 +130,37 @@
             </li>
           </ul>
         </div>
+       </section>
       </article>
-      <article class="combinadores">
-        <h2>Combinadores</h2>
-        <div>
-          <h3>Agrupamento de Seletores</h3>
-          <p class="texto">
-            Podemos aplicar as mesmas regras CSS para vários seletores
-            diferentes. Para isso, podemos separar os seletores utilizando uma
-            vígula (,).
-          </p>
-          <div class="texto">
-            Assim, não precisamos fiar copiando e colando os mesmos códigos para
-            todos, nós podemos fazer um só básico de CSS e reutilizar as mesmas
-            regras!
-          </div>
-          <p>Exemplos:</p>
+      <article id="combinadores">
+        <section>
+          <h2>Combinadores</h2>
+          <div>
+            <h3>Agrupamento de Seletores</h3>
+            <p class="texto">
+              Podemos aplicar as mesmas regras CSS para vários seletores
+              diferentes. Para isso, podemos separar os seletores utilizando uma
+              vígula (,).
+            </p>
+            <div class="texto">
+              Assim, não precisamos fiar copiando e colando os mesmos códigos para
+              todos, nós podemos fazer um só básico de CSS e reutilizar as mesmas
+              regras!
+            </div>
+            <p>Exemplos:</p>
 
-          <a id="link-referencia" href="#">Clique para ver a documentação</a>
-          <br /><br />
-          <a id="link-suporte" href="#">Clique para entrar em contato</a>
-          <br /><br />
-          <a id="botao-voltar" href="#">Voltar</a>
-          <br /><br />
-          <button id="botao-fechar">Fechar página</button>
-        </div>
-        <div>
-          <h3>Combinadores</h3>
-          <p>Especifica o tipo de relação entre dois seletores.</p>
+            <a id="link-referencia" href="#">Clique para ver a documentação</a>
+            <br /><br />
+            <a id="link-suporte" href="#">Clique para entrar em contato</a>
+            <br /><br />
+            <a id="botao-voltar" href="#">Voltar</a>
+            <br /><br />
+            <button id="botao-fechar">Fechar página</button>
+          </div>
+          <div>
+            <h3>Combinadores</h3>
+            <p>Especifica o tipo de relação entre dois seletores.</p>
+        </section>
 
           <section>
             <h4>Combinador Descendente</h4>
@@ -156,7 +176,7 @@
                 <ul id="sublista-01">
                   <li>Subitem A</li>
                   <li>Subitem B</li>
-          initial;ul>
+                </ul>
               </li>
               <li class="fundo-verde" id="lista-02">
                 <div>Item 2</div>
@@ -228,9 +248,11 @@
           </section>
       </article>
 
-      <article class="dimensionamento">
-        <h2>Dimensionamento e Espaçamento</h2>
+      <article id="dimensionamento">
         <section id="largura-altura">
+        <h2>Dimensionamento e Espaçamento</h2>
+    
+       
           <h3>Largura e Altura</h3>
           <div id="ex-alt-lar">
             Exemplo altura e largura de um elemento

@@ -148,8 +148,8 @@ p {
   background-color: #f1f1f1;
   border-radius: 5px;
   display: grid;
-  grid-template-columns: 100px 150px; /* Define as colunas: 100px e 150px */
-  grid-template-rows: 50px 50px; /* Define as linhas: 50px cada */
+  grid-template-columns: 1fr 1.5fr; /* Define as colunas: 100px e 150px */
+
   gap: 10px; /* Espaçamento entre os itens */
   justify-content: center; /* Centraliza o grid horizontalmente */
   align-content: center; /* Centraliza o grid verticalmente */
@@ -158,9 +158,11 @@ p {
 .grid-1 {
   border: 3px solid tomato;
   border-radius: 10px;
-  background-color: rgba(255, 99, 71, 0.75);
+  background-color: #ff6347bf;
   grid-column: 1; /* Posiciona na primeira coluna */
   grid-row: 1; /* Primeira linha */
+  width: 80%;
+  height: 50px;
 }
 
 .grid-2 {
@@ -169,6 +171,8 @@ p {
   background-color: rgba(78, 198, 150, 0.75);
   grid-column: 1; /* Continua na primeira coluna */
   grid-row: 2; /* Segunda linha */
+  width: 200%;
+  height: 50px;
 }
 
 .grid-3 {
@@ -177,6 +181,8 @@ p {
   background-color: rgba(227, 196, 59, 0.75);
   grid-column: 2; /* Segunda coluna */
   grid-row: 1 / span 2; /* Ocupa a primeira e a segunda linha */
+  width:80%;
+  height: 50px;
 }
 
 .example {

@@ -87,22 +87,7 @@ header .logo {
   border: none;
   z-index: 900;
 }
-header button {
-  margin: 0 auto;
-  padding: 8px 16px;
-  border: 2px solid transparent;
-  border-image-source: linear-gradient(180deg, #3ba1cd 0%, #1572b7 100%);
-  border-radius: 30px;
-  border-image-slice: 10;
-  color: #31a8dd;
-  cursor: pointer;
-  text-transform: uppercase;
-  background-color: transparent;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 10px;
-}
+
 header nav {
   position: -webkit-sticky;
   position: sticky;

@@ -9,25 +9,42 @@
   </head>
   <body>
     <header>
-      <div class="logo"></div>
-        <img
-          src="../img/css.svg"
-          title="Logotipo Trilha de CSS DIO"
-          alt="Logotipo Trilha de CSS DIO"
-        />
+      <div class="container-header">
+        <div class="logo">
+          <img
+            src="../img/css.svg"
+            title="Logotipo Trilha de CSS DIO"
+            alt="Logotipo Trilha de CSS DIO"
+          />
+        </div>
+        <h1>Trilha CSS</h1>
       </div>
-      <h1>Trilha CSS</h1>
-      <button id="voltar"><a href="../index.html">Voltar</a></button>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../introducao/introducao.html">Introdução</a></li>
+          <li>
+            <a href="../estilizacao-basica/estilizacao.html">Estilização</a>
+          </li>
+          <li><a href="../unidades-medida\unidades-medida.html">Medidas</a></li>
+          <li><a href="../posicionamento/posicionamento.html">Posição</a></li>
+          <li><a href="../flexbox/flexbox.html">Flexbox</a></li>
+          <li><a href="../grid/grid.html">Grid</a></li>
+          <li><a href="../responsivo/responsivo.html">Responsivo</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
       <article class="absolutas">
+       <section>
         <h2>Unidades de Medidas Absolutas</h2>
         <p>
           As unidades de medida absolutas têm um valor fixo, independentemente
           de outras propriedades. Elas são úteis para especificar tamanhos e
           dimensões que precisam ser constantes, ou seja, o tamanho não vai mudar por interferência de outros fatores ou alterações. 
         </p>
+       </section>
         <section class="exemplo">
             <h3>- Pixels (px)</h3>
             <p>
@@ -76,20 +93,22 @@
       </article>
 
       <article class="relativas">
-        <h2>Unidades de Medidas Relativas</h2>
-        <p>
-          As unidades de medida relativas são baseadas em outros elementos, como
-          o tamanho da fonte do elemento pai. Elas são úteis para criar layouts
-          responsivos e adaptáveis.
-        </p>
-        <p>O elemnento raiz &lthtml&gt herda o valor padrão do tamanho das fontes dos navegadores e esse tamanho pode ser configurado nas preferências do browser.</p>
-        <h3>Vantagens de utilizar as unidades em e rem</h3>
-        <p>Traz flexibilidade aos projetos e a capacidade de dimensionar os elementos das páginas web, resulado em designs:</p>
-        <ul>
-            <li>Fácil manutenção</li>
-            <li>Responsivos</li>
-            <li>Controle de escla pelos navegadores.</li>
-        </ul>
+     <section>
+      <h2>Unidades de Medidas Relativas</h2>
+      <p>
+        As unidades de medida relativas são baseadas em outros elementos, como
+        o tamanho da fonte do elemento pai. Elas são úteis para criar layouts
+        responsivos e adaptáveis.
+      </p>
+      <p>O elemnento raiz &lthtml&gt herda o valor padrão do tamanho das fontes dos navegadores e esse tamanho pode ser configurado nas preferências do browser.</p>
+      <h3>Vantagens de utilizar as unidades em e rem</h3>
+      <p>Traz flexibilidade aos projetos e a capacidade de dimensionar os elementos das páginas web, resulado em designs:</p>
+      <ul>
+          <li>Fácil manutenção</li>
+          <li>Responsivos</li>
+          <li>Controle de escla pelos navegadores.</li>
+      </ul>
+     </section>
         <section class="exemplo">
           <h3>- Em (em)</h3>
           <p>
@@ -145,8 +164,10 @@
         </section>
       </article>
       <article class="calculo">
-        <h2>Calculando valores em CSS</h2>
-        <p>No CSS, podemos usar funções para calcular valores dinâmicos para tamanhos, margens, espaçamentos e muito mais. Estas funções são úteis para criar layouts responsivos e flexíveis, especialmente ao trabalhar com diferentes unidades de medida como <code>px</code>, <code>em</code>, <code>%</code>, etc. Vamos explorar algumas das funções mais comuns como <code>calc()</code>, <code>max()</code> e <code>min()</code>.</p>
+ <section>
+  <h2>Calculando valores em CSS</h2>
+  <p>No CSS, podemos usar funções para calcular valores dinâmicos para tamanhos, margens, espaçamentos e muito mais. Estas funções são úteis para criar layouts responsivos e flexíveis, especialmente ao trabalhar com diferentes unidades de medida como <code>px</code>, <code>em</code>, <code>%</code>, etc. Vamos explorar algumas das funções mais comuns como <code>calc()</code>, <code>max()</code> e <code>min()</code>.</p>
+ </section>
             
         <section>
             <h3>Usando <code>calc()</code> para cálculos dinâmicos</h3>

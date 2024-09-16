@@ -91,7 +91,22 @@ figcaption {
   display: flex;
   justify-content: space-between;
 }
-
+.grid-ul {
+  list-style: none !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+}
+.double-grid {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid-ul li {
+  border: solid 1px #999;
+  padding: 1rem;
+}
 .object-fit {
   width: 150px;
   height: 180px;
@@ -419,6 +434,13 @@ figcaption {
   margin: 20px auto;
   padding: 10px;
 }
+.display-flex {
+  display: flex;
+}
+.border-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 /* Exemplo de borda sólida */
 #border-solid {
   border: 4px solid #fff;
@@ -635,8 +657,11 @@ figcaption {
   font-family: Arial;
   font-size: 18px;
 }
+figure {
+  width: 80%;
+}
 .fontes-img img {
-  width: 300px;
+  width: 100%;
   margin: auto;
 }
 
@@ -866,6 +891,8 @@ figcaption {
 }
 div > pre {
   background-color: #f4f4f4;
+  white-space: normal;
+  padding-left: 1rem;
 }
 
 /* Exemplo de propriedade resumida font */
@@ -1133,14 +1160,15 @@ div > pre {
 }
 /* Estilos gerais para os exemplos */
 .filter-drop-shadow-basic {
-  width: 500px;
+  width: 100%;
   height: 200px;
   margin-bottom: 20px;
-
+  color: #333;
   background-size: cover;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1148,6 +1176,7 @@ div > pre {
 
 .filter-drop-shadow-basic img {
   width: 150px;
+  margin: 0;
   filter: drop-shadow(20px 20px 5px gray);
 }
 
@@ -1230,7 +1259,9 @@ div > pre {
   border: 1px solid #293f6a;
   color: #000;
 }
-
+[class^="overflow-"] p{
+  color:#222;
+}
 /* Exemplo de overflow: visible */
 .overflow-visible {
   overflow: visible;

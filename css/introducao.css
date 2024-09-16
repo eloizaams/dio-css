@@ -1,37 +1,57 @@
 @import url(styles.css);
 
 div {
-  background: lightblue;
-  color: darkblue;
+  color: lightcyan;
 }
 
-li {
-  background-color: lightgreen;
+main li {
+  background-color: #777;
   border-radius: 5px;
   color: #333;
   padding: 5px;
   margin: 5px 0;
 }
-li p {
+main li p {
   color: #333;
 }
-li p strong {
+main li p strong {
   color: #333;
 }
 #bem-vindo {
-  background: palevioletred;
-  color: white;
-  padding: 20px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(180deg, #3ba1cd 0%, #1572b7 100%);
+  border-radius: 30px;
+  border-image-slice: 10;
+  color: #31a8dd;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #111;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 10px;
   max-width: 400px;
-  border-radius: 20px;
+  text-align: center;
+  margin: 10px auto;
 }
 
 #entender-css {
-  background: hotpink;
-  color: white;
-  padding: 20px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(180deg, #3ba1cd 0%, #1572b7 100%);
+  border-radius: 30px;
+  border-image-slice: 10;
+  color: #31a8dd;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #222;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 10px;
   max-width: 400px;
-  border-radius: 20px;
+  text-align: center;
 }
 
 .seletores-mais-comuns {
@@ -82,24 +102,25 @@ li p strong {
 #link-suporte,
 #botao-voltar {
   text-decoration: none;
-  color: darkorchid;
+  color: #fff;
 }
 [id^="botao"] {
   background-color: lightcoral;
   color: white;
+  padding: 5px 15px;
 }
 
 p.texto {
-  color: green;
+  color: lightblue;
 }
 
 /* Combinadores descendentes - espaço*/
 
 .fundo-verde li {
-  background-color: greenyellow;
+  background-color: lightgreen;
 }
 .fundo-azul li {
-  background-color: lightseagreen;
+  background-color: lightblue;
 }
 
 .fundo-verde #sublista-01 li {
@@ -113,6 +134,9 @@ p.texto {
 #exemplo01 div > p {
   color: red;
 }
+#exemplo02{
+  border:none;
+}
 
 #exemplo02 div > p {
   background-color: aquamarine;
@@ -124,11 +148,14 @@ p.texto {
 
 #exemplo02 .fundo-verde > p {
   background-color: greenyellow;
+  color: green;
 }
-
+div span p {
+  color: blue;
+}
 /* Combinadores irmãos (+) -> aplica para o irmão que vem logo após*/
 #exemplo02 div + p {
-  color: brown;
+  color: #7c021b;
 }
 
 #exemplo02 .fundo-verde + p {
@@ -141,22 +168,24 @@ p.texto {
 
 /* Altura e largura */
 #ex-alt-lar {
-  background: lightgoldenrodyellow;
+  background: rgb(73, 4, 163);
   width: 150px;
   height: 100px;
 }
 #auto {
   width: auto;
   height: auto;
+  color: #333;
 }
 
-#inicial {
+#initial {
   width: initial;
   height: initial;
+  color: #333;
 }
 
 #div01 {
-  background: lightblue;
+  background: rgb(38, 131, 161);
   height: 150px;
   width: 200px;
 }
@@ -167,16 +196,10 @@ p.texto {
   height: inherit;
 }
 
-#largura-altura {
-  background: #ddd;
-}
-
-#max-min {
-  background: #bbb;
-}
 #max-min button {
   max-width: 200px;
   min-height: 100px;
+  color: #333;
 }
 
 /* margin */
@@ -210,7 +233,7 @@ p.texto {
 }
 
 #elemento04 {
-  background: lightgrey;
+  background: mediumorchid;
 }
 #box-sizing div {
   width: 300px;
@@ -219,11 +242,11 @@ p.texto {
   padding: 30px;
 }
 #elemento05 {
-  background: beige;
+  background: deeppink;
   box-sizing: border-box;
 }
 
 #elemento06 {
-  background: burlywood;
+  background: mediumorchid;
   box-sizing: content-box;
 }

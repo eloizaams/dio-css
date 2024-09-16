@@ -12,39 +12,52 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="container-header">
+          <div class="logo">
             <img
-            src="../img/css.svg"
+              src="../img/css.svg"
               title="Logotipo Trilha de CSS DIO"
               alt="Logotipo Trilha de CSS DIO"
             />
           </div>
-        <h1>Trilha CSS</h1>
-        
-        <button #="voltar"><a href="../index.html">Voltar</a></button>
+          <h1>Trilha CSS</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../introducao/introducao.html">Introdução</a></li>
+            <li>
+              <a href="../estilizacao-basica/estilizacao.html">Estilização</a>
+            </li>
+            <li><a href="../unidades-medida\unidades-medida.html">Medidas</a></li>
+            <li><a href="../posicionamento/posicionamento.html">Posição</a></li>
+            <li><a href="../flexbox/flexbox.html">Flexbox</a></li>
+            <li><a href="../grid/grid.html">Grid</a></li>
+            <li><a href="../responsivo/responsivo.html">Responsivo</a></li>
+          </ul>
+        </nav>
       </header>
       <main>
         <article id="cores">
-            <h2>Cores</h2>
-            <p>Existem várias formas de se definirem cores utilizando o CSS.</p>
             <section>
-                <h3>Cores Pré-definidas</h3>
-                <p class="pre-definidas">Os navegadores disponibilizam cerca de 140 cores pré-definidas que podem ser referenciadas utilizando nomes, como por exemplo <code id="blue">blue</code>, <code id="red">red</code>, <code id="lightgreen">lightgreen</code>.</p>
-                <a href="https://www.w3schools.com/tags/ref_colornames.asp">Nomes de cores disponíveis</a>
-                <p>A palavra-chave <strong>transparent</strong> em CSS é usada para definir a transparência completa de um elemento ou cor. Quando aplicada, faz com que o elemento ou a cor se torne totalmente invisível, permitindo que o conteúdo ou o fundo atrás dele seja visível. Isso é útil para criar sobreposições ou para ocultar elementos sem removê-los do layout.</p>
-                <p>A propriedade <strong>opacity</strong> em CSS controla o nível de transparência de um elemento. O valor de <code>opacity</code> varia de 0 a 1, onde 0 representa total transparência (o elemento é invisível) e 1 representa total opacidade (o elemento é completamente visível). Valores intermediários, como 0.5, fazem o elemento ser parcialmente transparente.</p>
-                <div id="externa">
-                    <div id="interna01">
-                        <p>transparente</p>
+                <h2>Cores</h2>
+                <p>Existem várias formas de se definirem cores utilizando o CSS.</p>
+                
+                    <h3>Cores Pré-definidas</h3>
+                    <p class="pre-definidas">Os navegadores disponibilizam cerca de 140 cores pré-definidas que podem ser referenciadas utilizando nomes, como por exemplo <code id="blue">blue</code>, <code id="red">red</code>, <code id="lightgreen">lightgreen</code>.</p>
+                    <a href="https://www.w3schools.com/tags/ref_colornames.asp">Nomes de cores disponíveis</a>
+                    <p>A palavra-chave <strong>transparent</strong> em CSS é usada para definir a transparência completa de um elemento ou cor. Quando aplicada, faz com que o elemento ou a cor se torne totalmente invisível, permitindo que o conteúdo ou o fundo atrás dele seja visível. Isso é útil para criar sobreposições ou para ocultar elementos sem removê-los do layout.</p>
+                    <p>A propriedade <strong>opacity</strong> em CSS controla o nível de transparência de um elemento. O valor de <code>opacity</code> varia de 0 a 1, onde 0 representa total transparência (o elemento é invisível) e 1 representa total opacidade (o elemento é completamente visível). Valores intermediários, como 0.5, fazem o elemento ser parcialmente transparente.</p>
+                    <div id="externa">
+                        <div id="interna01">
+                            <p>transparente</p>
+                        </div>
+                        <div id="interna02">
+                            <p>opaca 50%</p>
+                        </div>
                     </div>
-                    <div id="interna02">
-                        <p>opaca 50%</p>
-                    </div>
-                </div>
-                <p>A palavra reservada <strong>currentColor</strong> refere-se à cor atual do texto de um elemento. Ao usar <code>currentColor</code>, você pode garantir que a cor aplicada a propriedades como <code>border</code>, <code>background</code>, ou <code>box-shadow</code> corresponda à cor do texto do elemento. Isso é útil para manter a consistência nas cores de um design e facilita a manutenção de estilos, pois qualquer alteração na cor do texto também será refletida automaticamente nas outras propriedades que usam currentColor. </p>
-             </section>
-                <div id="currentcolor">Exemplo de currentColor: <br> texto e borda com a mesma cor</div>
-
+                    <p>A palavra reservada <strong>currentColor</strong> refere-se à cor atual do texto de um elemento. Ao usar <code>currentColor</code>, você pode garantir que a cor aplicada a propriedades como <code>border</code>, <code>background</code>, ou <code>box-shadow</code> corresponda à cor do texto do elemento. Isso é útil para manter a consistência nas cores de um design e facilita a manutenção de estilos, pois qualquer alteração na cor do texto também será refletida automaticamente nas outras propriedades que usam currentColor. </p>
+                    <div id="currentcolor">Exemplo de currentColor: <br> texto e borda com a mesma cor</div>               
             </section>
             <section>
                 <h3>RGB e RGBA</h3>
@@ -78,11 +91,12 @@
             </section>
         </article>
         <article id="imagens">
-            <h2>Imagens</h2>
             <section>
+            <h2>Imagens</h2>
+        
                 <h3>Propriedade Object-Fit</h3>
                 <p>A propriedade <code>object-fit</code> ("ajuste de objeto") em CSS é usada para controlar como o conteúdo de um elemento substituto, como uma imagem ou vídeo, se ajusta ao seu contêiner. Ela define como o conteúdo deve ser redimensionado e posicionado dentro de seu elemento pai, que tem um tamanho fixo. Os valores comuns incluem: </p>
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p><code>fill</code>  redimensiona a imagem para cobrir o contêiner, podendo distorcer a imagem. É o valor default dessa propriedade.</p>
                         <div class="object-fit">
@@ -107,7 +121,7 @@
                             <img src="../img/girassol.jpeg" id="none">
                         </div>
                     </li>
-                    <li>
+                    <li class="double-grid">
                         <p><code>scale-down</code>  ajusta o conteúdo de um elemento substituto (como imagens e vídeos) para que ele se ajuste ao contêiner sem distorção, mantendo a proporção original. Se o conteúdo for menor que o contêiner, ele é exibido em seu tamanho original. Se for maior, é reduzido apenas o suficiente para caber dentro do contêiner, garantindo que não haja ampliação além do tamanho original. Isso permite uma apresentação eficaz e proporcional do conteúdo, sem esticamento ou distorção.</p>
                         <div class="object-fit">
                             <img src="../img/girassol.jpeg" id="scale-down">
@@ -115,7 +129,7 @@
                     </li>
                 </ul>
             </section>
-            <section>
+            <section >
                 <h3>Propriedade Object-Position</h3>
                 <p>A propriedade <code>object-position</code> define o alinhamento do conteúdo dentro de um contêiner com um object-fit aplicado. Ela permite ajustar a posição do conteúdo substituto dentro de seu contêiner, especificando onde o conteúdo deve ser alinhado em relação às bordas do contêiner. Os valores padrão incluem <code>center</code>,<code> top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, e combinações desses valores (por exemplo, top right). Combinando object-position com object-fit, é possível refinar como o conteúdo é exibido dentro de um espaço definido, melhorando a apresentação e a adequação do conteúdo visual a diferentes tamanhos de contêineres.</p>
                 <p>Além das palavras-chave, também é possível usar valores em unidades de comprimento ou porcentagens, como <code>object-position: 50% 50%</code> para centralizar o conteúdo, ou <code>object-position: 10px 20px</code> para um alinhamento mais personalizado. Isso oferece flexibilidade para controlar exatamente onde o conteúdo aparece dentro de seu contêiner.</p>
@@ -125,8 +139,9 @@
             </section>
         </article>
         <article id="fundo">
-            <h2>Fundos</h2>
             <section>
+                <h2>Fundos</h2>
+         
                 <p>O fundo dos elementos em CSS é gerenciado pela propriedade <strong>background</strong>, que oferece grande flexibilidade para definir cores, imagens, gradientes e padrões como fundo de qualquer elemento. Usando <code>background-color</code>, você pode definir uma cor sólida, enquanto <code>background-image</code> permite inserir imagens. Propriedades adicionais, como <code>background-repeat</code>, <code>background-position</code>, e <code>background-size</code>, controlam como a imagem se repete, é posicionada e redimensionada dentro do elemento. Além disso, você pode combinar múltiplas camadas de fundo para criar designs complexos, empilhando várias imagens e cores em um único elemento. Essa versatilidade torna o background uma ferramenta poderosa para estilização visual no design web.</p>
                 <div id="image">
                     <p>background-image</p>
@@ -155,7 +170,7 @@
                 <h3>Redimensionando as imagens de fundo dos elementos</h3>
                 <p>A propriedade <code>background-size</code> em CSS3 é usada para controlar o tamanho da imagem de fundo de um elemento.</p>
 
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p>
                         <code>auto</code>: Mantém o tamanho original da imagem.
@@ -213,7 +228,7 @@
                 <h3>Repetição das imagens de fundo</h3>
                 <p>A propriedade <code>background-repeat</code> controla a repetição de uma imagem de fundo em um elemento.</p>
 
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p><code>repeat</code> faz com que a imagem de fundo se repita horizontal e verticalmente para cobrir toda a área do elemento.</p>
                         <div id="repeat" class="background-image">
@@ -262,7 +277,7 @@
                 <h3>Posicionamento das Imagens de Fundo</h3>
                 <p>A propriedade <strong>background-position</strong> define a posição da imagem de fundo dentro de um elemento. Você pode especificar a posição usando valores de comprimento, porcentagem ou palavras-chave.</p>
 
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p>Para posicionar a imagem de fundo no canto superior esquerdo do elemento, você pode usar a sintaxe <code>left top</code>.</p>
                         <div id="position-left-top" class="background-image">
@@ -299,7 +314,7 @@
                 <h3>Propriedade Background Attachment</h3>
                 <p>A propriedade <strong>background-attachment</strong> controla como a imagem de fundo é fixada em relação ao viewport ou ao elemento. Pode ser usada para criar efeitos de paralaxe ou de rolagem de fundo.</p>
 
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p>Para manter a imagem de fundo fixa em relação ao viewport enquanto o conteúdo é rolado, use a sintaxe <code>fixed</code>.</p>
                      
@@ -329,7 +344,7 @@
                 <h3>Propriedade Background Origin</h3>
                 <p>A propriedade <strong>background-origin</strong> especifica o local a partir do qual a imagem de fundo é posicionada dentro do elemento. Pode ser usada para ajustar a posição da imagem de fundo em relação ao conteúdo, bordas e preenchimento do elemento.</p>
 
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p>Para posicionar a imagem de fundo em relação à área do conteúdo do elemento, use a sintaxe <code>content-box</code>.</p>
                         <div id="origin-content" class="background-image">
@@ -353,9 +368,8 @@
             <section >
                 <h3>Propriedade Background Clip</h3>
                 <p>A propriedade <strong>background-clip</strong> especifica a área dentro da qual a imagem de fundo é desenhada. Pode ser usada para ajustar a imagem de fundo em relação ao conteúdo, preenchimento ou borda do elemento.</p>
-                
 
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <p>Para limitar a imagem de fundo à área do conteúdo do elemento, use a sintaxe <code>content-box</code>.</p>
                         <div id="clip-content">
@@ -380,8 +394,8 @@
                             trilha de css
                         </div>
                         <p>No Google Chorme pode-se utilizar <code>-webkit-background-clip: text;</code></p>
-                    </li>
                 </ul>
+               
             </section>
             <section >
                 <h3>Mesclagem</h3>
@@ -421,14 +435,16 @@
         </article>
 
         <article id="bordas">
+            <section>
             <h2>Bordas</h2>
             <p>A propriedade <strong>border</strong> em CSS permite que você adicione bordas aos elementos HTML. Ela é composta por três propriedades principais: largura da borda (<code>border-width</code> ), estilo da borda (<code>border-style</code> ) e cor da borda (<code>border-color</code> ). Cada uma dessas propriedades pode ser ajustada individualmente ou combinada usando a propriedade abreviada <code>border</code>.</p>
-            
+        </section>
             <section>
                 <h3>Tamanho da borda</h3>
                 <p>A propriedade <strong> border-width</strong> em CSS é utilizada para definir a espessura da borda de um elemento. Ela pode ser aplicada de maneira uniforme ou para lados específicos (superior, direito, inferior, esquerdo).</p>
-                <!-- Borda com tamanho uniforme -->
-                <div id="border-uniform">
+               <div class="display-flex">
+                 <!-- Borda com tamanho uniforme -->
+                 <div id="border-uniform">
                     <p>Borda com tamanho uniforme</p>
                 </div>
 
@@ -441,12 +457,14 @@
                 <div id="border-predefined">
                     <p>Borda com valores predefinidos</p>
                 </div>
+               </div>
             </section>
             <section>
                 <h3>Estilo da borda</h3>
                 <p>A propriedade <strong>border-style</strong> em CSS define o estilo das bordas de um elemento. Existem vários estilos predefinidos, como sólido, tracejado, pontilhado, etc.</p>
-                <!-- Borda sólida -->
-                <div id="border-solid">
+               <div class="border-style">
+                 <!-- Borda sólida -->
+                 <div id="border-solid">
                     <p>solid</p>
                 </div>
 
@@ -494,6 +512,7 @@
                 <div id="border-rounded">
                     <p>border-radius</p>
                 </div>
+               </div>
             </section>
             <section>
                 <h3>Cor da borda</h3>
@@ -502,11 +521,13 @@
             <section>
                 <h3>Arredondando os Cantos com a Propriedade Border Radius</h3>
                 <p>A propriedade <strong>border-radius</strong> é usada para arredondar os cantos de elementos. O valor define o raio da curva aplicada em cada canto.</p>
-                <div id="box-border-1">Box 1: No Border Radius</div>
-                <div id="box-border-2">Box 2: Border Radius 15px</div>
-                <div id="box-border-3">Box 3: Border Radius 50%</div>
-                <div id="box-border-4">Box 4: Border Radius 2 valores: 30px 10px</div>
-                <div id="box-border-5">Box 5: Border Radius com barra: 100px/30px </div>
+                <div class="border-style">
+                    <div id="box-border-1">Box 1: No Border Radius</div>
+                    <div id="box-border-2">Box 2: Border Radius 15px</div>
+                    <div id="box-border-3">Box 3: Border Radius 50%</div>
+                    <div id="box-border-4">Box 4: Border Radius 2 valores: 30px 10px</div>
+                    <div id="box-border-5">Box 5: Border Radius com barra: 100px/30px </div>
+                </div>
             </section>
             <section>
                 <h3>Propriedade Border Image</h3>
@@ -515,14 +536,16 @@
                     <li>
                         <p><code>border-image-source</code>: Define a imagem que será usada como borda.
                             </p>
-                            <div id="box-image-source"></div>
+                            <div class="display-flex">
+                                <div id="box-image-source"></div>
                             <div id="box-image-source-2"></div>
+                            </div>
                     </li>
                     <li>
                         <p>A propriedade <code>border-image-slice</code> no CSS define como uma imagem é dividida para criar as bordas de um elemento. A imagem é cortada em nove partes: quatro bordas laterais, quatro cantos e o centro. A quantidade de imagem cortada de cada lado pode ser controlada usando valores numéricos.</p>
                         <img src="../img/slice.png">
                         <h4>Valores da Propriedade `border-image-slice`</h4>
-                        <ul>
+                        <ul class="grid-ul">
                             <li>
                                 <p><strong>Um Valor:</strong> <code>border-image-slice: 60;</code> - Aplica o mesmo valor a todos os lados da imagem.</p>
                                 <div class="example-box example-1">
@@ -568,7 +591,7 @@
                             <code>border-image-repeat</code>: Define o comportamento  da imagem da borda 
                         </p>
                         <h4>Valores da Propriedade `border-image-repeat`</h4>
-                        <ul>
+                        <ul class="grid-ul">
                             <li>
                                 <strong>repeat:</strong> A imagem da borda é repetida ao longo da borda, cortando a imagem se necessário.
                                 <div class="container repeat">repeat</div>
@@ -603,11 +626,11 @@
             </section>
         </article>
         <article id="fontes">
-            <h2>Fontes</h2>
             <section>
+            <h2>Fontes</h2>
                 <h3>Família de fontes</h3>
                 <p>Na tipografia exitem os chamados <strong>tipos genéricos</strong>, tmabém conhecidos como <strong>grupos de fontes</strong>, que são:</p>
-                <ul>
+                <ul class="grid-ul">
                     <li>
                         <h4>Serif</h4>
                         <p>As fontes <Strong>serifadas</Strong> são compostas por pequenos traços e prolongamentos que ficam no fim de cada letra, conhecidos como serifas.</p>
@@ -689,7 +712,7 @@
                 <p>Através da regra <strong>@import</strong>, também podemos incluir fontes. Quando for adicionar o @import ao arquivo css, ele deve ficar no topo do arquivo. Exemplo:</p>
                 <div>
 <pre><code>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital, wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 </code></pre>
                 </div>
@@ -800,9 +823,9 @@
             </section>
         </article>
         <article id="textos">
+            <section>
             <h2>Textos</h2>
              <!-- Propriedade Text-Transform -->
-        <section>
             <h3>Propriedade Text-Transform</h3>
             <p>A propriedade <code>text-transform</code> controla a capitalização do texto. Pode ser usada para transformar o texto em maiúsculas, minúsculas ou capitalizar cada palavra.</p>
             <p><strong>Exemplos:</strong></p>
@@ -991,16 +1014,18 @@
         </section>
         </article>
         <article id="sombras">
-            <h2>Sombras</h2>
-            <p>
-            O uso de sombras é uma das características mais úteis do CSS, pois permite adicionais de estilização e visualizações ao seu conteúdo. A sombra pode ser aplicada aos elementos HTML usando as propriedades <code>box-shadow</code>, <code>text-shadow</code>, ou <code>text-decoration-shadow</code>.
-            </p>
+      <section>
+        <h2>Sombras</h2>
+        <p>
+        O uso de sombras é uma das características mais úteis do CSS, pois permite adicionais de estilização e visualizações ao seu conteúdo. A sombra pode ser aplicada aos elementos HTML usando as propriedades <code>box-shadow</code>, <code>text-shadow</code>, ou <code>text-decoration-shadow</code>.
+        </p>
+      </section>
             <section>
                 <h3>Box Shadow</h3>
                 <p>Os parâmetros utilizados são:</p>
-                <ul>
+                <ul class="grid-ul">
                     <li>
-                        <h4>1. Deslocamento Horizontal</h4>
+                        <h4>Deslocamento Horizontal</h4>
                         <p>O primeiro valor define o deslocamento da sombra na direção horizontal. Valores positivos deslocam a sombra para a direita, enquanto valores negativos deslocam para a esquerda.</p>
                         <div class="box-shadow-exemplo">
                             <p class="box-shadow-offset-h">Deslocamento Horizontal: 10px</p>
@@ -1008,7 +1033,7 @@
                     </li>
             
                     <li>
-                        <h4>2. Deslocamento Vertical</h4>
+                        <h4>Deslocamento Vertical</h4>
                         <p>O segundo valor define o deslocamento da sombra na direção vertical. Valores positivos deslocam a sombra para baixo, enquanto valores negativos deslocam para cima.</p>
                         <div class="box-shadow-exemplo">
                             <p class="box-shadow-offset-v">Deslocamento Vertical: 10px</p>
@@ -1016,7 +1041,7 @@
                     </li>
             
                     <li>
-                        <h4>3. Desfoque</h4>
+                        <h4>Desfoque</h4>
                         <p>O terceiro valor define o raio de desfoque da sombra. Um valor maior resulta em uma sombra mais difusa e suave. Um valor de 0px cria uma sombra com bordas nítidas.</p>
                         <div class="box-shadow-exemplo">
                             <p class="box-shadow-blur">Desfoque: 15px</p>
@@ -1024,7 +1049,7 @@
                     </li>
             
                     <li>
-                        <h4>4. Expansão</h4>
+                        <h4>Expansão</h4>
                         <p>O quarto valor opcional define a expansão da sombra. Valores positivos fazem a sombra se expandir além das bordas do elemento, enquanto valores negativos fazem a sombra encolher.</p>
                         <div class="box-shadow-exemplo">
                             <p class="box-shadow-spread">Expansão: 10px</p>
@@ -1032,7 +1057,7 @@
                     </li>
             
                     <li>
-                        <h4>5. Cor</h4>
+                        <h4>Cor</h4>
                         <p>O último valor define a cor da sombra. Pode ser qualquer valor de cor válido em CSS, como nomes de cores, valores hexadecimais ou RGB.</p>
                         <div class="box-shadow-exemplo">
                             <p class="box-shadow-color">Cor: rgba(0, 0, 0, 0.5)</p>
@@ -1052,7 +1077,7 @@
                         </div>
                     </li>
                     <li>
-                        <h4>1. Sombra com Filter Drop-Shadow</h4>
+                        <h4>Sombra com Filter Drop-Shadow</h4>
                         <p> A propriedade <code>filter: drop-shadow</code> faz com que o drop shadow seja aplicado ao próprio conteúdo do elemento e não apenas à sua caixa</p>
                         <div class="filter-drop-shadow-basic">Sombra com filter: drop-shadow
                             <img src="../img/moldura.png" alt="">
@@ -1094,20 +1119,24 @@
             </section>
         </article>
         <article id="outros">
-            <h2>Outros</h2>
-            <h3>Aplicando Transparência aos Elementos</h3>
             <section>
+                <h2>Outros</h2>
+                <h3>Aplicando Transparência aos Elementos</h3>
                 <h4>1. Aplicando Transparência com Opacity</h4>
                 <p>A propriedade <code>opacity</code> define a opacidade de um elemento e afeta tanto o conteúdo quanto o fundo.</p>
-                <div class="opacity-50">Transparência de 50%</div>
+                <div class="display-flex">
+                    <div class="opacity-50">Transparência de 50%</div>
                 <div class="opacity-30">Transparência de 30%</div>
+                </div>
             </section>
     
             <section>
                 <h4>2. Aplicando Transparência com RGBA</h4>
                 <p>O uso de <code>rgba()</code> permite aplicar transparência apenas à cor de fundo ou de borda, sem afetar o conteúdo do elemento.</p>
-                <div class="rgba-70">Fundo com transparência de 70%</div>
-                <div class="rgba-40">Fundo com transparência de 40%</div>
+                <div class="display-flex">  
+                    <div class="rgba-70">Fundo com transparência de 70%</div>
+                    <div class="rgba-40">Fundo com transparência de 40%</div>
+                </div>
             </section>
             <h3>Propriedade Overflow</h3>
             <p>A propriedade <code>overflow </code>em CSS é usada para controlar o comportamento de um conteúdo que ultrapassa o tamanho do contêiner. Ela pode ter vários valores, cada um determinando o que acontecerá quando o conteúdo for maior que o elemento.</p>
@@ -1142,9 +1171,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium enim ex officiis nulla sint repudiandae incidunt molestiae.</p>
                 </div>
             </section>
+            <section>
             <h3>Redefinindo as Propriedades Padrões dos Navegadores</h3>
-            <p>Os navegadores aplicam estilos padrões aos elementos HTML, como margens, espaçamentos e formatação de texto. Esses estilos podem variar entre diferentes navegadores, afetando a consistência visual de uma página. Para evitar essas inconsistências, utilizamos um "CSS Reset", que redefine ou normaliza essas propriedades.</p>
-            <p> Existem várias formas de redefinir as propriedades padrões:</p>
+                <p>Os navegadores aplicam estilos padrões aos elementos HTML, como margens, espaçamentos e formatação de texto. Esses estilos podem variar entre diferentes navegadores, afetando a consistência visual de uma página. Para evitar essas inconsistências, utilizamos um "CSS Reset", que redefine ou normaliza essas propriedades.</p>
+                <p> Existem várias formas de redefinir as propriedades padrões:</p>
+            </section>
             <section>
                 <h4>1. Reset Básico</h4>
                 <p>O reset CSS básico remove as margens e espaçamentos padrões aplicados pelos navegadores. Isso garante que a estilização seja consistente entre navegadores diferentes.</p>
