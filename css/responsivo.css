@@ -1,0 +1,55 @@
+@import url(styles.css);
+
+.example {
+    margin:1rem;
+    border-radius: 3px;
+}
+.responsive-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  color:#333;
+}
+
+@media (max-width: 600px) {
+  .responsive-box {
+    font-size: 14px;
+    background-color: #e0e0e0;
+    color:#333;
+  }
+}
+.multicolumn {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    color:#333;
+  }
+  .flex-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+  }
+  .item{
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .flex-item {
+    background-color: #4CAF50;
+    flex: 1;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    background-color: #2196F3;
+
+  }

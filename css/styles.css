@@ -23,6 +23,7 @@ body {
 .container-header {
   margin: 0;
   text-align: center;
+  padding-bottom: 1rem;
 }
 header {
   background-image: linear-gradient(
@@ -36,7 +37,6 @@ header {
 
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
   border-bottom: 1px solid #33a8db80;
   position: sticky;
   top: -160px;
@@ -46,6 +46,7 @@ header {
 section {
   border-bottom: 1px solid #33a8db80;
   padding: 15px;
+  padding-top: 0;
   line-height: 2;
 }
 h1 {
@@ -93,8 +94,8 @@ header nav {
   position: sticky;
   top: 10px;
   z-index: 1000;
-  background-color: rgb(17, 17, 17);
-  box-shadow: 0 -10px 10px rgba(17, 17, 17, 0.6);
+  background-color: #111111;
+  box-shadow: 0 -10px 10px #11111199;
   display: flex;
 }
 header nav ul {
@@ -112,6 +113,11 @@ header nav ul li {
   flex: 1 1 auto;
   justify-content: space-around;
 }
+.selected{
+  background: linear-gradient(180deg, #9fc8d9 0%, #2f9ce9 100%);
+  border-radius: 3px;
+}
+
 header nav ul li a {
   z-index: 1100;
   color: #f1f1f1;
@@ -119,18 +125,20 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #68bbde;
+  background: linear-gradient(180deg, #9fc8d9 0%, #2f9ce9 100%);
+  border-radius: 3px;;
+  color: #0d2732;
 }
 h2 {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(49, 168, 221, 0.1)
   );
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #33a8db;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
   margin: 0 -15px 15px;
-  padding: 1rem;
+  padding: 0.7rem;
   text-align: center;
   text-transform: uppercase;
 }
