@@ -3,47 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
-    <link rel="stylesheet" href="../css/responsivo.css" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/responsivo.css" />
     <title>Responsividade em css</title>
   </head>
+
   <body>
+
     <header>
       <nav>
         <ul>
-          <li class="selected"><a href="../index.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="introducao.html">Introdução</a></li>
-          <li>
-            <a href="estilizacao.html">Estilização</a>
-          </li>
+          <li><a href="estilizacao.html">Estilização</a></li>
           <li><a href="unidades-medida.html">Medidas</a></li>
           <li><a href="posicionamento.html">Posição</a></li>
           <li><a href="flexbox.html">Flexbox</a></li>
           <li><a href="grid.html">Grid</a></li>
-          <li><a href="responsivo.html">Responsivo</a></li>
-      
+          <li  class="selected"><a href="responsivo.html">Responsivo</a></li>
         </ul>
       </nav>
     </header>
-    <aside>
-      <h2>Trilha CSS</h2>
 
+    <aside>
+      <h2>Responsividade</h2>
       <nav>
         <ul>
-          <li>Introdução ao Design Responsivo</li>
-          <li>Layouts flexíveis - Multicolunas</li>
-          <li>Layouts flexíveis - Flexbox</li>
-          <li>Layouts flexíveis - Grid</li>
-          <li>a</li>
-          <li>a</li>
-          <li>a</li>
-          <li>a</li>
+          <li><a href="#introducao">Design Responsivo</a></li>
+          <li><a href="#multicolunas">Multicolunas</a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#viewport">Viewport</a></li>
+          <li><a href="#media-queries">Media Queries</a></li>
+          <li><a href="#imagens-responsivas">Imagens responsivas</a></li>
+          <li><a href="#tipografias-responsivas">Tipografias Responsivas</a></li>
+          <li><a href="#mobile-first">Mobile-first</a></li>
         </ul>
       </nav>
     </aside>
+
     <main>
       <article>
-        <section>
+        <section id="introducao">
           <h2>Introdução ao Design Responsivo</h2>
           <p>
             O <strong>Design Responsivo</strong> refere-se à abordagem de design
@@ -62,7 +63,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="multicolunas">
           <h2>Layouts flexíveis - Multicolunas</h2>
           <p>
             Os <strong>Layouts Multicolunas</strong> são uma forma de dividir o
@@ -107,7 +108,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="flexbox">
           <h2>Layouts flexíveis - Flexbox</h2>
           <p>
             O <strong>Flexbox</strong> é um modelo de layout CSS que facilita a
@@ -145,46 +146,46 @@
           </p>
           <div class="gallery">
             <div class="image-card">
-              <img src="../img/resp/img1.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img1.jpg" alt="Imagem aleatória" />
             </div>
 
             <div class="image-card">
-              <img src="../img/resp/img12.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img12.jpg" alt="Imagem aleatória" />
             </div>
             <div class="image-card">
-              <img src="../img/resp/img4.jpg" alt="Imagem aleatória" />
-            </div>
-
-            <div class="image-card">
-              <img src="../img/resp/img13.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img4.jpg" alt="Imagem aleatória" />
             </div>
 
             <div class="image-card">
-              <img src="../img/resp/img5.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img13.jpg" alt="Imagem aleatória" />
             </div>
 
             <div class="image-card">
-              <img src="../img/resp/img7.jpg" alt="Imagem aleatória" />
-            </div>
-            <div class="image-card">
-              <img src="../img/resp/img6.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img5.jpg" alt="Imagem aleatória" />
             </div>
 
             <div class="image-card">
-              <img src="../img/resp/img8.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img7.jpg" alt="Imagem aleatória" />
+            </div>
+            <div class="image-card">
+              <img src="img/resp/img6.jpg" alt="Imagem aleatória" />
             </div>
 
             <div class="image-card">
-              <img src="../img/resp/img9.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img8.jpg" alt="Imagem aleatória" />
             </div>
 
             <div class="image-card">
-              <img src="../img/resp/img10.jpg" alt="Imagem aleatória" />
+              <img src="img/resp/img9.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="img/resp/img10.jpg" alt="Imagem aleatória" />
             </div>
           </div>
         </section>
 
-        <section>
+        <section id="grid">
           <h2>Layouts flexíveis - Grid</h2>
           <p>
             O <strong>CSS Grid Layout</strong> é um sistema de layout
@@ -216,7 +217,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="viewport">
           <h2>Meta tag viewport</h2>
           <p>
             A meta tag <code>viewport</code> irá informar para os navegadores
@@ -252,25 +253,22 @@
           </p>
         </section>
 
-        <section>
-          <h2>O que são Media Queries</h2>
+        <section id="media-queries">
+          <h2>Media Queries</h2>
           <p>Media Queries são uma técnica do CSS3 que permite aplicar estilos condicionais a uma página, dependendo das características do dispositivo, como a largura da tela, altura, ou orientação.</p>
-        </div>
+      
             <div class="img-example width-100">
-              <img src="../img/resp/media.png" alt="exemplos de mídias">
+              <img src="img/resp/media.png" alt="exemplos de mídias">
             </div>
-        </section>
-
-        <section id="estruturas">
-          <h2>Estruturas</h2>
+        
           <p>A estrutura básica de uma media query consiste em utilizar a regra <code>@media</code>, especificando as condições para a aplicação do estilo, seguidas pelos estilos aplicados.</p>
         
          <div class="img-example">
-          <img src="../img/resp/estrutura.png" alt="estrutura das media queries">
+          <img src="img/resp/estrutura.png" alt="estrutura das media queries">
         </div>
         <h3><code>@media</code>(at rule)</h3>
         <div class="img-example">
-          <img src="../img/resp/at-rule.png" alt="@media">
+          <img src="img/resp/at-rule.png" alt="@media">
         </div> 
         <p>
           Regra usada para identificar o tipo de mídia que uma página está 
@@ -282,7 +280,7 @@
       
           <h3>Media Types</h3>
           <div class="img-example">
-            <img src="../img/resp/media-type.png" alt="@media">
+            <img src="img/resp/media-type.png" alt="@media">
           </div>
           <p>Media types definem o tipo de dispositivo ao qual a media query será aplicada. Os mais comuns são:
             <ul>
@@ -316,7 +314,7 @@
      
           <h3>Media Features (Recursos de Mídia)</h3>
           <div class="img-example">
-            <img src="../img/resp/media-feature.png" alt="@media">
+            <img src="img/resp/media-feature.png" alt="@media">
           </div>
           <p>Media features são as características específicas do dispositivo, como largura, altura, resolução, orientação, entre outras. Elas são usadas dentro das media queries para aplicar estilos condicionalmente.   </p>
             <ul>
@@ -372,26 +370,19 @@
                 
               </ul>
          
-      </section>
-
-      <section id="maneiras-de-usar">
-          <h2>Maneiras de usar as Media Queries</h2>
+      
           <p>As media queries podem ser aplicadas de três maneiras: no arquivo CSS, diretamente na tag <code>&lt;style&gt;</code> no HTML ou usando a tag <code>&lt;link&gt;</code> para carregar arquivos CSS específicos.</p>
           <p>Exemplos:</p>
           <p><a href="https://css-tricks.com/working-with-javascript-media-queries/">Working with JavaScript Media Queries</a></p>
          
-      </section>
-
-      <section id="breakpoints">
-          <h2>Breakpoints</h2>
+    
+          <h3>Breakpoints</h3>
           <p>Breakpoints são os pontos em que o layout da página muda com base no tamanho da tela. Eles são usados para ajustar o design em diferentes dispositivos.</p>
           <div class="img-example">
-            <img src="../img/resp/breakpoints.png" alt="@media">
+            <img src="img/resp/breakpoints.png" alt="@media">
           </div>
-      </section>
-
-      <section id="media-queries-uso">
-          <h2>Devemos sempre usar as Media Queries?</h2>
+      
+          <h3>Devemos sempre usar as Media Queries?</h3>
           <p>Não é obrigatório usar media queries em todos os projetos, mas elas são uma ferramenta poderosa para garantir que o design funcione bem em vários dispositivos.</p>
           <h4>Design Acessível x Design Universal</h4>
           <blockquote>“Um design acessível irá criar uma 
@@ -432,30 +423,18 @@
 
       <section id="mobile-first">
           <h2>Mobile First</h2>
-          <div class="img-example"></div>
-            <img src="../img/resp/mobile-first.png" alt="@media">
-          </div>
           <p>Mobile First é uma abordagem de design onde o layout e os estilos são primeiro definidos para dispositivos móveis, e depois se expandem para telas maiores com media queries.</p>
-          <div class="container-mobile">
-            <div class="header-mobile">
-              <nav>
-                <ul>
-                  <li><a href="#">Sobre mim</a></li>
-                  <li><a href="#">Contato</a></li>
-                  <li><a href="#">Conheça meu trabalho</a></li>
-                  <li><a href="#">Linkedin</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-       
+          <div class="img-example"></div>
+            <img src="img/resp/mobile-first.png" alt="@media">
+          </div>        
       </section>
       </article>
     </main>
+
     <footer>
       <p>
-        Desenvolvido por
-        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams"  target="_blank">Eloiza Souza</a>
       </p>
     </footer>
   </body>

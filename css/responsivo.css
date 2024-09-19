@@ -179,23 +179,6 @@ blockquote i {
   color: #333;
 }
 
-.container-mobile li a {
-  text-decoration: none;
-  font-weight: bold;
-}
-.container-mobile ul li {
-  background-color: lightgreen;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  list-style: none;
-  width: 100%;
-}
-
-.container-mobile nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
 @media print {
   body {
     background: black;

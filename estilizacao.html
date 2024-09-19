@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
-    <link rel="stylesheet" href="../css/estilizacao.css" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/estilizacao.css" />
    
     <!-- Usar o @import no css é melhor do que usar o link para a fonte aqui -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -12,12 +12,11 @@
 </head>
 <body>
     <header>
-       
         <nav>
             <ul>
-                <li class="selected"><a href="../index.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="introducao.html">Introdução</a></li>
-                <li>
+                <li class="selected">
                   <a href="estilizacao.html">Estilização</a>
                 </li>
                 <li><a href="unidades-medida.html">Medidas</a></li>
@@ -29,6 +28,23 @@
               </ul>
         </nav>
       </header>
+
+      <aside>
+        <h2>Estilização</h2>
+        <nav>
+          <ul>
+            <li><a href="#cores">Cores</a></li>
+            <li><a href="#imagens">Imagens</a></li>
+            <li><a href="#fundo">Fundos</a></li>
+            <li><a href="#bordas">Bordas</a></li>
+            <li><a href="#fontes">Fontes</a></li>
+           <li><a href="#textos">Textos</a></li>
+           <li><a href="#sombras">Sombras</a></li>
+           <li><a href="#outros">Outros</a></li>
+          </ul>
+        </nav>
+      </aside>
+
       <main>
         <article id="cores">
             <section>
@@ -37,7 +53,7 @@
                 
                     <h3>Cores Pré-definidas</h3>
                     <p class="pre-definidas">Os navegadores disponibilizam cerca de 140 cores pré-definidas que podem ser referenciadas utilizando nomes, como por exemplo <code id="blue">blue</code>, <code id="red">red</code>, <code id="lightgreen">lightgreen</code>.</p>
-                    <a href="https://www.w3schools.com/tags/ref_colornames.asp">Nomes de cores disponíveis</a>
+                    <a href="https://www.w3schools.com/tags/ref_colornames.asp"  target="_blank">Nomes de cores disponíveis</a>
                     <p>A palavra-chave <strong>transparent</strong> em CSS é usada para definir a transparência completa de um elemento ou cor. Quando aplicada, faz com que o elemento ou a cor se torne totalmente invisível, permitindo que o conteúdo ou o fundo atrás dele seja visível. Isso é útil para criar sobreposições ou para ocultar elementos sem removê-los do layout.</p>
                     <p>A propriedade <strong>opacity</strong> em CSS controla o nível de transparência de um elemento. O valor de <code>opacity</code> varia de 0 a 1, onde 0 representa total transparência (o elemento é invisível) e 1 representa total opacidade (o elemento é completamente visível). Valores intermediários, como 0.5, fazem o elemento ser parcialmente transparente.</p>
                     <div id="externa">
@@ -57,7 +73,7 @@
 
                 <p> O modelo <strong>RGBA</strong> é uma extensão do RGB que inclui um quarto valor, o A (Alpha), que controla a opacidade da cor. O valor alfa varia de 0 a 1, onde 0 representa total transparência e 1 total opacidade. Isso permite criar efeitos de sobreposição e transparência em elementos gráficos, como em <code id="rgba-255-0-0-05">rgba(255, 0, 0, 0.5)</code>, que resultaria em um vermelho semitransparente.</p>
                 <figure>
-                    <img id="rgb-img" src="../img/rgb.jpg" alt="Círculos de cores RGB">
+                    <img id="rgb-img" src="img/rgb.jpg" alt="Círculos de cores RGB">
                     <figcaption>Círculos de cores RGB</figcaption>
                 </figure>
             </section>
@@ -71,11 +87,11 @@
                 <p>O modelo de cores <strong></strong> (Hue, Saturation, Lightness) define cores com base em três componentes: matiz (hue), saturação e luminosidade. O <strong>matiz</strong> é o valor de cor base, expresso em graus de 0 a 360 no círculo de cores (como vermelho a 0°, verde a 120° e azul a 240°). <strong>Saturação </strong>refere-se à intensidade da cor, variando de 0% (cinza) a 100% (cor pura), enquanto <strong>luminosidade </strong>ajusta o brilho da cor, de 0% (preto) a 100% (branco). </p>
                 <div id="img-hsl">
                     <figure>
-                        <img id="rgb-img" src="../img/hsl.png" alt="Roda de cores HSL">
+                        <img id="rgb-img" src="img/hsl.png" alt="Roda de cores HSL">
                         <figcaption>Roda de cores </figcaption>
                     </figure>
                     <figure>
-                        <img id="rgb-img" src="../img/hsl2.png" alt="Roda de cores HSL">
+                        <img id="rgb-img" src="img/hsl2.png" alt="Roda de cores HSL">
                         <figcaption>Roda de cores HSL</figcaption>
                     </figure>
                 </div>
@@ -92,31 +108,31 @@
                     <li>
                         <p><code>fill</code>  redimensiona a imagem para cobrir o contêiner, podendo distorcer a imagem. É o valor default dessa propriedade.</p>
                         <div class="object-fit">
-                            <img src="../img/girassol.jpeg" id="fill">
+                            <img src="img/girassol.jpeg" id="fill">
                         </div>
                     </li>
                     <li>
                         <p><code>contain</code> ajusta a imagem para caber no contêiner mantendo a proporção.</p>
                         <div class="object-fit">
-                            <img src="../img/girassol.jpeg" id="contain">
+                            <img src="img/girassol.jpeg" id="contain">
                         </div>
                     </li>
                     <li>
                         <p><code>cover</code>   preenche o contêiner, podendo cortar partes da imagem.</p>
                         <div class="object-fit">
-                            <img src="../img/girassol.jpeg" id="cover">
+                            <img src="img/girassol.jpeg" id="cover">
                         </div>
                     </li>
                     <li>
                         <p> <code>none</code> não aplica redimensionamento. Esta propriedade é particularmente útil para manter a integridade visual de imagens e vídeos em layouts responsivos.</p>
                         <div class="object-fit">
-                            <img src="../img/girassol.jpeg" id="none">
+                            <img src="img/girassol.jpeg" id="none">
                         </div>
                     </li>
                     <li class="double-grid">
                         <p><code>scale-down</code>  ajusta o conteúdo de um elemento substituto (como imagens e vídeos) para que ele se ajuste ao contêiner sem distorção, mantendo a proporção original. Se o conteúdo for menor que o contêiner, ele é exibido em seu tamanho original. Se for maior, é reduzido apenas o suficiente para caber dentro do contêiner, garantindo que não haja ampliação além do tamanho original. Isso permite uma apresentação eficaz e proporcional do conteúdo, sem esticamento ou distorção.</p>
                         <div class="object-fit">
-                            <img src="../img/girassol.jpeg" id="scale-down">
+                            <img src="img/girassol.jpeg" id="scale-down">
                         </div>
                     </li>
                 </ul>
@@ -126,7 +142,7 @@
                 <p>A propriedade <code>object-position</code> define o alinhamento do conteúdo dentro de um contêiner com um object-fit aplicado. Ela permite ajustar a posição do conteúdo substituto dentro de seu contêiner, especificando onde o conteúdo deve ser alinhado em relação às bordas do contêiner. Os valores padrão incluem <code>center</code>,<code> top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, e combinações desses valores (por exemplo, top right). Combinando object-position com object-fit, é possível refinar como o conteúdo é exibido dentro de um espaço definido, melhorando a apresentação e a adequação do conteúdo visual a diferentes tamanhos de contêineres.</p>
                 <p>Além das palavras-chave, também é possível usar valores em unidades de comprimento ou porcentagens, como <code>object-position: 50% 50%</code> para centralizar o conteúdo, ou <code>object-position: 10px 20px</code> para um alinhamento mais personalizado. Isso oferece flexibilidade para controlar exatamente onde o conteúdo aparece dentro de seu contêiner.</p>
                 <div class="object-fit">
-                    <img src="../img/girassol.jpeg" id="obj-position">
+                    <img src="img/girassol.jpeg" id="obj-position">
                 </div>
             </section>
         </article>
@@ -152,7 +168,7 @@
                     <p>repeating-linear-gradient()</p>
                 </div>
                 <p>Alguns sites oferecem modelos prontos de padrões.</p>
-                <a href="https://css-pattern.com/" 
+                <a href="https://css-pattern.com/"  target="_blank"
                 >Modelos de padrões CSS</a>
                 <div id="padroes">
                     <p>padrões</p>
@@ -535,7 +551,7 @@
                     </li>
                     <li>
                         <p>A propriedade <code>border-image-slice</code> no CSS define como uma imagem é dividida para criar as bordas de um elemento. A imagem é cortada em nove partes: quatro bordas laterais, quatro cantos e o centro. A quantidade de imagem cortada de cada lado pode ser controlada usando valores numéricos.</p>
-                        <img src="../img/slice.png">
+                        <img src="img/slice.png">
                         <h4>Valores da Propriedade `border-image-slice`</h4>
                         <ul class="grid-ul">
                             <li>
@@ -628,7 +644,7 @@
                         <p>As fontes <Strong>serifadas</Strong> são compostas por pequenos traços e prolongamentos que ficam no fim de cada letra, conhecidos como serifas.</p>
                         <p><i>Exemplo: </i><span class="exemplo-font-times-new-roman">Times New Roman</span> e <span class="exemplo-font-georgia">Georgia</span></p>
                         <figure class="fontes-img">
-                            <img src="../img/serif.jpg" >
+                            <img src="img/serif.jpg" >
                         </figure>
                     </li>
                     <li>
@@ -636,21 +652,21 @@
                         <p>As fontes <strong>sem serifa</strong>,que são fontes que não possuem os traços e prolongamentos no fim das letras.</p>
                         <p><i>Exemplo: </i><span class="exemplo-font-arial">Arial</span></p>
                         <figure class="fontes-img">
-                            <img src="../img/sans-serif.jpg" >
+                            <img src="img/sans-serif.jpg" >
                         </figure>
                     </li>
                     <li>
                         <h4>Display</h4>
                         <p>As fontes <strong>enfeitadas</strong> são consideradas tipografias comemorativas. Muitas vezes nem representam letras, mas sim símbolos. Esta é a famosa fonte para ver, utilizada em textos curtos, publicidade, casamentos (também é usado aqui, mas as melhores são handwriting) e artes diversas para chamar a atenção.</p>
                         <figure class="fontes-img">
-                            <img src="../img/display.jpg" >
+                            <img src="img/display.jpg" >
                         </figure>
                     </li>
                     <li>
                         <h4>Handwriting</h4>
                         <p>As fontes <strong>manuscritas</strong> se assemelham com a escrita à mão, conheciadas como cursivas. Normalmente utilizadas para passar a sensação de humanização. </p>
                         <figure class="fontes-img">
-                            <img src="../img/handwriting.jpg" >
+                            <img src="img/handwriting.jpg" >
                         </figure>
                     </li>
                     <li>
@@ -658,7 +674,7 @@
                         <p>As fontes <strong>monoespaçadas</strong> são definidas por toda família de fontes que todos os caracteres ocupam a mesma largura.</p>
                         <p><i>Exemplo: </i><span class="exemplo-font-monospace">Monospace</span></p>
                         <figure class="fontes-img">
-                            <img src="../img/monospace.jpg" >
+                            <img src="img/monospace.jpg" >
                         </figure>
                     </li>
                 </ul>
@@ -1072,7 +1088,7 @@
                         <h4>Sombra com Filter Drop-Shadow</h4>
                         <p> A propriedade <code>filter: drop-shadow</code> faz com que o drop shadow seja aplicado ao próprio conteúdo do elemento e não apenas à sua caixa</p>
                         <div class="filter-drop-shadow-basic">Sombra com filter: drop-shadow
-                            <img src="../img/moldura.png" alt="">
+                            <img src="img/moldura.png" alt="">
                         </div>
                     </li>
                 </ul>
@@ -1182,8 +1198,8 @@
       </main>
       <footer>
         <p>
-          Desenvolvido por
-          <a href="https://github.com/eloizaams">Eloiza Souza</a>
+          &copy 2024 - Desenvolvido por
+          <a href="https://github.com/eloizaams"  target="_blank">Eloiza Souza</a>
         </p>
       </footer>
 </body>

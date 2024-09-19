@@ -3,18 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
     <title>Introdução ao CSS</title>
-    <link rel="stylesheet" href="../css/introducao.css" />
-   
+    <link rel="stylesheet" href="css/introducao.css" />
   </head>
   <body>
     <header>
-    
       <nav>
         <ul>
-          <li class="selected"><a href="../index.html">Início</a></li>
-          <li><a href="introducao.html">Introdução</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li class="selected"><a href="introducao.html">Introdução</a></li>
           <li>
             <a href="estilizacao.html">Estilização</a>
           </li>
@@ -23,107 +21,129 @@
           <li><a href="flexbox.html">Flexbox</a></li>
           <li><a href="grid.html">Grid</a></li>
           <li><a href="responsivo.html">Responsivo</a></li>
-     
         </ul>
       </nav>
     </header>
+
+    <aside>
+      <h2>Introdução ao css</h2>
+      <nav>
+        <ul>
+          <li><a href="#introducao">Introducao</a></li>
+          <li><a href="#sletores">Seletores</a></li>
+          <li><a href="#combinadores">Combinadores</a></li>
+          <li><a href="#dimensionamento">Dimensionamento</a></li>
+        </ul>
+      </nav>
+    </aside>
+
     <main>
       <article id="introducao">
-       <section>
-        <h2>Introdução ao CSS</h2>
-        <p id="bem-vindo">Bem vindo!</p>
-        <p id="entender-css">Vamos entender o CSS!</p>
-        <h3>Propriedades e valores</h3>
-        <p>
-          Uma <strong>propriedade</strong> é uma característica de um elemento
-          do nosso HTML (cor de fundo, largura, altura, espaçamento, etc). Um
-          <strong>valor</strong> define o resultado de uma propriedade e como o
-          navegador deve exibir o estilo daquele elemento.
-        </p>
-        <h3>Formas de declarar o CSS</h3>
-        <div>
-          <ul>
-            <li>
-              CSS Inline: adicionamos o código CSS utilizando o atributo style
-              dentro das tags HTML, elemento por elemento.
-            </li>
-            <li>
-              CSS Interno: código CSS é adicionado dentro da tag
-              <code>&lthead&gt</code> da página HTML. Dentro da tag
-              <code>&lthead&gt</code> adicionamos outra tag,
-              a <code>&ltstyle&gt</code>, e colocamos as regras CSS nessa área.
-            </li>
-            <li>
-              CSS Externo: é criado um arquivo com a extensão .css com todas as
-              regras CSS que queremos aplicar e esse arquivo é referenciado no
-              HTML da página através da tag <code>&ltlink&gt</code>.
-            </li>
-          </ul>
-        </div>
-       </section>
+        <section>
+          <h2>Introdução ao CSS</h2>
+          <p id="bem-vindo">Bem vindo!</p>
+          <p id="entender-css">Vamos entender o CSS!</p>
+          <h3>Propriedades e valores</h3>
+          <p>
+            Uma <strong>propriedade</strong> é uma característica de um elemento
+            do nosso HTML (cor de fundo, largura, altura, espaçamento, etc). Um
+            <strong>valor</strong> define o resultado de uma propriedade e como
+            o navegador deve exibir o estilo daquele elemento.
+          </p>
+          <h3>Formas de declarar o CSS</h3>
+          <div>
+            <ul>
+              <li>
+                CSS Inline: adicionamos o código CSS utilizando o atributo style
+                dentro das tags HTML, elemento por elemento.
+              </li>
+              <li>
+                CSS Interno: código CSS é adicionado dentro da tag
+                <code>&lthead&gt</code> da página HTML. Dentro da tag
+                <code>&lthead&gt</code> adicionamos outra tag,
+                a <code>&ltstyle&gt</code>, e colocamos as regras CSS nessa
+                área.
+              </li>
+              <li>
+                CSS Externo: é criado um arquivo com a extensão .css com todas
+                as regras CSS que queremos aplicar e esse arquivo é referenciado
+                no HTML da página através da tag <code>&ltlink&gt</code>.
+              </li>
+            </ul>
+          </div>
+        </section>
       </article>
+
       <article id="seletores">
-       <section>
-        <h2>Seletores CSS</h2>
-        <div>
-          <ul>
-            <li class="seletores-mais-comuns texto-maiusculo">
-              <p>
-                <strong>Seletor por tipo:</strong> Busca elementos por uma tag
-                HTML especifica.
-              </p>
-            </li>
-            <li class="seletores-mais-comuns">
-              <p>
-                <strong>Seletor por ID (#):</strong> Busca elementos através do
-                atributo "id", que é único para cada elemento HTML na página.
-              </p>
-            </li>
-            <li class="seletores-mais-comuns">
-              <p>
-                <strong>Seletor por Classe (.):</strong> Busca elemntos através
-                do atributo "class".
-              </p>
-            </li>
-            <li>
-              <p>
-                <strong>Seletor Universal (*):</strong> Seleciona todos os
-                elementos HTML.
-              </p>
-            </li>
-            <li>
-              <p>
-                <strong>Seletor de Atributo ([atrib]):</strong> Seleciona
-                elemntos que possuem um atributo específico em nosso documento
-                HTML e conseguimos também buscar atributos com um valor
-                específico.
-              </p>
-              <p>Exemplo:</p>
-              <div>
-                <ul>
-                  <li>
-                    <a title="Netflix" href="http://www.netflix.com">Netflix</a>
-                  </li>
-                  <li>
-                    <a title="streaming-Prime" href="http://www.primevideo.com"
-                      >Prime video</a
-                    >
-                  </li>
-                  <li>
-                    <a title="streaming Spotify" href="https://www.spotify.com"
-                      >Spotify</a
-                    >
-                  </li>
-                  <li>
-                    <a title="streaming">Disney Plus</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-       </section>
+        <section>
+          <h2>Seletores CSS</h2>
+          <div>
+            <ul>
+              <li class="seletores-mais-comuns texto-maiusculo">
+                <p>
+                  <strong>Seletor por tipo:</strong> Busca elementos por uma tag
+                  HTML especifica.
+                </p>
+              </li>
+              <li class="seletores-mais-comuns">
+                <p>
+                  <strong>Seletor por ID (#):</strong> Busca elementos através
+                  do atributo "id", que é único para cada elemento HTML na
+                  página.
+                </p>
+              </li>
+              <li class="seletores-mais-comuns">
+                <p>
+                  <strong>Seletor por Classe (.):</strong> Busca elemntos
+                  através do atributo "class".
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Seletor Universal (*):</strong> Seleciona todos os
+                  elementos HTML.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <strong>Seletor de Atributo ([atrib]):</strong> Seleciona
+                  elemntos que possuem um atributo específico em nosso documento
+                  HTML e conseguimos também buscar atributos com um valor
+                  específico.
+                </p>
+                <p>Exemplo:</p>
+                <div>
+                  <ul>
+                    <li>
+                      <a title="Netflix" href="http://www.netflix.com"
+                        >Netflix</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        title="streaming-Prime"
+                        href="http://www.primevideo.com"
+                        >Prime video</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        title="streaming Spotify"
+                        href="https://www.spotify.com"
+                        >Spotify</a
+                      >
+                    </li>
+                    <li>
+                      <a title="streaming">Disney Plus</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </article>
+
       <article id="combinadores">
         <section>
           <h2>Combinadores</h2>
@@ -135,9 +155,9 @@
               vígula (,).
             </p>
             <div class="texto">
-              Assim, não precisamos fiar copiando e colando os mesmos códigos para
-              todos, nós podemos fazer um só básico de CSS e reutilizar as mesmas
-              regras!
+              Assim, não precisamos fiar copiando e colando os mesmos códigos
+              para todos, nós podemos fazer um só básico de CSS e reutilizar as
+              mesmas regras!
             </div>
             <p>Exemplos:</p>
 
@@ -149,70 +169,70 @@
             <br /><br />
             <button id="botao-fechar">Fechar página</button>
           </div>
-          <div>
-            <h3>Combinadores</h3>
-            <p>Especifica o tipo de relação entre dois seletores.</p>
         </section>
+        <section>
+          <h3>Combinadores</h3>
+          <p>Especifica o tipo de relação entre dois seletores.</p>
 
-          <section>
-            <h4>Combinador Descendente</h4>
-            <p>
-              É o padrão e busca os elementos descendentes (filhos) do primeiro
-              seletor para o segundo.
-            </p>
+          <h4>Combinador Descendente</h4>
+          <p>
+            É o padrão e busca os elementos descendentes (filhos) do primeiro
+            seletor para o segundo.
+          </p>
 
-            <p>Exemplos:</p>
-            <ul>
-              <li class="fundo-verde" id="lista-01">
-                <div>Item 1</div>
-                <ul id="sublista-01">
-                  <li>Subitem A</li>
-                  <li>Subitem B</li>
-                </ul>
-              </li>
-              <li class="fundo-verde" id="lista-02">
-                <div>Item 2</div>
-                <ul id="sublista-02">
-                  <li>Subitem A</li>
-                  <li>Subitem B</li>
-                </ul>
-              </li>
-              <li class="fundo-azul" id="lista-03">
-                <div>Item 3</div>
-                <ul id="sublista-03">
-                  <li>Subitem A</li>
-                  <li>Subitem B</li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <section id="combinador-filho">
-            <h4>Combinador Filho</h4>
-            <p>
-              Busca os elementos filhos (filhos diretos) do primeiro seletor para o
-              segundo.
-            </p>
-            <p>Exemplos:</p>
-            
-           <section id="exemplo01">
-            <div >
+          <p>Exemplos:</p>
+          <ul>
+            <li class="fundo-verde" id="lista-01">
+              <div>Item 1</div>
+              <ul id="sublista-01">
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+              </ul>
+            </li>
+            <li class="fundo-verde" id="lista-02">
+              <div>Item 2</div>
+              <ul id="sublista-02">
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+              </ul>
+            </li>
+            <li class="fundo-azul" id="lista-03">
+              <div>Item 3</div>
+              <ul id="sublista-03">
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="combinador-filho">
+          <h4>Combinador Filho</h4>
+          <p>
+            Busca os elementos filhos (filhos diretos) do primeiro seletor para
+            o segundo.
+          </p>
+          <p>Exemplos:</p>
+
+          <section id="exemplo01">
+            <div>
               <p>Parágrafo 1 dentro da div</p>
               <p>Parágrafo 2 dentro da div</p>
               <span><p>Paragrafo 3 dentro da div, dentro do span</p></span>
             </div>
             <p>Paragrafo 4 fora da div</p>
             <p>Paragrafo 5 fora da div</p>
-           </section>
           </section>
+        </section>
 
-          <section id="combinador-irmão">
-           
-            <h4>Combinador Irmão</h4>
-            <p> Busca os elementos irmãos (semelhantes) do primeiro seletor. Usa-se (+) para selecionar apenas o próximo irmão e (~) para selecionar todos os irmãos.
-              
-            </p>
-            <p>Exemplos:</p>
-            <section id="exemplo02">
+        <section id="combinador-irmão">
+          <h4>Combinador Irmão</h4>
+          <p>
+            Busca os elementos irmãos (semelhantes) do primeiro seletor. Usa-se
+            (+) para selecionar apenas o próximo irmão e (~) para selecionar
+            todos os irmãos.
+          </p>
+          <p>Exemplos:</p>
+          <section id="exemplo02">
             <div class="fundo-verde">
               <p>Parágrafo 1 dentro da div</p>
               <p>Parágrafo 2 dentro da div</p>
@@ -236,89 +256,137 @@
             </div>
             <p>Paragrafo 14 fora da div</p>
             <p>Paragrafo 15 fora da div</p>
-           </section>
           </section>
+        </section>
       </article>
 
       <article id="dimensionamento">
         <section id="largura-altura">
-        <h2>Dimensionamento e Espaçamento</h2>
-    
-       
+          <h2>Dimensionamento e Espaçamento</h2>
+
           <h3>Largura e Altura</h3>
-          <div id="ex-alt-lar">
-            Exemplo altura e largura de um elemento
-          </div>
-          <p>A palavra-chave <strong>auto</strong> faz com que a altura e largura do elemento sejam adustadas de acordo com o conteúdo e o tamanho da tela. </p>
+          <div id="ex-alt-lar">Exemplo altura e largura de um elemento</div>
+          <p>
+            A palavra-chave <strong>auto</strong> faz com que a altura e largura
+            do elemento sejam adustadas de acordo com o conteúdo e o tamanho da
+            tela.
+          </p>
           <button id="auto">
             Exemplo altura e largura de um elemento usando "auto".
           </button>
-          <p>A palavra-chave <strong>initial</strong> aplica o valor inicial padrão do css. </p>
+          <p>
+            A palavra-chave <strong>initial</strong> aplica o valor inicial
+            padrão do css.
+          </p>
           <button id="initial">
             Exemplo altura e largura de um elemento usando "initial".
           </button>
 
-          <p>A palavra-chave <strong>inherit</strong> aplica o mesmo valor do elemento pai. </p>
+          <p>
+            A palavra-chave <strong>inherit</strong> aplica o mesmo valor do
+            elemento pai.
+          </p>
 
-          <div id="div01">Div 01
+          <div id="div01">
+            Div 01
             <div id="div02">Div 02</div>
           </div>
-          <br><br>
-       </section>
-     
-       <section id="max-min">
-        <h3>Largura e Altura Máxima e Mínima</h3>
-        <button>Botão -  testando se a largura vai aumentar</button>
-       </section> 
-       <section id="margin">
-        <h3>Margin</h3>
-        <p>Espaçamento externo de um elemento, criando espaço ao redor dele, fora das bordas.</p>
-        <ul>
-          <li>Um valor: aplica-se a todos os lados</li>
-          <li>Dois valores: primeiro, em cima e embaixo, segundo laterais</li>
-          <li>Três valores: em cima, lados, embaixo</li>
-          <li>Quatro valores: em cima, esquerda, embaixo, direita</li>
-        </ul>
-        <p>A palavra-chave <strong>auto</strong> faz com que o elemento fique centralizado na tela na horizontal. Então se ainda assim quiser aplicar margem em cima e embaixo tem jeito. </p>
-        <p>Podem ser aplicados também valores negativos, fazendo com que um elemento se sobreponha a outro.</p>
-        <p>Exemplos:</p>
+          <br /><br />
+        </section>
 
-        <div id="elemento01"></div>
-        <div id="elemento02"></div>
-       </section>
+        <section id="max-min">
+          <h3>Largura e Altura Máxima e Mínima</h3>
+          <button>Botão - testando se a largura vai aumentar</button>
+        </section>
+        <section id="margin">
+          <h3>Margin</h3>
+          <p>
+            Espaçamento externo de um elemento, criando espaço ao redor dele,
+            fora das bordas.
+          </p>
+          <ul>
+            <li>Um valor: aplica-se a todos os lados</li>
+            <li>Dois valores: primeiro, em cima e embaixo, segundo laterais</li>
+            <li>Três valores: em cima, lados, embaixo</li>
+            <li>Quatro valores: em cima, esquerda, embaixo, direita</li>
+          </ul>
+          <p>
+            A palavra-chave <strong>auto</strong> faz com que o elemento fique
+            centralizado na tela na horizontal. Então se ainda assim quiser
+            aplicar margem em cima e embaixo tem jeito.
+          </p>
+          <p>
+            Podem ser aplicados também valores negativos, fazendo com que um
+            elemento se sobreponha a outro.
+          </p>
+          <p>Exemplos:</p>
 
-       <section id="padding">
-        <h3>Padding</h3>
-        <p>Espaçamento interno, cria espaço entre o conteúdo de um elemento e suas bordas.</p>
-        <p>Segue a mesma regra de margin para a quantidade de valores atribuídos.</p>
-        <p>Quando aumentamos o padding do elemento, é como se a largura e a altura aumentassem junto. </p>
-       
-        <p>Exemplos:</p>
-        <p>Com padding:</p>
-        <div id="elemento03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque facilis repellat dignissimos ullam tempore neque aliquam accusamus aperiam excepturi molestias delectus nam quo repellendus sunt sint. Optio, praesentium totam!</div>
-        <p>Sem padding:</p>
-        <div id="elemento04">Lorem ipsum dolor sit amet consectetur adipisicing elit. Box-siding: </div>
-       
-       </section>
+          <div id="elemento01"></div>
+          <div id="elemento02"></div>
+        </section>
 
-       <section id="box-sizing">
-        <h3>Box Sizing = border-box</h3>
-        <p>Define como o tamanho total de um elemento é calculado.</p>
-        <p>Com box-sizing <strong>border-box</strong>, o padding e a borda são incluídos na largura e altura definidas do elemento.</p>
-       <p>Com box-sizing <strong>content-box</strong>, a largura e altura aumentam com o padding.</p>
-        <p>Exemplos:</p>
-        <p>Box-siding = border-box: o elemento não aumenta com o padding. </p>
-        <div id="elemento05">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque facilis repellat dignissimos ullam tempore neque aliquam accusamus aperiam excepturi molestias delectus nam quo repellendus sunt sint. </div>
-        <p>Box-siding = content-box: o elemento aumenta com o padding.</p>
-        <div id="elemento06">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cumque facilis repellat dignissimos ullam tempore neque aliquam accusamus aperiam excepturi molestias delectus nam quo repellendus sunt sint. </div>
-       
-       </section>
+        <section id="padding">
+          <h3>Padding</h3>
+          <p>
+            Espaçamento interno, cria espaço entre o conteúdo de um elemento e
+            suas bordas.
+          </p>
+          <p>
+            Segue a mesma regra de margin para a quantidade de valores
+            atribuídos.
+          </p>
+          <p>
+            Quando aumentamos o padding do elemento, é como se a largura e a
+            altura aumentassem junto.
+          </p>
+
+          <p>Exemplos:</p>
+          <p>Com padding:</p>
+          <div id="elemento03">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            cumque facilis repellat dignissimos ullam tempore neque aliquam
+            accusamus aperiam excepturi molestias delectus nam quo repellendus
+            sunt sint. Optio, praesentium totam!
+          </div>
+          <p>Sem padding:</p>
+          <div id="elemento04">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Box-siding:
+          </div>
+        </section>
+
+        <section id="box-sizing">
+          <h3>Box Sizing = border-box</h3>
+          <p>Define como o tamanho total de um elemento é calculado.</p>
+          <p>
+            Com box-sizing <strong>border-box</strong>, o padding e a borda são
+            incluídos na largura e altura definidas do elemento.
+          </p>
+          <p>
+            Com box-sizing <strong>content-box</strong>, a largura e altura
+            aumentam com o padding.
+          </p>
+          <p>Exemplos:</p>
+          <p>Box-siding = border-box: o elemento não aumenta com o padding.</p>
+          <div id="elemento05">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            cumque facilis repellat dignissimos ullam tempore neque aliquam
+            accusamus aperiam excepturi molestias delectus nam quo repellendus
+            sunt sint.
+          </div>
+          <p>Box-siding = content-box: o elemento aumenta com o padding.</p>
+          <div id="elemento06">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
+            cumque facilis repellat dignissimos ullam tempore neque aliquam
+            accusamus aperiam excepturi molestias delectus nam quo repellendus
+            sunt sint.
+          </div>
+        </section>
       </article>
     </main>
     <footer>
       <p>
-        Desenvolvido por
-        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams" target="_blank">Eloiza Souza</a>
       </p>
     </footer>
   </body>

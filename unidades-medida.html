@@ -3,67 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
-    <link rel="stylesheet" href="../css/unidades-medida.css" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/unidades-medida.css" />
     <title>Unidades de Medidas</title>
   </head>
   <body>
     <header>
-  
       <nav>
         <ul>
-          <li class="selected"><a href="../index.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="introducao.html">Introdução</a></li>
           <li>
             <a href="estilizacao.html">Estilização</a>
           </li>
-          <li><a href="unidades-medida.html">Medidas</a></li>
+          <li class="selected"><a href="unidades-medida.html">Medidas</a></li>
           <li><a href="posicionamento.html">Posição</a></li>
           <li><a href="flexbox.html">Flexbox</a></li>
           <li><a href="grid.html">Grid</a></li>
           <li><a href="responsivo.html">Responsivo</a></li>
-
         </ul>
       </nav>
     </header>
 
+    <aside>
+      <h2>Unidades de Medidas</h2>
+      <nav>
+        <ul>
+          <li><a href="#absolutas">Absolutas</a></li>
+          <li><a href="#relativas">Relativas</a></li>
+          <li><a href="#calculo">Cálculos</a></li>
+        </ul>
+      </nav>
+    </aside>
+
     <main>
-      <article class="absolutas">
-       <section>
-        <h2>Unidades de Medidas Absolutas</h2>
-        <p>
-          As unidades de medida absolutas têm um valor fixo, independentemente
-          de outras propriedades. Elas são úteis para especificar tamanhos e
-          dimensões que precisam ser constantes, ou seja, o tamanho não vai mudar por interferência de outros fatores ou alterações. 
-        </p>
-       </section>
+      <article class="absolutas" id="absolutas">
+        <section>
+          <h2>Unidades de Medidas Absolutas</h2>
+          <p>
+            As unidades de medida absolutas têm um valor fixo, independentemente
+            de outras propriedades. Elas são úteis para especificar tamanhos e
+            dimensões que precisam ser constantes, ou seja, o tamanho não vai
+            mudar por interferência de outros fatores ou alterações.
+          </p>
+        </section>
         <section class="exemplo">
-            <h3>- Pixels (px)</h3>
+          <h3>- Pixels (px)</h3>
+          <p>
+            A unidade <code>px</code> representa pixels. É uma unidade fixa e é
+            amplamente utilizada para definir tamanhos precisos.
+          </p>
+          <div class="box px">
+            Texto com largura de 200px e altura de 100px.
+          </div>
+          <h4>Pixel, resolucção e densidade</h4>
+          <p>
+            Pixels, resolução e densidade são conceitos fundamentais para
+            entender a qualidade e a clareza das imagens em displays.
+            <strong>Pixels</strong> são as menores unidades de uma imagem
+            digital e representam os pontos individuais que formam a imagem
+            exibida na tela. <strong>Resolução</strong> refere-se ao número
+            total de pixels em uma tela ou imagem, geralmente expressa em termos
+            de largura por altura (por exemplo, 1920x1080). Uma resolução maior
+            significa mais pixels e, portanto, mais detalhes e clareza na
+            imagem. <strong>Densidade de pixels</strong> (ou PPI - pixels por
+            polegada) é a medida de quantos pixels estão presentes em uma
+            polegada da tela. Uma maior densidade de pixels indica que os pixels
+            estão mais próximos uns dos outros, resultando em uma imagem mais
+            nítida e menos visível em qualquer distorção ou pixelização. Em
+            resumo, enquanto a resolução define a quantidade total de pixels
+            disponíveis, a densidade de pixels mede a concentração desses pixels
+            em uma área específica, influenciando diretamente a qualidade visual
+            da tela.
+          </p>
+          <h4>Pixels Físicos e Lógicos</h4>
+          <p>
+            Em displays digitais, <strong>pixels físicos</strong> são os pontos
+            reais no hardware da tela, enquanto
+            <strong>pixels lógicos</strong> são a unidade de medida usada no CSS
+            para renderizar elementos na tela.
+          </p>
+          <div class="pixel-example">
+            <h3>Pixel Físico</h3>
             <p>
-                A unidade <code>px</code> representa pixels. É uma unidade fixa e é
-                amplamente utilizada para definir tamanhos precisos. 
+              Os pixels físicos são os reais pontos de luz que compõem uma tela.
+              A imagem abaixo mostra uma representação do que seria um pixel
+              físico em um display:
             </p>
-            <div class="box px">
-                Texto com largura de 200px e altura de 100px.
-            </div>
-            <h4>Pixel, resolucção e densidade</h4>
-            <p>Pixels, resolução e densidade são conceitos fundamentais para entender a qualidade e a clareza das imagens em displays. <strong>Pixels</strong> são as menores unidades de uma imagem digital e representam os pontos individuais que formam a imagem exibida na tela. <strong>Resolução</strong> refere-se ao número total de pixels em uma tela ou imagem, geralmente expressa em termos de largura por altura (por exemplo, 1920x1080). Uma resolução maior significa mais pixels e, portanto, mais detalhes e clareza na imagem. <strong>Densidade de pixels</strong> (ou PPI - pixels por polegada) é a medida de quantos pixels estão presentes em uma polegada da tela. Uma maior densidade de pixels indica que os pixels estão mais próximos uns dos outros, resultando em uma imagem mais nítida e menos visível em qualquer distorção ou pixelização. Em resumo, enquanto a resolução define a quantidade total de pixels disponíveis, a densidade de pixels mede a concentração desses pixels em uma área específica, influenciando diretamente a qualidade visual da tela.</p>
-            <h4>Pixels Físicos e Lógicos</h4>
-            <p>Em displays digitais, <strong>pixels físicos</strong> são os pontos reais no hardware da tela, enquanto <strong>pixels lógicos</strong> são a unidade de medida usada no CSS para renderizar elementos na tela.</p>
-            <div class="pixel-example">
-                <h3>Pixel Físico</h3>
-                <p>Os pixels físicos são os reais pontos de luz que compõem uma tela. A imagem abaixo mostra uma representação do que seria um pixel físico em um display:</p>
-                <div class="pixel physical-pixel">Pixel Físico</div>
-            </div>
+            <div class="pixel physical-pixel">Pixel Físico</div>
+          </div>
 
-            <div class="pixel-example">
-                <h3>Pixel Lógico</h3>
-                <p>Os pixels lógicos são usados pelo CSS para definir tamanhos e posições. Eles não correspondem diretamente aos pixels físicos, pois podem ser escalados dependendo da densidade da tela. A imagem abaixo mostra um exemplo de como um pixel lógico pode ser exibido em uma tela:</p>
-                <div class="pixel logical-pixel">Pixel Lógico</div>
-            </div>
+          <div class="pixel-example">
+            <h3>Pixel Lógico</h3>
+            <p>
+              Os pixels lógicos são usados pelo CSS para definir tamanhos e
+              posições. Eles não correspondem diretamente aos pixels físicos,
+              pois podem ser escalados dependendo da densidade da tela. A imagem
+              abaixo mostra um exemplo de como um pixel lógico pode ser exibido
+              em uma tela:
+            </p>
+            <div class="pixel logical-pixel">Pixel Lógico</div>
+          </div>
         </section>
 
-        </section>
         <section class="exemplo">
           <h3>- Pontos (pt)</h3>
           <p>
@@ -84,23 +126,30 @@
         </section>
       </article>
 
-      <article class="relativas">
-     <section>
-      <h2>Unidades de Medidas Relativas</h2>
-      <p>
-        As unidades de medida relativas são baseadas em outros elementos, como
-        o tamanho da fonte do elemento pai. Elas são úteis para criar layouts
-        responsivos e adaptáveis.
-      </p>
-      <p>O elemnento raiz &lthtml&gt herda o valor padrão do tamanho das fontes dos navegadores e esse tamanho pode ser configurado nas preferências do browser.</p>
-      <h3>Vantagens de utilizar as unidades em e rem</h3>
-      <p>Traz flexibilidade aos projetos e a capacidade de dimensionar os elementos das páginas web, resulado em designs:</p>
-      <ul>
-          <li>Fácil manutenção</li>
-          <li>Responsivos</li>
-          <li>Controle de escla pelos navegadores.</li>
-      </ul>
-     </section>
+      <article class="relativas" id="relativas">
+        <section>
+          <h2>Unidades de Medidas Relativas</h2>
+          <p>
+            As unidades de medida relativas são baseadas em outros elementos,
+            como o tamanho da fonte do elemento pai. Elas são úteis para criar
+            layouts responsivos e adaptáveis.
+          </p>
+          <p>
+            O elemnento raiz &lthtml&gt herda o valor padrão do tamanho das
+            fontes dos navegadores e esse tamanho pode ser configurado nas
+            preferências do browser.
+          </p>
+          <h3>Vantagens de utilizar as unidades em e rem</h3>
+          <p>
+            Traz flexibilidade aos projetos e a capacidade de dimensionar os
+            elementos das páginas web, resulado em designs:
+          </p>
+          <ul>
+            <li>Fácil manutenção</li>
+            <li>Responsivos</li>
+            <li>Controle de escla pelos navegadores.</li>
+          </ul>
+        </section>
         <section class="exemplo">
           <h3>- Em (em)</h3>
           <p>
@@ -108,29 +157,35 @@
             pai. Se o tamanho da fonte do pai for 16px, 1em será igual a 16px.
           </p>
           <ul>
-            <li>
-                Contexto dos elementos            </li>
+            <li>Contexto dos elementos</li>
           </ul>
-          <div class="box em1">font-size: 16px;
-            <div class="box em2">font-size: 2em = 32px;
-                <div class="box em3">font-size: 2em = 64px;</div>
+          <div class="box em1">
+            font-size: 16px;
+            <div class="box em2">
+              font-size: 2em = 32px;
+              <div class="box em3">font-size: 2em = 64px;</div>
             </div>
           </div>
-          <p>Quando usa <code>em</code> na propriedade <code>width</code> o tamanho é calculado em relação ao <code>font-size</code> do próprio elemento.</p>
-          <div class="box em4">font-size: 30px;<br>
+          <p>
+            Quando usa <code>em</code> na propriedade <code>width</code> o
+            tamanho é calculado em relação ao <code>font-size</code> do próprio
+            elemento.
+          </p>
+          <div class="box em4">
+            font-size: 30px;<br />
             width: 10em = 300px;
-            
           </div>
         </section>
         <section class="exemplo">
-            <h3>- Rem (rem)</h3>
-            <p>
-              A unidade <code>rem</code> é relativa ao tamanho da fonte do elemento raiz, chamado root, que no caso, é a tag html.
-            </p>
-            <ul>
-                <li>Tamanhos consistentes, sem herança</li>
-                <li>Melhor experiência do usuário</li>
-            </ul>
+          <h3>- Rem (rem)</h3>
+          <p>
+            A unidade <code>rem</code> é relativa ao tamanho da fonte do
+            elemento raiz, chamado root, que no caso, é a tag html.
+          </p>
+          <ul>
+            <li>Tamanhos consistentes, sem herança</li>
+            <li>Melhor experiência do usuário</li>
+          </ul>
         </section>
         <section class="exemplo">
           <h3>- Percentagem (%)</h3>
@@ -140,13 +195,18 @@
           </p>
           <div class="externa">
             <div class="box percent">
-                Texto com largura de 50% e altura de 25%.
-              </div>
+              Texto com largura de 50% e altura de 25%.
+            </div>
           </div>
         </section>
         <section class="exemplo">
           <h3>- Viewport Width (vw) e Viewport Height (vh)</h3>
-          <p><strong>Viewport</strong> é a área visível de uma página web, podendo variar de dispositivo para dispositivo. As undidades de medida viewport, vão ser calculadas em relação ao tamanho da área em que o usuário está vendo sua página.</p>
+          <p>
+            <strong>Viewport</strong> é a área visível de uma página web,
+            podendo variar de dispositivo para dispositivo. As undidades de
+            medida viewport, vão ser calculadas em relação ao tamanho da área em
+            que o usuário está vendo sua página.
+          </p>
           <p>
             As unidades <code>vw</code> e <code>vh</code> são relativas ao
             tamanho da viewport. 1vw é igual a 1% da largura da viewport e 1vh é
@@ -155,42 +215,71 @@
           <div class="box vw">Texto com largura de 50vw e altura de 25vh.</div>
         </section>
       </article>
-      <article class="calculo">
- <section>
-  <h2>Calculando valores em CSS</h2>
-  <p>No CSS, podemos usar funções para calcular valores dinâmicos para tamanhos, margens, espaçamentos e muito mais. Estas funções são úteis para criar layouts responsivos e flexíveis, especialmente ao trabalhar com diferentes unidades de medida como <code>px</code>, <code>em</code>, <code>%</code>, etc. Vamos explorar algumas das funções mais comuns como <code>calc()</code>, <code>max()</code> e <code>min()</code>.</p>
- </section>
-            
+      <article class="calculo" id="calculo">
         <section>
-            <h3>Usando <code>calc()</code> para cálculos dinâmicos</h3>
-            <p>A função <code>calc()</code> permite realizar operações matemáticas em valores CSS, como somar, subtrair, multiplicar ou dividir diferentes unidades. Exemplo:</p>
-            <div class="box calc-example">Tamanho calculado com <code>calc()</code></div>
-        </section>
-        
-        <section>
-            <h3>Usando <code>max()</code> para escolher o maior valor</h3>
-            <p>A função <code>max()</code> escolhe o maior valor entre dois ou mais parâmetros. Exemplo:</p>
-            <div class="box max-example">Altura baseada em <code>max()</code></div>
+          <h2>Calculando valores em CSS</h2>
+          <p>
+            No CSS, podemos usar funções para calcular valores dinâmicos para
+            tamanhos, margens, espaçamentos e muito mais. Estas funções são
+            úteis para criar layouts responsivos e flexíveis, especialmente ao
+            trabalhar com diferentes unidades de medida como <code>px</code>,
+            <code>em</code>, <code>%</code>, etc. Vamos explorar algumas das
+            funções mais comuns como <code>calc()</code>, <code>max()</code> e
+            <code>min()</code>.
+          </p>
         </section>
 
         <section>
-            <h3>Usando <code>min()</code> para escolher o menor valor</h3>
-            <p>A função <code>min()</code> escolhe o menor valor entre dois ou mais parâmetros. Exemplo:</p>
-            <div class="box min-example">Largura baseada em <code>min()</code></div>
+          <h3>Usando <code>calc()</code> para cálculos dinâmicos</h3>
+          <p>
+            A função <code>calc()</code> permite realizar operações matemáticas
+            em valores CSS, como somar, subtrair, multiplicar ou dividir
+            diferentes unidades. Exemplo:
+          </p>
+          <div class="box calc-example">
+            Tamanho calculado com <code>calc()</code>
+          </div>
         </section>
 
         <section>
-            <h3>Usando <code>clamp()</code> para limitar valores</h3>
-            <p>A função <code>clamp()</code> define um valor baseado em três parâmetros: o valor mínimo, o preferencial e o valor máximo. Exemplo:</p>
-            <div class="box clamp-example">Largura limitada com <code>clamp()</code></div>
+          <h3>Usando <code>max()</code> para escolher o maior valor</h3>
+          <p>
+            A função <code>max()</code> escolhe o maior valor entre dois ou mais
+            parâmetros. Exemplo:
+          </p>
+          <div class="box max-example">
+            Altura baseada em <code>max()</code>
+          </div>
         </section>
 
+        <section>
+          <h3>Usando <code>min()</code> para escolher o menor valor</h3>
+          <p>
+            A função <code>min()</code> escolhe o menor valor entre dois ou mais
+            parâmetros. Exemplo:
+          </p>
+          <div class="box min-example">
+            Largura baseada em <code>min()</code>
+          </div>
+        </section>
+
+        <section>
+          <h3>Usando <code>clamp()</code> para limitar valores</h3>
+          <p>
+            A função <code>clamp()</code> define um valor baseado em três
+            parâmetros: o valor mínimo, o preferencial e o valor máximo.
+            Exemplo:
+          </p>
+          <div class="box clamp-example">
+            Largura limitada com <code>clamp()</code>
+          </div>
+        </section>
       </article>
     </main>
     <footer>
       <p>
-        Desenvolvido por
-        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams" target="_blank">Eloiza Souza</a>
       </p>
     </footer>
   </body>

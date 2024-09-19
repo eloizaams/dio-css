@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
-    <link rel="stylesheet" href="../css/posicionamento.css" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/posicionamento.css" />
     <title>Posicionamento em css</title>
   </head>
   <body>
@@ -12,13 +12,13 @@
    
       <nav>
         <ul>
-          <li class="selected"><a href="../index.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="introducao.html">Introdução</a></li>
           <li>
             <a href="estilizacao.html">Estilização</a>
           </li>
           <li><a href="unidades-medida.html">Medidas</a></li>
-          <li><a href="posicionamento.html">Posição</a></li>
+          <li  class="selected"><a href="posicionamento.html">Posição</a></li>
           <li><a href="flexbox.html">Flexbox</a></li>
           <li><a href="grid.html">Grid</a></li>
           <li><a href="responsivo.html">Responsivo</a></li>
@@ -27,12 +27,34 @@
       </nav>
     </header>
 
+    <aside>
+      <h2>Posicionamento</h2>
+      <nav>
+        <ul>
+          <li><a href="#display">Display</a></li>
+          <li><a href="#block">Display Bolck</a></li>
+          <li><a href="#inline">Display Inline</a></li>
+          <li><a href="#inline-block">Display Inline-Block</a></li>
+          <li><a href="#none">Display None</a></li>
+          <li><a href="#alinhamento">Alinhamento Inline</a></li>
+          <li><a href="#flex">Display Flex</a></li>
+          <li><a href="#grid">Display Grid</a></li>
+          <li><a href="#static">Position Static</a></li>
+          <li><a href="#relative">Position Relative</a></li>
+          <li><a href="#absolute">Position Absolute</a></li>
+          <li><a href="#sticky">Position Sticky</a></li>
+          <li><a href="#fixed">Position Fixed</a></li>
+          <li><a href="#z-index">Z-index</a></li>
+        </ul>
+      </nav>
+    </aside>
+
     <main>
       <article>
         <section>
         <h2>Propriedades de exibição</h2>
       </section>
-        <section>
+        <section id="display">
           <h3>Propriedade Display</h3>
           <p>
             Determina como as caixas dos elementos devem se comportar no momento
@@ -40,7 +62,7 @@
           </p>
           <p>Todo elemento HTML já vem com um valor de display como padrão.</p>
         </section>
-        <section class="block">
+        <section class="block" id="block">
           <h3>Display Block</h3>
           <h4>O que é display: block?</h4>
           <p>
@@ -83,7 +105,7 @@
             disponível.
           </p>
         </section>
-        <section>
+        <section id="inline">
           <h3>Display Inline</h3>
           <h4>O que é display: inline?</h4>
           <p>
@@ -121,7 +143,7 @@
             quebra.
           </p>
         </section>
-        <section>
+        <section id="inline-block">
           <h3>Display Inline-Block</h3>
           <h4>O que é display: inline-block?</h4>
           <p>
@@ -157,7 +179,7 @@
             permitem ajuste de largura e altura.
           </p>
         </section>
-        <section>
+        <section id="none">
           <h3>Display None</h3>
           <h4>O que é display: none?</h4>
           <p>
@@ -203,7 +225,7 @@
             <code>visibility: hidden</code>
           </p>
         </section>
-        <section>
+        <section id="alinhamento">
           <h3>Alinhamento de Elementos Inline</h3>
           <p>
             O alinhamento de elementos inline pode ser ajustado usando a
@@ -228,19 +250,19 @@
           <div>
             <p><code>top</code>: Alinha o topo dos elementos da linha.</p>
             <div>
-              <img src="../img/css.svg" class="top" />
+              <img src="img/css.svg" class="top" />
               <span>Item 1</span>
               <span>Item 2</span>
             </div>
             <p><code>middle</code>: Alinha os elementos ao meio.</p>
             <div>
-              <img src="../img/css.svg" class="middle" />
+              <img src="img/css.svg" class="middle" />
               <span>Item 1</span>
               <span>Item 2</span>
             </div>
             <p><code>bottom</code>: Alinha a base dos elementos da linha.</p>
             <div>
-              <img src="../img/css.svg" class="bottom" />
+              <img src="img/css.svg" class="bottom" />
               <span>Item 1</span>
               <span>Item 2</span>
             </div>
@@ -254,7 +276,7 @@
             de uma linha.
           </p>
         </section>
-        <section>
+        <section id="flex">
           <h3>Display: flex</h3>
           <p>
             O <strong>Flexbox</strong> é uma forma de organizar os elemntos em
@@ -268,7 +290,7 @@
             <span class="flex-3"></span>
           </div>
         </section>
-        <section>
+        <section id="grid">
           <h3>Display: grid</h3>
           <p>
             O <strong>Grid Layout</strong> é uma forma de organizar os elemntos
@@ -285,8 +307,8 @@
         </section>
       </article>
       <article>
-        <section>
-          <h2>Posssicionando elementos</h2>
+        <section id="static">
+          <h2>Posicionando elementos</h2>
             <h3>Position Static</h3>
             <p>
                 <code>position: static;</code> é o valor padrão de posicionamento dos elementos HTML. Os elementos são posicionados de acordo com o fluxo normal da página, sem ajustes de posição. Eles não respondem às propriedades de topo, esquerda, direita ou abaixo.
@@ -296,7 +318,7 @@
             </div>
         </section>
     
-        <section>
+        <section id="relative">
             <h3>Position Relative</h3>
             <p>
                 Com <code>position: relative;</code>, o elemento é posicionado em relação à sua posição original no fluxo da página. O espaço que ele ocupa permanece, mas ele pode ser movido usando as propriedades <code>top</code>, <code>left</code>, <code>right</code>, e <code>bottom</code>.
@@ -306,7 +328,7 @@
             </div>
         </section>
     
-        <section>
+        <section id="absolute">
             <h3>Position Absolute</h3>
             <p>
                 O <code>position: absolute;</code> retira o elemento do fluxo normal da página e o posiciona em relação ao seu elemento pai mais próximo com <code>position: relative</code>, <code>absolute</code> ou <code>fixed</code>. Caso nenhum elemento pai tenha um desses valores, o elemento será posicionado em relação ao <code>body</code>.
@@ -316,12 +338,12 @@
                 Este elemento foi posicionado com <code>position: absolute</code>.
             </div>
          <div class="pai">
-            <img src="../img/breakfast.jpeg">
+            <img src="img/breakfast.jpeg">
             <p class="filho">Breakfast</p>
          </div>
         </section>
 
-        <section>
+        <section id="sticky">
             <h3>Position Sticky</h3>
             <p>
                 O <code>position: sticky;</code> permite que o elemento fique "grudado" em uma posição específica ao rolar a página, mas volta para sua posição original quando não é mais necessário. Ele se comporta como <code>relative</code> até que o usuário role a página para uma certa posição, e então se torna <code>fixed</code>.
@@ -332,7 +354,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="fixed">
             <h3>Position Fixed</h3>
             <p>
                 O <code>position: fixed;</code> posiciona o elemento em relação à janela do navegador. O elemento fica fixo na tela, mesmo quando o usuário rola a página.
@@ -342,7 +364,7 @@
             </div>
         </section>
     
-        <section>
+        <section id="z-index">
             <h3>Z-Index</h3>
             <p>
                 A propriedade <code>z-index</code> controla a ordem de empilhamento dos elementos posicionados. Elementos com <code>z-index</code> mais alto ficam sobre aqueles com <code>z-index</code> menor. Apenas elementos com <code>position</code> diferente de <code>static</code> podem ter <code>z-index</code> aplicado.
@@ -357,8 +379,8 @@
 
     <footer>
       <p>
-        Desenvolvido por
-        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams"  target="_blank">Eloiza Souza</a>
       </p>
     </footer>
   </body>

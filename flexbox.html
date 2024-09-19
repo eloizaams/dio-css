@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../img/css.svg" />
-    <link rel="stylesheet" href="../css/flexbox.css" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/flexbox.css" />
     <title>Flexbox</title>
   </head>
   <body>
@@ -12,21 +12,43 @@
 
       <nav>
         <ul>
-          <li class="selected"><a href="../index.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="introducao.html">Introdução</a></li>
           <li>
             <a href="estilizacao.html">Estilização</a>
           </li>
           <li><a href="unidades-medida.html">Medidas</a></li>
           <li><a href="posicionamento.html">Posição</a></li>
-          <li><a href="flexbox.html">Flexbox</a></li>
+          <li  class="selected"><a href="flexbox.html">Flexbox</a></li>
           <li><a href="grid.html">Grid</a></li>
           <li><a href="responsivo.html">Responsivo</a></li>
         
         </ul>
       </nav>
     </header>
-
+    <aside>
+      <h2>Flexbox</h2>
+      <nav>
+        <ul>
+          <li><a href="#conceitos">Conceitos Do Flexbox</a></li>
+          <li><a href="#eixos">Eixos</a></li>
+          <li><a href="#direcao">Direção</a></li>
+          <li><a href="#wrap">Quebra de linha</a></li>
+          <li><a href="#flow">Flex-flow</a></li>
+          <li><a href="#justify">Alinhmento Principal</a></li>
+          <li><a href="#align">Alinhmento Secundário</a></li>
+          <li><a href="#lines">Alinhamento das linhas</a></li>
+          <li><a href="#gap">Gap</a></li>
+          <li><a href="#order">Ordenação</a></li>
+          <li><a href="#grow">Ampliação</a></li>
+          <li><a href="#shrink">Encolhimento</a></li>
+          <li><a href="#basis">Tamanho inicial</a></li>
+          <li><a href="#flex">Shorthand</a></li>
+          <li><a href="#self">Alinhamento célula</a></li>
+          
+        </ul>
+      </nav>
+    </aside>
     <main>
       <article>
         <section>
@@ -43,7 +65,7 @@
         </section>
       </article>
       <article>
-        <section>
+        <section id="conceitos">
           <h3>Entendendo Os Conceitos Do Flexbox</h3>
           <p>
             Flexbox é uma técnica de layout que usa um modelo de caixa para
@@ -57,7 +79,7 @@
             Os elementos dentro do <i>container</i> são conhecidos como itens.
           </p>
           <figure id="img-container">
-            <img src="../img/container.png" >
+            <img src="img/container.png" >
           </figure>
           <h4>Display: Flex</h4>
           <p>
@@ -96,7 +118,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="eixos">
           <h3>Os Eixos Do Flexbox</h3>
           <p>
             O Flexbox tem dois eixos principais: o eixo principal e o eixo
@@ -105,7 +127,7 @@
             principal.
           </p>
           <figure>
-            <img src="../img/eixos.png" />
+            <img src="img/eixos.png" />
           </figure>
           <p>Os ítens serão dispostos no leiaute seguindo ou o eixo principal ou o transversal.
             <ul>
@@ -131,7 +153,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="direcao">
           <h3>
             Definindo A Direção Do Flexbox Com A Propriedade Flex-Direction
           </h3>
@@ -142,10 +164,11 @@
             <code>column-reverse</code>.
           </p>
           <figure>
-            <img src="../img/direction.png">
+            <img src="img/direction.png">
           </figure>
+        </section>
 
-        <section>
+        <section id="wrap">
           <h3>Quebra de Linhas e Colunas com Flex-Wrap</h3>
           <p>
             A propriedade <code>flex-wrap</code> define se os itens devem
@@ -153,7 +176,7 @@
             <code>nowrap</code>, <code>wrap</code>, e <code>wrap-reverse</code>.
           </p>
           <figure>
-            <img src="../img/wrap.png">
+            <img src="img/wrap.png">
           </figure>
           <div class="fundo-branco">
             <div class="example-wrap wrap-example">
@@ -169,7 +192,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="flow">
           <h3>Juntando a Propriedade Flex-Direction e Flex-Wrap em Flex-Flow</h3>
           <p>
             Você pode combinar <code>flex-direction</code> e
@@ -190,7 +213,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="justify">
           <h3>Alinhando os Elementos no Eixo Principal com Justify-Content</h3>
           <p>
             A propriedade <code>justify-content</code> alinha os itens ao longo
@@ -198,16 +221,15 @@
             <code>center</code>, <code>space-between</code>, <code>space-around</code> e <code>space-evenly</code>.
           </p>
           <figure>
-            <img src="../img/justify.png">
+            <img src="img/justify.png">
           </figure>
         
           <figure>
-            <img src="../img/space.png" >
+            <img src="img/space.png" >
           </figure>
         </section>
         
-
-        <section>
+        <section id="align">
           <h3>Alinhando os Elementos no Eixo Transversal com Align-Items</h3>
           <p>
             A propriedade <code>align-items</code> alinha os itens ao longo do
@@ -216,12 +238,12 @@
             <code>stretch</code>.
           </p>
           <figure>
-            <img src="../img/align-items.png" >
+            <img src="img/align-items.png" >
           </figure>
        
         </section>
 
-        <section>
+        <section id="lines">
           <h3>Alinhando as Linhas no Container com Align-Content</h3>
           <p>
             A propriedade <code>align-content</code> alinha as linhas do
@@ -231,12 +253,12 @@
             <code>stretch</code>. Só tem efeito se o container tiver mais de uma linha.
           </p>
           <figure>
-            <img src="../img/align-content.png" >
+            <img src="img/align-content.png" >
           </figure>
      
         </section>
 
-        <section>
+        <section id="gap">
           <h3>Controlando os Espaços entre os Itens com Gap</h3>
           <p>
             A propriedade <code>gap</code> define o espaço entre os itens em um
@@ -244,12 +266,12 @@
             linhas e colunas.
           </p>
           <figure>
-            <img src="../img/gap.png" >
+            <img src="img/gap.png" >
           </figure>
          
         </section>
 
-        <section>
+        <section id="order">
           <h3>Ordenando os Itens Com a Propriedade Order</h3>
           <p>
             A propriedade <code>order</code> permite alterar a ordem dos itens
@@ -257,11 +279,11 @@
             ser usados para alterar a ordem de exibição dos itens.
           </p>
           <figure>
-            <img src="../img/items.png" >
+            <img src="img/items.png" >
           </figure>
         </section>
 
-        <section>
+        <section id="grow">
           <h3>Propriedade Flex-Grow</h3>
           <p>
             A propriedade <code>flex-grow</code> define a capacidade de um item
@@ -269,36 +291,36 @@
             valor padrão é 0.
           </p>
           <figure>
-            <img src="../img/grow.png" >
+            <img src="img/grow.png" >
           </figure>
           
         </section>
 
-        <section>
+        <section id="shrink">
           <h3>Propriedade Flex-Shrink</h3>
           <p>
             A propriedade <code>flex-shrink</code> define a capacidade de um
             item de encolher quando o espaço é reduzido. O valor padrão é 1.
           </p>
           <figure>
-            <img src="../img/shrink.png" >
+            <img src="img/shrink.png" >
           </figure>
         </section>
 
-        <section>
+        <section id="basis">
           <h3>Propriedade Flex-Basis</h3>
           <p>
             A propriedade <code>flex-basis</code> define o tamanho inicial de um item antes do espaço disponível ser distribuído. Pode ser um valor em pixels, porcentagem, ou auto. Aceita também que o valor seja absoluto ou relativo.
           </p>
           <figure>
-            <img src="../img/flex-basis.png" >
+            <img src="img/flex-basis.png" >
           </figure>
           <p>Caso seja aplicado <code>flex-basis: 0</code>, o espaço extra  em volta do conteúdo não
             será considerado. Se definirmos como <code>flex-basis: auto</code>, o espaço extra será
             distribuído com base no que definimos na propriedade <code>flex-grow</code>.
           </p>
             <figure>
-              <img src="../img/flex-basis-2.png" >
+              <img src="img/flex-basis-2.png" >
             </figure>
             <p>
               Se usarmos a propriedade <code>flex-basis</code> no item, ele irá sobrescrever o valor do
@@ -306,24 +328,26 @@
               para o elemento, assim como o <code>min-width/min-height</code>.
             </p>
             <figure>
-              <img src="../img/flex-basis-3.png" >
+              <img src="img/flex-basis-3.png" >
             </figure>
         </section>
-        <section>
+
+        <section id="flex">
           <h3>Shorthand Flex</h3>
           <p>Normalmente, as propriedades <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>
             não são usadas de forma individual, mas sim através da propriedade abreviada <code>flex</code>.
             Os valores de flex-grow, flex-shrink e flex-basis, são definidos, respectivamente, através da
             propriedade flex.</p>
             <figure>
-              <img src="../img/flex.png" >
+              <img src="img/flex.png" >
             </figure>
         </section>
-        <section>
+
+        <section id="self">
           <h3>Propriedade Align-Self</h3>
           <p>A propriedade <code>align-self</code> permite que nós possamos sobrescrever o alinhamento padrão aplicado em todos os itens de forma geral que foi definido pela propriedade align-items.</p>
             <figure>
-              <img src="../img/align-self.png" >
+              <img src="img/align-self.png" >
             </figure>
         </section>
         
@@ -331,10 +355,10 @@
     </main>
 
     <footer>
-      <p>Guia completo de CSS Grid Layout.</p>
+     
       <p>
-        Desenvolvido por
-        <a href="https://github.com/eloizaams">Eloiza Souza</a>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams"  target="_blank">Eloiza Souza</a>
       </p>
     </footer>
   </body>
