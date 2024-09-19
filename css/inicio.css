@@ -1,0 +1,65 @@
+@import url(styles.css);
+
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: minmax(9rem, auto) max-content;
+  grid-template-areas: "logo title" "nav nav";
+}
+.container-logo {
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  grid-area: logo;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+h1 {
+  grid-area: title;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+
+  color: transparent;
+  background: linear-gradient(180deg, #9fc8d9 0%, #2f9ce9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  align-content: center;
+}
+nav {
+  grid-area: nav;
+  width: 100%;
+}
+
+header .logo {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 10rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+header .logo img {
+  padding: 0.3rem;
+  width: 7rem;
+  background-color: transparent;
+  border: none;
+}
+
+#css {
+  padding: 30px;
+  text-align: center;
+  width: 70%;
+  font-size: 1.3rem;
+  letter-spacing: 1.3px;
+}
+#about {
+  padding: 30px;
+  text-align: center;
+  width: 70%;
+}

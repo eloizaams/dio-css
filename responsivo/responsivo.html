@@ -9,16 +9,6 @@
   </head>
   <body>
     <header>
-      <div class="container-header">
-        <div class="logo">
-          <img
-            src="../img/css.svg"
-            title="Logotipo Trilha de CSS DIO"
-            alt="Logotipo Trilha de CSS DIO"
-          />
-        </div>
-        <h1>Trilha CSS</h1>
-      </div>
       <nav>
         <ul>
           <li><a href="../index.html">Início</a></li>
@@ -30,109 +20,438 @@
           <li><a href="../posicionamento/posicionamento.html">Posição</a></li>
           <li><a href="../flexbox/flexbox.html">Flexbox</a></li>
           <li><a href="../grid/grid.html">Grid</a></li>
-          <li class="selected"><a href="../responsivo/responsivo.html">Responsivo</a></li>
+          <li class="selected">
+            <a href="../responsivo/responsivo.html">Responsivo</a>
+          </li>
         </ul>
       </nav>
     </header>
+    <aside>
+      <h2>Trilha CSS</h2>
+
+      <nav>
+        <ul>
+          <li>Introdução ao Design Responsivo</li>
+          <li>Layouts flexíveis - Multicolunas</li>
+          <li>Layouts flexíveis - Flexbox</li>
+          <li>Layouts flexíveis - Grid</li>
+          <li>a</li>
+          <li>a</li>
+          <li>a</li>
+          <li>a</li>
+        </ul>
+      </nav>
+    </aside>
     <main>
-        <article>
-            <section>
-              <h2>Introdução ao Design Responsivo</h2>
-              <p>O <strong>Design Responsivo</strong> refere-se à abordagem de design web em que as páginas se adaptam automaticamente a diferentes tamanhos de tela e dispositivos, como smartphones, tablets e desktops. Ele permite que o conteúdo seja acessível e visualmente agradável em qualquer plataforma, sem a necessidade de criar versões diferentes para cada dispositivo.</p>
-              <p>Neste exemplo, usamos a meta tag <code>viewport</code> e <code>media queries</code> para tornar a página responsiva:</p>
-              <div class="example responsive-box">Este conteúdo se adapta a diferentes tamanhos de tela.</div>
-            </section>
-          
-            <section>
-              <h2>Layouts flexíveis - Multicolunas</h2>
-              <p>Os <strong>Layouts Multicolunas</strong> são uma forma de dividir o conteúdo de uma página em várias colunas, utilizando a propriedade column do CSS. Isso é especialmente útil para textos longos ou conteúdos que você deseja dividir em seções verticais, semelhante a um layout de jornal.</p>
-              <p>Aqui, criamos um layout multicolunas onde o texto é dividido automaticamente em colunas.</p>
-              <div class="example multicolumn">Este conteúdo será dividido em várias colunas automaticamente, criando um layout semelhante a um jornal.</div>
-            </section>
-          
-            <section>
-              <h2>Layouts flexíveis - Flexbox</h2>
-              <p>O <strong>Flexbox</strong> é um modelo de layout CSS que facilita a criação de layouts flexíveis e adaptáveis. Ele organiza os elementos dentro de um contêiner em várias direções, facilitando o alinhamento e distribuição de espaço entre os itens.</p>
-              <p>Neste exemplo, usamos Flexbox para alinhar três caixas lado a lado, com ajuste automático de espaço entre elas.</p>
-              <div class="example flex-container">
-                <div class="item flex-item">Item 1</div>
-                <div class="item flex-item">Item 2</div>
-                <div class="item flex-item">Item 3</div>
-              </div>
-            </section>
-          
-            <section>
-              <h2>Layouts flexíveis - Grid</h2>
-              <p>O <strong>CSS Grid Layout</strong> é um sistema de layout bidimensional que permite criar layouts complexos com facilidade. Ele oferece controle sobre as linhas e colunas, permitindo uma organização mais precisa dos elementos na página.</p>
-              <p>Este exemplo usa o Grid para criar uma estrutura de três colunas, onde cada item ocupa uma célula.</p>
-              <div class="example grid-container">
-                <div class="item grid-item">Item 1</div>
-                <div class="item grid-item">Item 2</div>
-                <div class="item grid-item">Item 3</div>
-              </div>
+      <article>
+        <section>
+          <h2>Introdução ao Design Responsivo</h2>
+          <p>
+            O <strong>Design Responsivo</strong> refere-se à abordagem de design
+            web em que as páginas se adaptam automaticamente a diferentes
+            tamanhos de tela e dispositivos, como smartphones, tablets e
+            desktops. Ele permite que o conteúdo seja acessível e visualmente
+            agradável em qualquer plataforma, sem a necessidade de criar versões
+            diferentes para cada dispositivo.
+          </p>
+          <p>
+            Neste exemplo, usamos a meta tag <code>viewport</code> e
+            <code>media queries</code> para tornar a página responsiva:
+          </p>
+          <div class="example responsive-box">
+            Este conteúdo se adapta a diferentes tamanhos de tela.
+          </div>
+        </section>
 
-            </section>
-          
-            <section>
-              <h2>Meta tag viewport</h2>
-              <p>10:03</p>
-            </section>
-          
-            <section>
-              <h2>O que são Media Queries</h2>
-              <p>02:17</p>
-            </section>
-          
-            <section>
-              <h2>Estruturas</h2>
-              <p>03:38</p>
-            </section>
-          
-            <section>
-              <h2>Media Types</h2>
-              <p>06:00</p>
-            </section>
-          
-            <section>
-              <h2>Media Features (recursos de mídia)</h2>
-              <p>15:21</p>
-            </section>
-          
-            <section>
-              <h2>Operadores</h2>
-              <p>07:25</p>
-            </section>
-          
-            <section>
-              <h2>Maneiras de usar as Media Queries</h2>
-              <p>03:54</p>
-            </section>
-          
-            <section>
-              <h2>Breakpoints</h2>
-              <p>04:49</p>
-            </section>
-          
-            <section>
-              <h2>Devemos sempre usar as media queries</h2>
-              <p>02:38</p>
-            </section>
-          
-            <section>
-              <h2>Imagens Responsivas</h2>
-              <p>13:55</p>
-            </section>
-          
-            <section>
-              <h2>Tipografias Responsivas</h2>
-              <p>08:19</p>
-            </section>
-          
-            <section>
-              <h2>Mobile First</h2>
-            </section>
-          </article>
+        <section>
+          <h2>Layouts flexíveis - Multicolunas</h2>
+          <p>
+            Os <strong>Layouts Multicolunas</strong> são uma forma de dividir o
+            conteúdo de uma página em várias colunas, utilizando a propriedade
+            column do CSS. Isso é especialmente útil para textos longos ou
+            conteúdos que você deseja dividir em seções verticais, semelhante a
+            um layout de jornal.
+          </p>
+          <p>
+            Aqui, criamos um layout multicolunas onde o texto é dividido
+            automaticamente em colunas. Se usarmos a propriedade
+            <code>column-count: 3;</code> o texto fica em 3 colunas e seu
+            tamanho muda com o tamanho da tela. enquanto que com a propriedade
+            <code>column-width: 200px; </code> as colunas vão ter 200px de
+            largura e a quantidade de colunas muda com o tamanho da tela.
+          </p>
+          <div class="example multicolumn">
+            <h3>93 Million Miles</h3>
+            <h4>Jason Mraz</h4>
+            <p>
+              93 million miles from the Sun People get ready, get ready 'Cause
+              here it comes, it's a light A beautiful light, over the horizon
+              Into our eyes Oh, my, my how beautiful Oh, my beautiful mother She
+              told me: Son, in life you're gonna go far If you do it right,
+              you'll love where you are Just know, wherever you go You can
+              always come home 240 thousand miles from the Moon We've come a
+              long way to belong here To share this view of the night A glorious
+              night Over the horizon is another bright sky Oh, my, my how
+              beautiful Oh, my irrefutable father He told me: Son, sometimes it
+              may seem dark But the absence of the light is a necessary part
+              Just know, you're never alone You can always come back home Oh,
+              oh, oh, oh Oh, oh, oh, oh You can always come back, back Every
+              road is a slippery slope There is always a hand that you can hold
+              on to Looking deeper through the telescope You can see that your
+              home's inside of you Just know, that wherever you go No, you're
+              never alone You will always get back home Oh, oh, oh, oh Oh, oh,
+              oh, oh Oh, oh, oh, oh Oh, oh, oh, oh Oh, oh, oh, oh 93 million
+              miles from the Sun People get ready, get ready 'Cause here it
+              comes, it's a light A beautiful light, over the horizon Into our
+              eyes
+            </p>
+          </div>
+        </section>
 
+        <section>
+          <h2>Layouts flexíveis - Flexbox</h2>
+          <p>
+            O <strong>Flexbox</strong> é um modelo de layout CSS que facilita a
+            criação de layouts flexíveis e adaptáveis. Ele organiza os elementos
+            dentro de um contêiner em várias direções, facilitando o alinhamento
+            e distribuição de espaço entre os itens.
+          </p>
+          <p>
+            Neste exemplo, usamos Flexbox para alinhar três caixas lado a lado,
+            com ajuste automático de espaço entre elas.
+          </p>
+          <div class="example flex-container">
+            <div class="item flex-item">
+              Item 1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Optio, et atque! Est eaque facilis laboriosam, esse error autem
+              quidem aliquam voluptates iure, ducimus magni pariatur. At et odit
+              beatae aspernatur!
+            </div>
+            <div class="item flex-item">
+              Item 2 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Optio, et atque! Est eaque facilis laboriosam, esse error autem
+              quidem aliquam voluptates iure, ducimus magni pariatur. At et odit
+              beatae aspernatur!
+            </div>
+            <div class="item flex-item">
+              Item 3 - Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Optio, et atque! Est eaque facilis laboriosam, esse error autem
+              quidem aliquam voluptates iure, ducimus magni pariatur. At et odit
+              beatae aspernatur!
+            </div>
+          </div>
+          <p>
+            O exemplo abaixo utilizou o
+            <a href="https://unsplash.com/">Unsplash</a> para baixar as imagens.
+          </p>
+          <div class="gallery">
+            <div class="image-card">
+              <img src="../img/resp/img1.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img12.jpg" alt="Imagem aleatória" />
+            </div>
+            <div class="image-card">
+              <img src="../img/resp/img4.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img13.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img5.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img7.jpg" alt="Imagem aleatória" />
+            </div>
+            <div class="image-card">
+              <img src="../img/resp/img6.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img8.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img9.jpg" alt="Imagem aleatória" />
+            </div>
+
+            <div class="image-card">
+              <img src="../img/resp/img10.jpg" alt="Imagem aleatória" />
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Layouts flexíveis - Grid</h2>
+          <p>
+            O <strong>CSS Grid Layout</strong> é um sistema de layout
+            bidimensional que permite criar layouts complexos com facilidade.
+            Ele oferece controle sobre as linhas e colunas, permitindo uma
+            organização mais precisa dos elementos na página.
+          </p>
+          <p>
+            Este exemplo usa o Grid para criar a estrutura de uma página html.
+          </p>
+          <div class="example grid-container">
+            <div class="grid-body">
+              <div class="grid-header">header content</div>
+              <nav class="grid-menu">
+                <ul>
+                  <li><a href="">Menu 1</a></li>
+                  <li><a href="">Menu 2</a></li>
+                  <li><a href="">Menu 3</a></li>
+                  <li><a href="">Menu 4</a></li>
+                  <li><a href="">Menu 5</a></li>
+                </ul>
+              </nav>
+              <div class="grid-main">main content</div>
+              <div class="grid-content-1">content 1</div>
+              <div class="grid-content-2">content 2</div>
+              <div class="grid-content-3">content 3</div>
+              <div class="grid-footer">footer content</div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Meta tag viewport</h2>
+          <p>
+            A meta tag <code>viewport</code> irá informar para os navegadores
+            que eles devem utilizar a largura da janela do dispositivo para
+            exibir a página web, fazendo com que os navegadores as redimensionem
+            melhor, ajudando na responsividade.
+          </p>
+          <div>
+            <code>
+              meta name="viewport" content="width=device-width,
+              initial-scale=1.0"
+            </code>
+          </div>
+          <ul>
+            <li>
+              <code>width=device-width</code>: sobrescreve a configuração padrão
+              dos navegadores para a largura da janela
+            </li>
+            <li><code>initial-scale</code>: define zoom inicial da página</li>
+            <li>
+              <code>height</code>: define altura específica para a viewport
+            </li>
+            <li><code>minimum-scale</code>: define o nível mínimo de zoom</li>
+            <li>
+              <code>user-scalable</code>: impede que o usuário aplique zoom na
+              página caso tenha o valor definido como <code>no</code>.
+            </li>
+          </ul>
+          <p>
+            <strong>Atenção:</strong> deve-se evitar o uso do
+            <code>minimum-scale</code>; <code>maximum-scale</code> e
+            <code>user-scalable=no</code>
+          </p>
+        </section>
+
+        <section>
+          <h2>O que são Media Queries</h2>
+          <p>Media Queries são uma técnica do CSS3 que permite aplicar estilos condicionais a uma página, dependendo das características do dispositivo, como a largura da tela, altura, ou orientação.</p>
+        </div>
+            <div class="img-example width-100">
+              <img src="../img/resp/media.png" alt="exemplos de mídias">
+            </div>
+        </section>
+
+        <section id="estruturas">
+          <h2>Estruturas</h2>
+          <p>A estrutura básica de uma media query consiste em utilizar a regra <code>@media</code>, especificando as condições para a aplicação do estilo, seguidas pelos estilos aplicados.</p>
+        
+         <div class="img-example">
+          <img src="../img/resp/estrutura.png" alt="estrutura das media queries">
+        </div>
+        <h3><code>@media</code>(at rule)</h3>
+        <div class="img-example">
+          <img src="../img/resp/at-rule.png" alt="@media">
+        </div> 
+        <p>
+          Regra usada para identificar o tipo de mídia que uma página está 
+          sendo visualizada, informando os recursos que esse tipo de mídia 
+          suporta e os operadores que podem ser combinados para 
+          misturar algumas condições.
+        </p>
+          
+      
+          <h3>Media Types</h3>
+          <div class="img-example">
+            <img src="../img/resp/media-type.png" alt="@media">
+          </div>
+          <p>Media types definem o tipo de dispositivo ao qual a media query será aplicada. Os mais comuns são:
+            <ul>
+              <li>
+                <code>all</code>:  corresponde a todos os 
+                dispositivos, é o default;
+              </li>
+              <li>
+                <code>print</code>: corresponde a documentos que 
+                são uma pré-visualização de 
+                impressão, ou em qualquer mídia que 
+                será voltada para imprimir;
+                <div class="code-example">
+                  <pre><code>@media print{
+  body{
+    background: black;
+    color:white;
+  }
+}</code></pre>
+                </div>
+              </li>
+              <li> <code>screen</code> corresponde a dispositivos 
+                com telas integradas;
+                </li>
+              <li><code>speech</code>: corresponde a dispositivos 
+                que leem o conteúdo de forma 
+                audível, como um leitor de tela, por 
+                exemplo.</li>
+            </ul>
+            </p>
+     
+          <h3>Media Features (Recursos de Mídia)</h3>
+          <div class="img-example">
+            <img src="../img/resp/media-feature.png" alt="@media">
+          </div>
+          <p>Media features são as características específicas do dispositivo, como largura, altura, resolução, orientação, entre outras. Elas são usadas dentro das media queries para aplicar estilos condicionalmente.   </p>
+            <ul>
+              <li><code>min-width/min-height/max-width/
+                max-height/width/height</code> : detecta a 
+                largura e altura da viewport.
+                <p>Exemplo: Transforma o flex-direction para column quando a largura for menor que 900px.
+                </p>
+               <div class="code-example">
+                <pre><code>@media screen and (max-width: 900px) {
+  .container-example{
+    flex-direction: column;
+  }
+}</code></pre>
+               </div>
+
+               <div class="container-example">
+                <div class="item-example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat recusandae sunt at magni? Perferendis quaerat autem, porro modi dolores temporibus voluptate enim ipsum, voluptatem beatae eum corporis repellat tenetur voluptatum.</div>
+                <div class="item-example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat recusandae sunt at magni? Perferendis quaerat autem, porro modi dolores temporibus voluptate enim ipsum, voluptatem beatae eum corporis repellat tenetur voluptatum.</div>
+                <div class="item-example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat recusandae sunt at magni? Perferendis quaerat autem, porro modi dolores temporibus voluptate enim ipsum, voluptatem beatae eum corporis repellat tenetur voluptatum.</div>
+                <div class="item-example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat recusandae sunt at magni? Perferendis quaerat autem, porro modi dolores temporibus voluptate enim ipsum, voluptatem beatae eum corporis repellat tenetur voluptatum.</div>
+               </div>
+              </li>
+              <li>
+                <code>orientation</code> : detecta se o dispositivo está em modo retrato ou paisagem.
+              </li>
+              <li><code>hover</code> : indica que a página está sendo acessada através de um mecanismo de ponteiro, como um mouse;</li>
+              <li>
+                <code>pointer</code> : detecta quão preciso é o 
+                ponteiro (grosso, fino, etc), ajudando a detectar <i>touchscreen</i>, mouse, etc.
+                </li>
+            </ul>
+          <p>  Para saber mais sobre Media Queries acesse os links abaixo:</p>
+          <p>
+            <a href="https://css-tricks.com/a-complete-guide-to-css-media-queries/">CSS Media Queries Guide</a>
+          </p>
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features">Using media queries</a>
+          </p>     
+         
+          <h3>Operadores lógicos</h3>
+          <p>Os operadores permitem combinar múltiplas condições em uma media query. Existem operadores como <code>and</code>, <code>not</code>, e <code>only</code>.</p>
+          <ul>
+            <li><code>and</code> :  deve atender a todas media 
+              features (recursos de mídia);
+              </li>
+              <li><code>or</code> : deve atender, no mínimo, uma das 
+                media features (recursos de mídia). Pode colocar <i>vírgula</i> no lugar de <code>or</code>;
+                </li>
+                <li><code>nor</code> : nega as condições aplicadas, 
+                  invertendo todo o significado do media 
+                  query.</li>
+                
+              </ul>
+         
+      </section>
+
+      <section id="maneiras-de-usar">
+          <h2>Maneiras de usar as Media Queries</h2>
+          <p>As media queries podem ser aplicadas de três maneiras: no arquivo CSS, diretamente na tag <code>&lt;style&gt;</code> no HTML ou usando a tag <code>&lt;link&gt;</code> para carregar arquivos CSS específicos.</p>
+          <p>Exemplos:</p>
+          <p><a href="https://css-tricks.com/working-with-javascript-media-queries/">Working with JavaScript Media Queries</a></p>
+         
+      </section>
+
+      <section id="breakpoints">
+          <h2>Breakpoints</h2>
+          <p>Breakpoints são os pontos em que o layout da página muda com base no tamanho da tela. Eles são usados para ajustar o design em diferentes dispositivos.</p>
+          <div class="img-example">
+            <img src="../img/resp/breakpoints.png" alt="@media">
+          </div>
+      </section>
+
+      <section id="media-queries-uso">
+          <h2>Devemos sempre usar as Media Queries?</h2>
+          <p>Não é obrigatório usar media queries em todos os projetos, mas elas são uma ferramenta poderosa para garantir que o design funcione bem em vários dispositivos.</p>
+          <h4>Design Acessível x Design Universal</h4>
+          <blockquote>“Um design acessível irá criar uma 
+            porta larga para as pessoas de 
+            cadeiras de rodas entrarem, 
+            enquanto um design universal irá 
+            produzir uma entrada onde qualquer 
+            um se entraria, desconsiderando 
+            suas habilidades.” <i>Laura Kalbag
+            </i></blockquote>
+            
+      </section>
+
+      <section id="imagens-responsivas">
+          <h2>Imagens Responsivas</h2>
+          <p>Imagens responsivas são ajustadas automaticamente para se adaptarem ao tamanho da tela. Isso pode ser feito com o uso de <code>max-width</code> ou <code>srcset</code> no HTML.</p>
+          <p>Deve-se usar sempre o <code>max-width: 100%</code> e não o <code>width: 100%;</code> para que o tamanho da imagem não ultrapasse seu tamanho original, o que prejudica a resolução.</p>
+         <div class="code-example">
+          <pre><code>img {
+  max-width: 100%;
+  display:block;
+}</code></pre>
+         </div>
+         <p>Exemplos:</p>
+         <p><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></p>
+      </section>
+
+      <section id="tipografias-responsivas">
+          <h2>Tipografias Responsivas</h2>
+          <p>As tipografias responsivas ajustam seu tamanho com base na largura da tela. Podemos usar <code>vw</code> (view width) para dimensionar o texto conforme o tamanho da janela e <code>rem</code> para dimensionar em múltiplos do tamanho de fonte padrão do navegador.</p>
+          <p>O uso do <code>vw</code> sozinho para tamanho de fonte não é muito interessante, pois caso o usuário altere o tamanho da fonte padrão do navegador aquele texto não vai acompanhar.</p>
+         <div class="code-example">
+          <pre><code>h1 {
+  font-size: calc(2rem + 5vw);
+}</code></pre>
+         </div>
+      </section>
+
+      <section id="mobile-first">
+          <h2>Mobile First</h2>
+          <div class="img-example"></div>
+            <img src="../img/resp/mobile-first.png" alt="@media">
+          </div>
+          <p>Mobile First é uma abordagem de design onde o layout e os estilos são primeiro definidos para dispositivos móveis, e depois se expandem para telas maiores com media queries.</p>
+          <div class="container-mobile">
+            <div class="header-mobile">
+              <nav>
+                <ul>
+                  <li><a href="#">Sobre mim</a></li>
+                  <li><a href="#">Contato</a></li>
+                  <li><a href="#">Conheça meu trabalho</a></li>
+                  <li><a href="#">Linkedin</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+       
+      </section>
+      </article>
     </main>
     <footer>
       <p>
