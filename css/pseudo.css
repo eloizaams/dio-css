@@ -1,0 +1,371 @@
+@import url(styles.css);
+
+.first-p {
+  margin-left: 1rem;
+}
+#first-letter .example::first-letter {
+  font-size: 2rem;
+  color: red;
+}
+
+#first-line .example::first-line {
+  background-color: coral;
+}
+
+video {
+  width: 100%;
+}
+
+video::backdrop {
+  background-color: blueviolet;
+}
+summary {
+  padding-left: 1rem;
+}
+summary::marker {
+  content: "✦";
+  color: coral;
+  font-size: 1.5rem;
+}
+#marker li {
+  padding-left: 1rem;
+}
+#marker li::marker {
+  content: "✱";
+  color: blueviolet;
+}
+
+input::placeholder {
+  color: lightcoral;
+}
+
+#selection .example::selection {
+  background-color: aquamarine;
+  color: violet;
+}
+#file-selector-button input::file-selector-button {
+  border: none;
+  background-color: #90caf4;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+#before-after .example::before {
+  content: "❤";
+  color: pink;
+}
+#before-after .example::after {
+  content: "❤";
+  color: pink;
+}
+.card-image {
+  width: 300px;
+  height: 300px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  background: url("../img/flor.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.card-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgb(255, 0, 140));
+}
+
+/* Pseudo-classes  */
+
+#hover-example {
+  background-color: palevioletred;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 2px;
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+}
+#hover-example:hover {
+  background-color: palegreen;
+  color: darkgreen;
+  border: 1px none solid;
+  cursor: pointer;
+}
+#hover-example:active {
+  background-color: purple;
+  color: white;
+}
+#hover-example-2 {
+  background-color: antiquewhite;
+  color: #b69b77;
+  width: 15rem;
+  height: 15rem;
+}
+#hover-example-2:hover {
+  background-image: url("../img/flor.jpg");
+  background-size: cover;
+  color: transparent !important;
+}
+
+#focus button,
+#focus label {
+  display: block;
+  margin: 1rem;
+  font-size: 1.5rem;
+
+  padding: 0.3rem 2rem;
+}
+#focus button {
+  color: #333;
+}
+#focus input,
+#focus select,
+#focus select option {
+  font-size: 1.5rem;
+  color: #333;
+}
+#focus input:focus {
+  outline: 2px dashed darkturquoise;
+}
+#focus select:focus {
+  background-color: lightgreen;
+}
+#focus button:focus-visible {
+  outline: 3px solid red;
+  outline-offset: 2px;
+  background-color: palevioletred;
+  color: white;
+}
+
+#focus label:focus-within {
+  font-weight: bold;
+  color: red;
+}
+
+#target-example * {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 0 2rem;
+}
+#target-example p:target {
+  background-color: gold;
+}
+#target-example p:target:before {
+  content: "➜";
+  color: red;
+}
+#enabled-disabled button{
+  background-color: #90caf4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  margin: 1rem;
+
+}
+#enabled-disabled button:disabled{
+  background-color: gray;
+  color: lightgray;
+  cursor: not-allowed;
+}
+#enabled-disabled button:enabled{
+  cursor:pointer;
+}
+#link:link{
+  text-decoration: underline;
+  color:#069b71 ;
+}
+#visited:visited{
+  text-decoration: double;
+  color:#e431f7;
+}
+#example-place *{
+  background-color: #f9f9f9;
+  color:#333;
+}
+#example-place form {
+  display: block;
+}
+#placeholder-shown input::placeholder{
+  color: #fff;
+}
+#placeholder-shown input:placeholder-shown{
+  border-color:royalblue;
+  background-color: rgb(48, 99, 210);
+}
+#placeholder-shown form{
+  padding:1rem;
+}
+.example-class *{
+  background-color: #f9f9f9;
+  color: #333;
+}
+.example-class{
+  margin:1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+.example-class div{
+  padding: 0 1rem;
+}
+.example-class input{
+  accent-color: red;
+}
+.example-class input[type="radio"]{
+  accent-color: blue;
+}
+.example-class input[type="checkbox"]:checked + label{
+  color:red;
+  text-decoration: line-through;
+}
+.example-class input[type="radio"]:checked + label{
+  color:blue;
+
+}
+.example-class option:checked{
+  color:red;
+  font-weight: bold;
+}
+progress{
+  width: 30%;
+  height: 1rem;
+  background-color: lightgray;
+  border-radius: 1px;
+}
+progress:indeterminate{
+  accent-color: red;
+
+}
+
+#valid-invalid input:valid {
+  border: 2px solid green;
+  color:green;
+}
+
+#valid-invalid input:invalid {
+  border: 2px solid red;
+  color:red;
+}
+
+#in-range-out-of-range input:in-range {
+  border: 2px solid blue;
+  color:blue;
+}
+
+#in-range-out-of-range input:out-of-range {
+  border: 2px solid orange;
+  color:orange;
+}
+
+#required-optional input:required {
+  border: 2px solid purple;
+  background-color: #fff;
+}
+
+
+#required-optional input:optional {
+  border: 2px solid palevioletred;
+  background-color: #fff;
+}
+#autofill input:-webkit-autofill {
+  border: 2px solid orange;
+  background-color: #ffffcc;
+  color: #000;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+#autofill input:-moz-autofill {
+  border: 2px solid orange;
+  background-color: #ffffcc;
+  color: #000;
+}
+
+#autofill input:-ms-autofill {
+  border: 2px solid orange;
+  background-color: #ffffcc;
+  color: #000;
+}
+
+/* Para garantir que a transição de cor funcione bem */
+#autofill input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #ffffcc inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+/* :root{
+  background-color: #b69b77;
+} */
+
+#nth-child table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+#nth-child th, #nth-child td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Estilo para cabeçalho */
+#nth-child th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Aplicando :nth-child */
+/* Estilizando as linhas ímpares */
+#nth-child tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Estilizando as linhas pares */
+#nth-child tbody tr:nth-child(even) {
+  background-color: #e6ffe6;
+}
+
+/* Destacando a primeira coluna usando :nth-child */
+#nth-child td:nth-child(1) {
+  font-weight: bold;
+  background-color: #ffebcc;
+  color:#a16408;
+}
+
+/* Aplicando :nth-of-type */
+/* Estilizando todas as segundas colunas */
+#nth-child td:nth-of-type(2) {
+  color: #1E90FF;
+}
+
+/* Estilizando todas as terceiras colunas */
+#nth-child td:nth-of-type(3) {
+  color: #FF6347;
+}
+
+/* Estilizando todas as quartas colunas */
+#nth-child td:nth-of-type(4) {
+  color: #8A2BE2;
+}
+#first :first-of-type{
+  color:#8A2BE2;
+} 
+#first :last-of-type{
+  color:#d4264f;
+} 
+#only-child li:only-child{
+  color:red;
+  font-weight: bold;
+}
+
+#empty .example-class div{
+  height: 2rem;
+  background-color: palegreen;
+}
+#elemento-content:before{
+  content:"🚗🚗🚗🚗"
+}
+#empty .example-class div:empty{
+border:2px solid deeppink;
+}

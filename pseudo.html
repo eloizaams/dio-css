@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/pseudo.css" />
+    <title>Pseudo</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="introducao.html">Introdução</a></li>
+          <li><a href="estilizacao.html">Estilização</a></li>
+          <li><a href="unidades-medida.html">Medidas</a></li>
+          <li><a href="posicionamento.html">Posição</a></li>
+          <li><a href="flexbox.html">Flexbox</a></li>
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="responsivo.html">Responsivo</a></li>
+          <li class="selected"><a href="pseudo.html">Pseudo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+      <nav>
+        <h2>Pseudo Elementos</h2>
+        <ul>
+          <li><a href="#first-letter">:first-letter</a></li>
+          <li><a href="#first-line">:first-line</a></li>
+          <li><a href="#backdrop">:backdrop</a></li>
+          <li><a href="#marker">:marker</a></li>
+          <li><a href="#place-holder">:place-holder</a></li>
+          <li><a href="#selection">:selection</a></li>
+          <li><a href="#file-selector-button">:file-selector-button</a></li>
+          <li><a href="#before-after">:before e :after</a></li>
+        </ul>
+
+        <h2>Pseudo Classes</h2>
+        <ul>
+          <li><a href="#hover">:hover</a></li>
+          <li><a href="#active">:active</a></li>
+          <li><a href="#focus">:focus</a></li>
+          <li><a href="#target">:target</a></li>
+          <li><a href="#enabled-disabled">:enabled e :disabled</a></li>
+          <li><a href="#link-visited">:link e :visited</a></li>
+          <li><a href="#placeholder-shown">:placeholder-shown</a></li>
+          <li>
+            <a href="#checked-indeterminate">:checked e :indeterminate</a>
+          </li>
+          <li><a href="#valid-invalid">:valid e :invalid</a></li>
+          <li><a href="#in-range-out-of-range">:in-range e :out-of-range</a></li>
+          <li><a href="#required-optional">:required e :optional</a></li>
+          <li><a href="#autofill">:autofill</a></li>
+          <li><a href="#root">:root</a></li>
+          <li><a href="#nth-child">:nth-child e :nth-of-type</a></li>
+          <li>
+            <a href="#first-last-of-type">:first-of-type e :last-of-type</a>
+          </li>
+          <li><a href="#only-child">:only-child</a></li>
+          <li><a href="#empty">:empty</a></li>
+          <li><a href="#is">:is</a></li>
+          <li><a href="#not">:not</a></li>
+          <li><a href="#has">:has</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <article id="pseudo-elementos">
+        <h2>Pseudo-Elementos</h2>
+        <p class="first-p">
+          Usado para adicionar elementos extras na página, sem a necessidade de
+          declará-lo no HTML, ou para selecionar uma parte de algum elemento.
+        </p>
+        <p class="first-p">É identificado por <code>::palavra-chave</code></p>
+        <section id="first-letter">
+          <h3>First Letter</h3>
+          <p>
+            A propriedade <code>::first-letter</code> permite estilizar a
+            primeira letra da primeira linha de um parágrafo.
+          </p>
+          <p>Propriedades disponíveis</p>
+          <ul>
+            <li>color</li>
+            <li>backgound</li>
+            <li>margin</li>
+            <li>padding</li>
+            <li>border</li>
+            <li>font</li>
+            <li>text</li>
+          </ul>
+          <p>Exemplo:</p>
+          <p class="example">
+            A primeira letra deste parágrafo foi estilizada com a cor vermelha e
+            seu tamanho foi aumentado.
+          </p>
+        </section>
+
+        <section id="first-line">
+          <h3>First Line</h3>
+          <p>
+            A propriedade <code>::first-line</code> permite estilizar a primeira
+            linha de um parágrafo.
+          </p>
+          <p>Propriedades disponíveis</p>
+          <ul>
+            <li>color</li>
+            <li>backgound</li>
+            <li>font</li>
+            <li>text</li>
+          </ul>
+          <p>Exemplo:</p>
+          <p class="example">
+            Foi adicionado um background colorido a primeira linha deste
+            parágrafo... Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quo ab reiciendis, eius dolore laboriosam voluptas! Est maxime
+            illo voluptas deleniti eum architecto impedit, molestias odit vero
+            sunt sapiente nemo voluptate?
+          </p>
+        </section>
+
+        <section id="backdrop">
+          <h3>Backdrop</h3>
+          <p>
+            A propriedade <code>::backdrop</code> é usada para estilizar a área
+            atrás de um elemento em tela cheia. É o espaço que fica entre o
+            elemento e o restante da página.
+          </p>
+          <p>Exemplo:</p>
+          <p>
+            O video a seguir, quando visualizado em celular preenche o restante
+            da tela com a cor violet.
+          </p>
+          <video controls>
+            <source src="videos/effect.mp4" />
+          </video>
+        </section>
+
+        <section id="marker">
+          <h3>Marker</h3>
+          <p>
+            A propriedade <code>::marker</code> estiliza o marcador de lista de
+            itens (bullets) <code>li</code> ou então a flecha de um elemento
+            <code>summary</code>.
+          </p>
+          <a href="https://www.copyandpastesymbols.net/"
+          target="_blank">Symbols - copy and paste</a
+          >
+          <details>
+            <summary>Propriedades disponíveis</summary>
+          </details>
+          <ul>
+            <li>color</li>
+            <li>content</li>
+            <li>white-space</li>
+            <li>font</li>
+            <li>animation</li>
+            <li>transition</li>
+          </ul>
+          <p>Exemplo:</p>
+          <p>A lista acima foi estilizada com o <i>marker</i></p>
+        </section>
+
+        <section id="place-holder">
+          <h3>Place-Holder</h3>
+          <p>
+            A propriedade <code>::placeholder</code> permite estilizar o texto
+            de placeholder de um campo de input.
+          </p>
+          <p>Propriedades disponíveis</p>
+          <ul>
+            <li>color</li>
+            <li>backgound</li>
+            <li>font</li>
+            <li>text</li>
+          </ul>
+          <p>Exemplo:</p>
+          <label for="nome">Nome</label>
+          <input name="nome" type="text" placeholder="Ex: Fulano de Tal" />
+
+          <label for="senha">Senha</label>
+          <input
+            name="senha"
+            type="password"
+            placeholder="Mínimo de 10 caracteres"
+          />
+        </section>
+
+        <section id="selection">
+          <h3>Selection</h3>
+          <p>
+            A propriedade <code>::selection</code> permite estilizar a área de
+            texto selecionada pelo usuário.
+          </p>
+          <p>Propriedades disponíveis</p>
+          <ul>
+            <li>color</li>
+            <li>backgound-color</li>
+            <li>text</li>
+          </ul>
+          <p>Exemplo:</p>
+          <p class="example">Selecione este texto para ver as alterações.</p>
+        </section>
+
+        <section id="file-selector-button">
+          <h3>File Selector Button</h3>
+          <p>
+            A propriedade <code>::file-selector-button</code> permite estilizar
+            o botão de upload de arquivos de um campo de input.
+          </p>
+          <p>Exemplo:</p>
+          <form>
+            <label for="fileUpload">Upload de arquivo</label>
+            <input name="fileUpload" type="file" />
+          </form>
+        </section>
+
+        <section id="before-after">
+          <h3>Before e After</h3>
+          <p>
+            As propriedades <code>::before</code> e
+            <code>::after</code> permitem adicionar conteúdo antes ou depois de
+            um elemento, útil para decorar elementos com pseudo-elementos.
+          </p>
+          <p>Exemplo 1:</p>
+          <p>
+            Neste exemplo a adição dos símbolos foi feita via CSS, através da
+            propriedade <code>content</code>.
+          </p>
+          <p class="example">
+            <span>Exemplo 1</span>
+            <span>Exemplo 2</span>
+            <span>Exemplo 3</span>
+          </p>
+          <p>Exemplo 2:</p>
+          <div class="card-image"></div>
+        </section>
+      </article>
+      <article id="pseudo-classes">
+        <section id="hover">
+          <h2>:hover</h2>
+          <p>
+            A pseudo-classe <code>:hover</code> aplica estilos quando o usuário
+            passa o cursor sobre o elemento.
+          </p>
+          <button id="hover-example">Exemplo de hover no botão</button>
+          <div id="hover-example-2">Passe o mouse para ver a imagem</div>
+        </section>
+
+        <section id="active">
+          <h2>:active</h2>
+          <p>
+            A pseudo-classe <code>:active</code> aplica estilos quando o
+            elemento é clicado ou ativado.
+          </p>
+          <button id="hover-example">Exemplo de active no botão</button>
+        </section>
+
+        <section id="focus">
+          <h2>:focus</h2>
+          <p>
+            As pseudo-classes <code> :focus</code>, <code>:focus-within</code> e
+            <code>:focus-visible</code> são usadas para estilizar elementos com
+            base em seu estado de foco em um documento HTML, mas com diferentes
+            contextos de aplicação.
+          </p>
+          <ul>
+            <li>
+              <code>:focus</code>
+              <p>
+                Aplica estilos a qualquer elemento que receba foco, seja pelo
+                teclado ou pelo mouse.
+              </p>
+            </li>
+            <li>
+              <code>:focus-within</code>
+              <p>
+                Aplica estilos a um elemento contêiner quando ele ou um de seus
+                filhos estiver focado.
+              </p>
+            </li>
+            <li>
+              <code>:focus-visible</code>
+              <p>
+                Aplica estilos apenas quando o foco é obtido por meio de
+                interações que justificam visualmente o indicador de foco, como
+                navegação por teclado.
+              </p>
+            </li>
+          </ul>
+          <p>Exemplo:</p>
+          <form>
+            <p>Faça seu pedido! Escolha o sabor do sorvete que você deseja:</p>
+            <label> Nome completo: <input name:"nome" type="text"> </label>
+            <label>
+              Sabor do Sorvete:
+              <select name="sabor">
+                <option value="chocolate">Chocolate</option>
+                <option value="morango">Morango</option>
+                <option value="doce-leite">Doce de leite</option>
+                <option value="abacaxi">Abacaxi</option>
+              </select>
+            </label>
+            <button>Finalizar pedido</button>
+          </form>
+        </section>
+
+        <section id="target">
+          <h2>:target</h2>
+          <p>
+            A pseudo-classe <code>:target</code> estiliza o elemento que é o
+            destino de um link com um identificador específico.
+          </p>
+          <p>Exemplo:</p>
+          <div id="target-example">
+            <h4>Table of content</h4>
+            <ol>
+              <li><a href="#p1">Pular para o primeiro parágrafo</a></li>
+              <li><a href="#p2">Pular para o segundo parágrafo</a></li>
+              <li>
+                <a href="#nowhere">Esse link não vai para lugar nenhum</a>
+              </li>
+            </ol>
+
+            <h4>Meu artigo</h4>
+            <p id="p1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              impedit laborum aliquam veniam illo non dicta porro voluptas
+              asperiores assumenda nesciunt deleniti nam, natus velit laboriosam
+              distinctio. Eius, illo veritatis!
+            </p>
+
+            <p id="p2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              non ipsum, neque optio sit in dignissimos vel adipisci
+              repudiandae, iusto voluptatibus assumenda natus aperiam sapiente
+              odit corrupti delectus! Tempora, ipsa!
+            </p>
+          </div>
+        </section>
+
+        <section id="enabled-disabled">
+          <h2>:enabled e :disabled</h2>
+          <p>
+            A pseudo-classe <code>:enabled</code> aplica estilos a elementos
+            habilitados, enquanto <code>:disabled</code> estiliza elementos
+            desabilitados.
+          </p>
+          <button>Botão habilitado</button>
+          <button disabled>Botão desabilitado</button>
+        </section>
+
+        <section id="link-visited">
+          <h2>:link e :visited</h2>
+          <p>
+            A pseudo-classe <code>:link</code> estiliza links não visitados, e
+            <code>:visited</code> estiliza links já visitados.
+          </p>
+          <a href="#">Link normal</a><br />
+          <a href="#" id="link">Link com estilo :link</a><br />
+          <a href="#" id="visited">Link com estilo :visited</a>
+        </section>
+
+        <section id="placeholder-shown">
+          <h2>:placeholder-shown</h2>
+          <p>
+            A pseudo-classe <code>:placeholder-shown</code> estiliza um campo de
+            input enquanto o placeholder está sendo exibido.
+          </p>
+          <p>Exemplo:</p>
+          <div id="example-place">
+            <form>
+              <label for="name">Nome:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Digite seu nome"
+                required
+              /><br />
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              /><br />
+              <label for="age">Idade:</label>
+              <input
+                name="age"
+                type="number"
+                id="age"
+                value="18"
+                placeholder="Você deve ter 18+ anos"
+              />
+            </form>
+          </div>
+        </section>
+
+        <section id="checked-indeterminate">
+          <h2>:checked e :indeterminate</h2>
+          <p>
+            A pseudo-classe <code>:checked</code> estiliza checkboxes ou radios
+            marcados, e <code>:indeterminate</code> estiliza checkboxes em
+            estado indeterminado.
+          </p>
+          Exemplo:
+          <div class="example-class">
+            <div>
+              <input name="task-01" type="checkbox" />
+              <label for="task-01">Tarefa 01</label>
+            </div>
+            <div>
+              <input name="task-02" type="checkbox" />
+              <label for="task-02">Tarefa 02</label>
+            </div>
+            <div>
+              <input name="task-03" type="checkbox" />
+              <label for="task-03">Tarefa 03</label>
+            </div>
+            <div>
+              <input name="task-04" type="checkbox" />
+              <label for="task-04">Tarefa 04</label>
+            </div>
+            <div>
+              <input name="task-05" type="checkbox" />
+              <label for="task-05">Tarefa 05</label>
+            </div>
+            <hr />
+            <div>
+              <input type="radio" name="genero" />
+              <label for="genero">Feminino</label>
+              <input type="radio" name="genero" />
+              <label for="genero">Masculino</label>
+            </div>
+            <hr>
+            <div>
+              <select name="sabor">
+                <option value="chocolate">Chocolate</option>
+                <option value="menta">Menta</option>
+                <option value="morango">Morango</option>
+              </select>
+            </div>
+            <div>
+              <progress></progress>
+            </div>
+          </div>
+        </section>
+
+        <section id="valid-invalid">
+          <h2>:valid e :invalid</h2>
+          <p>
+            A pseudo-classe <code>:valid</code> estiliza inputs válidos e
+            <code>:invalid</code> estiliza inputs inválidos com base em regras
+            de validação.
+          </p>
+         <div class="example-class">
+          <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <small>(Digite um email válido)</small>
+          </form>
+         </div>
+        </section>
+        <section id="in-range-out-of-range">
+          <h2>:in-range e :out-of-range</h2>
+          <p>
+            A pseudo-classe <code>:in-range</code> estiliza inputs que estão dentro do
+            intervalo definido e <code>:out-of-range</code> estiliza inputs que estão
+            fora desse intervalo.
+          </p>
+          <div class="example-class">
+            <form>
+              <label for="age">Idade (entre 18 e 60):</label>
+              <input type="number" id="age" name="age" min="18" max="60" />
+              <small>(Valores válidos de 18 a 60)</small>
+            </form>
+          </div>
+        </section>
+        <section id="required-optional">
+          <h2>:required e :optional</h2>
+          <p>
+            A pseudo-classe <code>:required</code> estiliza campos obrigatórios
+            e <code>:optional</code> estiliza campos opcionais em formulários.
+          </p>
+          <div class="example-class">
+            <form>
+              <label for="name">Nome (Obrigatório):</label>
+              <input type="text" id="name" name="name" required />
+              <br /><br />
+          
+              <label for="email">Email (Opcional):</label>
+              <input type="email" id="email" name="email" />
+            </form>
+          </div>
+        </section>
+
+        <section id="autofill">
+          <h2>:autofill</h2>
+          <p>
+            A pseudo-classe <code>:autofill</code> estiliza campos de formulário
+            que foram preenchidos automaticamente pelo navegador.
+          </p>
+         <div class="example-class">
+          <form>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" autocomplete="username" />
+            <br /><br />
+        
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" autocomplete="current-password" />
+          </form>
+         </div>
+        </section>
+
+        <section id="root">
+          <h2>:root</h2>
+          <p>
+            A pseudo-classe <code>:root</code> refere-se ao elemento raiz do
+            documento, útil para definir variáveis CSS. Equivale a tag <code>html</code>.
+          </p>
+          <p>É comum de ser usando no reset CSS e para criar variáveis e valores customizados.</p>
+          
+        </section>
+
+        <section id="nth-child">
+          <h2>:nth-child e :nth-of-type</h2>
+          <p>
+            A pseudo-classe <code>:nth-child</code> seleciona o elemento com base na
+            posição de todos os filhos de seu elemento pai, independentemente do
+            tipo de tag. Pode usar padrões como <code>odd</code> (ímpar),
+            <code>even</code> (par), números exatos como <code>1</code>,
+            <code>2</code>, múltiplos de um número como <code>3n+1</code> (onde n é o número do elemento).
+          </p>
+          <p>
+            A pseudo-classe <code>:nth-of-type</code> seleciona o elemento com base
+            na posição de seu tipo específico, ou seja, leva em consideração apenas
+            os elementos do mesmo tipo (como <code>div</code> ou <code>p</code>).
+          </p>
+          <p>Exemplo:</p>
+         <div class="example">
+          <h4>Horário das Aulas</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Dia</th>
+                <th>Matéria 1</th>
+                <th>Matéria 2</th>
+                <th>Matéria 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Segunda-feira</td>
+                <td>Matemática</td>
+                <td>História</td>
+                <td>Ciências</td>
+              </tr>
+              <tr>
+                <td>Terça-feira</td>
+                <td>Português</td>
+                <td>Geografia</td>
+                <td>Educação Física</td>
+              </tr>
+              <tr>
+                <td>Quarta-feira</td>
+                <td>Química</td>
+                <td>Física</td>
+                <td>Artes</td>
+              </tr>
+              <tr>
+                <td>Quinta-feira</td>
+                <td>Biologia</td>
+                <td>Filosofia</td>
+                <td>Sociologia</td>
+              </tr>
+              <tr>
+                <td>Sexta-feira</td>
+                <td>Inglês</td>
+                <td>Espanhol</td>
+                <td>Literatura</td>
+              </tr>
+            </tbody>
+          </table>
+         </div>
+        </section>
+
+        <section id="first-last-of-type">
+          <h2>:first-of-type e :last-of-type</h2>
+          <p>
+            A pseudo-classe <code>:first-of-type</code> estiliza o primeiro
+            elemento de um tipo, e <code>:last-of-type</code> estiliza o último.
+          </p>
+         <div class="example-class" id="first">
+          <div>Eu sou uma div</div>
+          <p>Eu sou o primeiro parágrafo</p>
+          <p>Eu sou o segundo parágrafo</p>
+          <p>Eu sou o terceir parágrafo</p>
+          <p>Eu sou o último parágrafo</p>
+         </div>
+        </section>
+
+        <section id="only-child">
+          <h2>:only-child</h2>
+          <p>
+            A pseudo-classe <code>:only-child</code> aplica estilos ao único
+            filho de um elemento.
+          </p>
+         <div class="example-class">
+          <p>Único item na lista</p>
+          <ul>
+            <li>Item 01</li>
+          </ul>
+          <p>Vários itens em uma lista</p>
+          <ul>
+            <li>Item 01</li>
+            <li>Item 02</li>
+            <li>Item 03</li>
+            <li>Item 04</li>
+          </ul>
+         </div>
+        </section>
+
+        <section id="empty">
+          <h2>:empty</h2>
+          <p>
+            A pseudo-classe <code>:empty</code> estiliza elementos que não
+            contêm filhos nem texto.
+          </p>
+          <p>Exemplo: vai colocar borda rosa nos elementos "empty"</p>
+          <div class="example-class">
+            <p>Elemento sem conteúdo</p>
+            <div></div>
+            <p>Elemento com comentário</p>
+            <div> <!-- Texto comentado  --></div>
+            <p>Elemento com epaço em branco</p>
+            <div> </div>
+            <p>Elemento com elemento vazio dentro dele.</p>
+            <div><p></p></div>
+            <p>Elemento com propriedade content:</p>
+            <div id="elemento-content"></div>
+          </div>
+        </section>
+
+        <section id="is">
+          <h2>:is</h2>
+          <p>
+            A pseudo-classe <code>:is()</code> simplifica a aplicação de estilos
+            a vários seletivos de uma só vez.
+          </p>
+      
+        </section>
+
+        <section id="not">
+          <h2>:not</h2>
+          <p>
+            A pseudo-classe <code>:not()</code> aplica estilos a elementos que
+            não correspondem ao seletor especificado.
+          </p>
+          
+        </section>
+
+        <section id="has">
+          <h2>:has</h2>
+          <p>
+            A pseudo-classe <code>:has()</code> estiliza elementos que contêm um
+            ou mais elementos específicos como filhos.
+          </p>
+          
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams" target="_blank">Eloiza Souza</a>
+      </p>
+    </footer>
+  </body>
+</html>

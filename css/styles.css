@@ -6,6 +6,10 @@
   margin: 0 auto;
 }
 
+::selection {
+  background-color: #33a8db80;
+  color: #f9f9f9;
+}
 html {
   background-color: #0d1923d0;
 }
@@ -129,7 +133,7 @@ aside h2 {
 
 aside ul {
   padding: 1rem;
-  list-style-type: none; 
+  list-style-type: none;
   margin: 0;
 }
 aside ul li {
