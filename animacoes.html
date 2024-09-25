@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/animacoes.css" />
+    <title>Pseudo</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="introducao.html">Introdução</a></li>
+          <li><a href="estilizacao.html">Estilização</a></li>
+          <li><a href="unidades-medida.html">Medidas</a></li>
+          <li><a href="posicionamento.html">Posição</a></li>
+          <li><a href="flexbox.html">Flexbox</a></li>
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="responsivo.html">Responsivo</a></li>
+          <li><a href="pseudo.html">Pseudo</a></li>
+          <li class="selected"><a href="animacoes.html">Animação</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- <aside>
+        <nav>
+         
+            <h2><a href="#transformacoes-2d">Transformações 2D</a> </h2>
+                <ul>
+                    <li><a href="#translate">translate()</a></li>
+                    <li><a href="#rotate">rotate()</a></li>
+                    <li><a href="#rotateX-rotateY">rotateX() e rotateY()</a></li>
+                    <li><a href="#scale">scale()</a></li>
+                    <li><a href="#skew">skew()</a></li>
+                    <li><a href="#matrix">matrix()</a></li>
+                </ul>
+           
+            <h2><a href="#transformacoes-3d">Transformações 3D</a>         </h2>
+                <ul>
+                    <li><a href="#perspectiva">Perspectiva</a></li>
+                    <li><a href="#eixoZ">Rotacionando e movendo elementos no eixo Z</a></li>
+                    <li><a href="#escalando">Escalando elementos de forma tridimensional</a></li>
+                    <li><a href="#transform-origin">transform-origin</a></li>
+                    <li><a href="#transform-style">transform-style</a></li>
+                    <li><a href="#matrix3d">Matrix3d</a></li>
+                    <li><a href="#backface-visibility">backface-visibility</a></li>
+                </ul>
+   
+            <h2><a href="#animacoes">Animações</a>      </h2>
+                <ul>
+                    <li><a href="#transicoes">Transições</a></li>
+                    <li><a href="#exemplo-pratico">Exemplo prático - transições e pseudo-elementos</a></li>
+                    <li><a href="#iniciando-animacoes">Iniciando com animações</a></li>
+                    <li><a href="#definindo-atraso">Definindo atraso e número de interações de uma animação</a></li>
+                    <li><a href="#direcao-animacao">Direção da reprodução e curva de velocidade da animação</a></li>
+                    <li><a href="#animation-fill-mode">Propriedade animation-fill-mode</a></li>
+                    <li><a href="#pausando-animacao">Pausando a animação e shorthand animation</a></li>
+                </ul>
+      
+        </ul>
+    </aside> -->
+
+    <main>
+        <!-- Article: Transformações 2D -->
+        <article id="transformacoes-2d">
+            <h2>Transformações 2D</h2>
+            
+            <section id="translate">
+                <h3>translate()</h3>
+                <p>A propriedade <code>translate()</code> move um elemento ao longo dos eixos X e Y. Imagine uma borboleta pousando suavemente em uma flor; a borboleta (elemento) se move de um lugar a outro no espaço 2D. 
+                <div class="box translate-box">Passe o mouse. Eu fui movido!</div>
+            </section>
+            
+            <section id="rotate">
+                <h3>rotate()</h3>
+                <p>A propriedade <code>rotate()</code> gira um elemento em torno de um ponto de referência (normalmente o centro). Pense em uma bússola girando para apontar o norte; o ponteiro (elemento) gira. Usando <code>rotate(45deg)</code>, podemos girar um quadrado em 45 graus no sentido horário.</p>
+                <div class="box rotate-box">Passe o mouse. Estou girando!</div>
+            </section>
+            
+            <section id="rotateX-rotateY">
+                <h3>rotateX() e rotateY()</h3>
+                <p>Essas funções rodam o elemento em torno dos eixos X ou Y, dando uma sensação de profundidade, mesmo em 2D. Imagine uma folha de papel sendo virada horizontalmente (<code>rotateX()</code>) ou lateralmente (<code>rotateY()</code>). No exemplo <code>rotateX(45deg)</code>, a folha parece inclinar-se para cima.</p>
+                <div class="box rotateX-box">Passe o mouse. Estou inclinando no eixo X!</div>
+                <div class="box rotateY-box">Passe o mouse. Estou inclinando no eixo Y!</div>
+            </section>
+            
+            <section id="scale">
+                <h3>scale()</h3>
+                <p>Com <code>scale()</code>, podemos aumentar ou reduzir o tamanho de um elemento. Pense em um balão que enche de ar (aumenta) ou desinfla (reduz). Usando <code>scale(1.5)</code>, o elemento aumenta em 150%.</p>
+                <div class="box scale-box">Passe o mouse. Estou maior!</div>
+            </section>
+            
+            <section id="skew">
+                <h3>skew()</h3>
+                <p>A propriedade <code>skew()</code> inclina um elemento ao longo dos eixos X e Y. Imagine um quadro sendo distorcido em forma de trapézio; ele se estica de um lado. Com <code>skew(20deg, 10deg)</code>, inclinamos o elemento tanto no eixo X quanto no Y.</p>
+                <div class="box skew-box">Passe o mouse. Estou inclinado!</div>
+            </section>
+            
+            <section id="matrix">
+                <h3>matrix()</h3>
+                <p>A função <code>matrix()</code> combina várias transformações (como <code>translate</code>, <code>rotate</code>, <code>scale</code> e <code>skew</code>) em uma única operação. É como manipular todas essas propriedades ao mesmo tempo, controlando a transformação de forma precisa.</p>
+                <div class="box matrix-box">Passe o mouse. Estou transformado com matrix!</div>
+            </section>
+        </article>
+
+         <!-- Article: Transformações 3D -->
+         <article id="transformacoes-3d">
+            <h2>Transformações 3D</h2>
+
+            <section id="perspectiva">
+                <h3>Perspectiva</h3>
+                <p>A propriedade <code>perspective</code> cria uma ilusão de profundidade. Imagine olhar por uma janela e ver objetos que parecem mais próximos ou mais distantes. Com <code>perspective(500px)</code>, criamos essa ilusão em elementos 3D, onde os objetos parecem maiores ou menores dependendo da distância do observador.</p> 
+                <p>Ela deve ser aplicada ao elemento pai para dar a ideia de perspectiva ao elemento filho.</p>
+
+                <div class="box perspectiva-box">Meu pai está em perspectiva!</div>
+            </section>
+
+            <section id="eixoZ">
+                <h3>Rotacionando e movendo elementos no eixo Z</h3>
+                <p>Com <code>translateZ()</code> e <code>rotateZ()</code>, movemos e giramos elementos ao longo do eixo Z, criando uma sensação de que eles se aproximam ou se afastam de nós. Imagine uma porta girando em seu eixo central (<code>rotateZ(45deg)</code>), ou um objeto movendo-se para dentro e para fora da tela com <code>translateZ(100px)</code>.</p>
+                <div class="box rotateZ-box">Estou girando no eixo Z!</div>
+            </section>
+
+            <section id="escalando">
+                <h3>Escalando elementos de forma tridimensional</h3>
+                <p>O <code>scale3d()</code> permite dimensionar um elemento em três eixos (X, Y, Z). Pense em uma caixa que aumenta de tamanho em todas as direções ao mesmo tempo. Com <code>scale3d(1.5, 1.5, 1.5)</code>, o elemento cresce em 150% em todas as dimensões.</p>
+                <div class="box scale3d-box">Estou escalando em 3D!</div>
+            </section>
+
+            <section id="transform-origin">
+                <h3>transform-origin</h3>
+                <p>O <code>transform-origin</code> define o ponto de origem da transformação, ou seja, o ponto ao redor do qual o elemento gira ou escala. Imagine um livro aberto: ele pode girar a partir da borda (origem) ou do centro. Usamos <code>transform-origin: bottom right;</code> para definir o canto inferior direito como ponto de origem.</p>
+                <div class="box transform-origin-box">Minha origem está no canto inferior direito!</div>
+            </section>
+
+            <section id="transform-style">
+                <h3>transform-style</h3>
+                <p>Com <code>transform-style: preserve-3d;</code>, permitimos que os elementos filhos de um contêiner mantenham suas propriedades 3D em relação ao pai. Isso significa que o conteúdo do elemento será renderizado em um espaço tridimensional. Imagine uma caixa com objetos flutuando dentro dela, todos preservando suas posições 3D.</p>
+                <div class="box transform-style-box">Estou preservando meu estilo 3D!</div>
+            </section>
+
+            <section id="matrix3d">
+                <h3>Matrix3d</h3>
+                <p>A função <code>matrix3d()</code> permite aplicar uma combinação de transformações tridimensionais em um único comando. Ela oferece controle total sobre a posição, rotação e escala em 3D. É uma ferramenta avançada para manipular objetos em um espaço 3D.</p>
+                <div class="box matrix3d-box">Estou transformado com matrix3d!</div>
+            </section>
+
+            <section id="backface-visibility">
+                <h3>backface-visibility</h3>
+                <p>Com <code>backface-visibility: hidden;</code>, podemos esconder a parte traseira de um elemento quando ele é girado. Imagine uma carta de baralho que, ao ser virada, esconde o lado de trás para mostrar apenas a frente.</p>
+                <div class="box backface-visibility-box">Minha face traseira está escondida!</div>
+                <div class="box backface-visibility-box2">Minha face traseira está visível!</div>
+            </section>
+        </article>
+
+        <!-- Article: Animações -->
+        <article id="animacoes">
+            <h2>Animações</h2>
+
+            <section id="transicoes">
+                <h3>Transições</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+
+            <section id="exemplo-pratico">
+                <h3>Exemplo prático - transições e pseudo-elementos</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+
+            <section id="iniciando-animacoes">
+                <h3>Iniciando com animações</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+
+            <section id="definindo-atraso">
+                <h3>Definindo atraso e número de interações de uma animação</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+
+            <section id="direcao-animacao">
+                <h3>Direção da reprodução e curva de velocidade da animação</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+
+            <section id="animation-fill-mode">
+                <h3>Propriedade animation-fill-mode</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+
+            <section id="pausando-animacao">
+                <h3>Pausando a animação e shorthand animation</h3>
+                <!-- Conteúdo da seção -->
+            </section>
+        </article>
+    </main>
+
+    <footer>
+      <p>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams" target="_blank">Eloiza Souza</a>
+      </p>
+    </footer>
+  </body>
+</html>

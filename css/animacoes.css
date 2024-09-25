@@ -1,0 +1,100 @@
+@import url(styles.css);
+
+.box {
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(90deg, #fc4668 0%, #3f5efb 100%);
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #293f6a;
+  color: #f9f9f9;
+  font-weight: bold;
+  transition: transform 0.5s ease;
+  display: inline-flex;
+}
+
+/* translate() */
+.translate-box:hover {
+  transform: translate(100px, 50px);
+}
+
+/* rotate() */
+.rotate-box:hover {
+  transform: rotate(45deg);
+}
+
+/* rotateX() */
+.rotateX-box:hover {
+ 
+  transform: rotateX(45deg);
+  transform-origin: center;
+}
+
+/* rotateY() */
+.rotateY-box:hover {
+  transform: rotateY(45deg);
+  transform-origin: center;
+}
+
+/* scale() */
+.scale-box:hover {
+  transform: scale(1.5, 1.3);
+}
+
+/* skew() */
+.skew-box:hover {
+  transform: skew(20deg, 10deg);
+}
+
+/* matrix() */
+.matrix-box:hover {
+  transform: matrix(1, 0.5, -0.5, 1, 0, 0);
+}
+
+/* Perspectiva */
+#transformacoes-3d section {
+  perspective: 200px;
+}
+.perspectiva-box:hover {
+  transform: rotateY(30deg);
+}
+
+/* Rotacionando no eixo Z */
+.rotateZ-box:hover {
+  transform: rotateX(20deg) rotateY(40deg) rotate(45deg);
+}
+
+/* Escalando em 3D */
+.scale3d-box:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+}
+
+/* transform-origin */
+.transform-origin-box:hover {
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
+
+/* transform-style */
+.transform-style-box:hover {
+  transform-style: preserve-3d;
+  transform: rotateX(30deg) rotateY(30deg);
+}
+
+/* matrix3d */
+.matrix3d-box:hover {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+/* backface-visibility */
+.backface-visibility-box:hover {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+/* backface-visibility */
+.backface-visibility-box2:hover {
+  backface-visibility: visible;
+  transform: rotateY(180deg);
+}
