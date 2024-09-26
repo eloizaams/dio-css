@@ -1,4 +1,5 @@
 @import url(styles.css);
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300..700&display=swap");
 
 .box {
   width: 130px;
@@ -27,7 +28,6 @@
 
 /* rotateX() */
 .rotateX-box:hover {
- 
   transform: rotateX(45deg);
   transform-origin: center;
 }
@@ -54,7 +54,7 @@
 }
 
 /* Perspectiva */
-#transformacoes-3d section {
+section {
   perspective: 200px;
 }
 .perspectiva-box:hover {
@@ -98,3 +98,417 @@
   backface-visibility: visible;
   transform: rotateY(180deg);
 }
+.box-anime {
+  width: 130px;
+  height: 130px;
+  background: #fc4668;
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #bacef7;
+  border-radius: 5px;
+  color: #f9f9f9;
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: background-color 1s, transform 2s;
+}
+
+.exemplo-01:hover {
+  background-color: rgb(134, 11, 116);
+  transform: rotateX(40deg);
+}
+
+.container-anime * {
+  margin-left: 0;
+  padding-left: 0;
+}
+.container-anime {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  justify-items: center;
+}
+.container-anime div {
+  transition: 5s;
+}
+.container-anime div:hover {
+  width: 300px;
+}
+
+.ease {
+  transition-timing-function: ease;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+}
+
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.cubic-bezier {
+  transition-timing-function: cubic-bezier(0.86, 0.11, 0.18, 0.91);
+}
+
+/* Estilo geral para transições e animações*/
+#animacoes :is(button, .box, .circle) {
+  transition: all 2s ease-in-out;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Transições */
+#animacoes button {
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 2px;
+}
+
+#animacoes button:hover {
+  background-color: red;
+}
+
+/* Exemplo prático com pseudo-elementos */
+#animacoes button::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: yellow;
+  transition: width 0.5s ease-in-out;
+}
+
+#animacoes button:hover::after {
+  width: 100%;
+}
+.contaner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+.anime-list {
+  display: inline-block;
+  background-color: #d53369;
+  padding: 1.3rem;
+  border-radius: 4px;
+  box-shadow: 0.4rem 0.4rem 0.3rem rgb(107, 107, 107);
+}
+.anime-list li {
+  list-style: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  margin-bottom: 0.25rem;
+  transition: background-color 1s;
+}
+.anime-list li:hover {
+  background-color: #b02151;
+}
+.anime-list input {
+  accent-color: #daae51;
+}
+
+.anime-list input:checked + span {
+  text-decoration: line-through;
+  color: #d53369;
+}
+.anime-list li:has(input:checked) {
+  background-color: #f0ab1a;
+
+  border-radius: 4px;
+}
+.picture-anime {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+.picture-anime img {
+  width: 20rem;
+  animation: pulsar 2s infinite;
+}
+.example-anime-01 {
+  background: none;
+  background-color: #d53369;
+  animation: example-color 5s infinite;
+}
+@keyframes example-color {
+  from {
+    background: palegreen;
+  }
+  to {
+    background: purple;
+  }
+}
+/* Iniciando animações - Pulsa */
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*Definindo atraso e número de interações */
+#animacoes .circle {
+  width: 100px;
+  height: 100px;
+  background-color: #d53369;
+  border-radius: 50%;
+  animation-name: pulsar;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+}
+
+/* Direção da reprodução e curva de velocidade */
+#animacoes .box-anime-02 {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  margin: 20px;
+}
+
+@keyframes crescer {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: #b02151;
+  }
+}
+
+#animacoes .box-reverse {
+  animation: crescer 2s infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+
+/* Animation-fill-mode */
+#animacoes .box-fill {
+  animation: crescer 2s forwards infinite;
+}
+
+/* Pausando animação e shorthand */
+#animacoes .square {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: rotacionar 3s infinite;
+  cursor: pointer;
+}
+
+@keyframes rotacionar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#animacoes .square:hover {
+  animation-play-state: paused;
+}
+
+.container-ex-01 {
+  margin: 2rem;
+  padding: 1rem 0;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ex-01 button {
+  padding: 1rem 2rem;
+  border: none;
+  color: #fff;
+  background: linear-gradient(90deg, #d53369, #daae51);
+  box-shadow: 8px 12px 7px lightgray;
+  animation: wiggle 2.2s linear infinite;
+}
+
+#ex-01 button:hover {
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-10deg);
+  }
+  40%,
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.loader {
+  border: 5px solid #d53369;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+.loader:nth-child(1) {
+  animation: loader 0.8s ease-in-out alternate infinite;
+}
+.loader:nth-child(2) {
+  animation: loader 0.8s ease-in-out 0.3s alternate infinite;
+}
+.loader:nth-child(3) {
+  animation: loader 0.8s ease-in-out 0.6s alternate infinite;
+}
+
+@keyframes loader {
+  to {
+    transform: scale(1.8);
+  }
+}
+
+.container-ex-02 {
+  margin: 0;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgb(34, 34, 34) 0%,
+    rgb(34, 13, 80) 50%,
+    rgb(74, 153, 230) 100%
+  );
+}
+
+.container-ex-02 img {
+  height: 40%;
+  animation: take-off-rocket 6s ease-in-out infinite alternate;
+}
+@keyframes take-off-rocket {
+  0% {
+    transform: translateY(20vh);
+  }
+  50% {
+    transform: translateY(-80vh);
+  }
+  100% {
+    transform: translateY(20vh);
+  }
+}
+.container-ex-03 {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  height: 50vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(-45deg, #d53369, #daae51);
+  background-size: 400% 400%;
+  animation: back-anime 5s ease infinite alternate;
+}
+.container-ex-03 h1{
+    font-size: 3rem;
+    margin:0;
+    position:relative;
+    bottom:5.8rem;
+}
+.gradient-word{
+    font-family: 'Pacifico', cursive;
+    margin:0;
+    font-size:4.5rem;
+    background: linear-gradient(0deg, transparent, rgba(24,24,24, .4) );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent !important;
+}
+@keyframes back-anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container-ex-04 {  
+    margin: 0;
+    height: 50vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #222;
+    perspective: 300px;
+  }
+  .box-ex-04 {
+    background: linear-gradient(90deg, #fc466b, #3f5efb);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: ex-04 5s infinite alternate;
+    filter:blur(50px);
+    position: absolute;
+  }
+  .container-ex-04 h1{
+    font-family: 'Quicksand', cursive;
+    font-size: 4rem;
+    text-align: center;
+    color:#999;
+  }
+  @keyframes ex-04{
+    0%{
+        transform: rotateY(30deg) rotate(-25deg) translate(100px);
+    }
+    25%{
+        transform: rotateY(-30deg) translateZ(100px);
+    }
+    50%{
+        transform: rotateX(-50deg) translateZ(-100px);
+    }
+    75%{
+        transform: rotateX(-50deg) translateZ(-100px);
+    }
+    100%{
+        transform: rotateX(20deg) translateZ(0px);
+    }
+  }
