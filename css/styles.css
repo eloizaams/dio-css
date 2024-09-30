@@ -92,6 +92,7 @@ header nav ul li a {
   z-index: 1100;
   color: #f1f1f1;
   text-align: center;
+  text-wrap: nowrap;
 }
 
 header nav ul li:hover {

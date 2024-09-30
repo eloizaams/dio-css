@@ -63,3 +63,14 @@ header .logo img {
   text-align: center;
   width: 70%;
 }
+.certificado{
+  display: flex;
+  align-items: center;
+
+  
+}
+.certificado img{
+height: 70vh;
+border: 3px solid #f1f1f1;
+border-radius: 8px;
+}

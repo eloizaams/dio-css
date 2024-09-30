@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/css.svg" />
+    <link rel="stylesheet" href="css/boas-praticas.css" />
+    <title>Boas Práticas</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="introducao.html">Introdução</a></li>
+          <li><a href="estilizacao.html">Estilização</a></li>
+          <li><a href="unidades-medida.html">Medidas</a></li>
+          <li><a href="posicionamento.html">Posição</a></li>
+          <li><a href="flexbox.html">Flexbox</a></li>
+          <li><a href="grid.html">Grid</a></li>
+          <li><a href="responsivo.html">Responsivo</a></li>
+          <li><a href="pseudo.html">Pseudo</a></li>
+          <li><a href="animacoes.html">Animação</a></li>
+          <li class="selected">
+            <a href="boas-praticas.html">Boas Práticas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <aside>
+      <nav>
+        <h2><a href="#article1">Hierarquia e Especificidade</a></h2>
+        <ul>
+          <li><a href="#hierarquia">Hierarquia do efeito em cascata</a></li>
+          <li><a href="#especificidade">Especificidade</a></li>
+          <li><a href="#important">!important</a></li>
+          <li><a href="#heranca">Herança</a></li>
+        </ul>
+
+        <h2><a href="#article2">Compatibilidade entre Navegadores</a></h2>
+        <ul>
+          <li><a href="#motores">Motores de Renderização</a></li>
+          <li>
+            <a href="#navegadores-antigos"
+              >Navegadores que não suportam recursos modernos</a
+            >
+          </li>
+          <li><a href="#prefixos">Prefixos no CSS</a></li>
+        </ul>
+
+        <h2><a href="#article3">Organizando os Estilos CSS</a></h2>
+        <ul>
+          <li><a href="#variaveis">Definindo variáveis</a></li>
+          <li><a href="#bem">BEM (Block, Element, Modifier)</a></li>
+          <li><a href="#smacss">SMACSS</a></li>
+          <li><a href="#oocss">OOCSS</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <article id="article1">
+        <h2>Hierarquia e Especificidade</h2>
+
+        <section id="hierarquia">
+          <h3>Hierarquia do efeito em cascata</h3>
+          <p>
+            A hierarquia do efeito em cascata define a ordem de prioridade entre
+            diferentes seletores de CSS. Estilos declarados mais próximos do
+            elemento, como inline, têm maior prioridade que os declarados em
+            folhas de estilo externas.
+          </p>
+        </section>
+
+        <section id="especificidade">
+          <h3>Especificidade</h3>
+          <p>
+            A especificidade é o cálculo usado para determinar qual regra CSS
+            será aplicada quando mais de uma regra corresponder ao mesmo
+            elemento. Regras com maior especificidade têm prioridade.
+          </p>
+        </section>
+
+        <section id="important">
+          <h3>!important</h3>
+          <p>
+            O uso da palavra-chave <code>!important</code> em uma regra CSS faz
+            com que ela tenha a maior prioridade, sobrepondo-se a qualquer outra
+            regra, exceto outra com <code>!important</code>.
+          </p>
+        </section>
+
+        <section id="heranca">
+          <h3>Herança</h3>
+          <p>
+            No CSS, algumas propriedades são herdadas dos elementos pais, como
+            cor e fonte. Isso permite que o estilo seja aplicado de forma
+            consistente sem a necessidade de repetição.
+          </p>
+        </section>
+      </article>
+
+      <article id="article2">
+        <h2>Compatibilidade entre Navegadores</h2>
+
+        <section id="motores">
+          <h3>Motores de Renderização</h3>
+          <p>
+            Os motores de renderização interpretam e exibem o código CSS em cada
+            navegador, podendo haver variações na exibição entre diferentes
+            navegadores.
+          </p>
+          <p>Como exemplo, temos os motores de renderização:</p>
+          <ul>
+            <li>Blink - para Google Chrome, Opera</li>
+            <li>Gecko - para Firefox</li>
+            <li>Webkit - para iOS, Safari</li>
+            <li>Trident - para Internet Explorer</li>
+          </ul>
+        </section>
+
+        <section id="navegadores-antigos">
+          <h3>Navegadores que não suportam recursos modernos</h3>
+          <p>
+            Alguns navegadores mais antigos não suportam certas propriedades CSS
+            modernas. Para contornar esse problema, utilizam-se fallback styles
+            ou recursos como <code>@supports</code>.
+          </p>
+          <p>
+            Site para pesquisa de recursos disponíveis nos navegadores -
+            <a href="https://caniuse.com/">Can I Use</a>
+          </p>
+        </section>
+
+        <section id="prefixos">
+          <h3>Prefixos no CSS</h3>
+          <p>
+            Prefixos específicos de navegadores, como <code>-webkit-</code> e
+            <code>-moz-</code>, são usados para garantir que estilos CSS
+            funcionem em diferentes motores de renderização.
+          </p>
+          <p>Exemplos de prefixos:</p>
+          <ul>
+            <li>-moz: Firefox</li>
+            <li>-webkit: Chrome/Edge/Opera/Safari</li>
+            <li>-ms: IE(versões antigas)</li>
+            <li>-o-: Opera (versões antigas)</li>
+          </ul>
+          <p>Quando os recursos CSS apresentam comportamento estável, os prefixos não são mais necessários para as novas versões dos navegadores.</p>
+        </section>
+      </article>
+
+      <article id="article3">
+        <h2>Organizando os Estilos CSS</h2>
+
+        <section id="variaveis">
+          <h3>Definindo variáveis</h3>
+          <p>
+            As variáveis no CSS, definidas usando
+            <code>--nome-da-variavel</code>, permitem reutilizar valores em
+            várias partes do código, tornando o CSS mais limpo e fácil de
+            manter.
+          </p>
+          <p>Exemplo:</p>
+         <picture>
+            <img src="img\var.png" >
+         </picture>
+         <p>Esse recurso é muito usado para alternar entre tema claro e escuro nos sites.</p>
+         <div class="container-theme">
+            <div class="theme light-theme">
+                <h1>show me the code</h1>
+            </div>
+            <div class="theme dark-theme">
+                <h1>show me the code</h1>
+            </div>
+         </div>
+         
+        </section>
+
+        <section id="bem">
+          <h3>BEM (Block, Element, Modifier)</h3>
+          <p>
+            BEM é uma metodologia que visa organizar o CSS de forma modular,
+            dividindo os componentes em blocos, elementos e modificadores,
+            facilitando a manutenção e a escalabilidade.
+          </p>
+          <ol>
+            <li><code>block</code>: Representa um componente independente da interface (por exemplo, um botão, card, formulário). Ele é a "base" do componente e geralmente é o nome de uma classe de nível superior (pai).</li>
+            <li><code>block_element</code>: Um bloco pode ter "elementos", que são partes constituintes do bloco (filhos). Um elemento está sempre relacionado ao bloco e não deve ser usado sozinho.</li>
+            <li><code>block--modifier</code> ou <code>block__element--modifier</code> Serve para alterar a aparência, estado ou comportamento do bloco ou elemento.</li>
+          </ol>
+        </section>
+
+        <section id="smacss">
+          <h3>SMACSS (Scalable and Modular Architecture for CSS)</h3>
+          <p>
+            SMACSS é uma abordagem para estruturar CSS de forma escalável,
+            separando estilos em cinco categorias principais: base, layout,
+            módulo, estado e tema.
+          </p>
+        </section>
+
+        <section id="oocss">
+          <h3>OOCSS (Object Oriented CSS)</h3>
+          <p>
+            OOCSS é uma metodologia que visa separar a estrutura visual dos
+            componentes, promovendo a reutilização de estilos e a modularidade
+            no código CSS.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        &copy 2024 - Desenvolvido por
+        <a href="https://github.com/eloizaams" target="_blank">Eloiza Souza</a>
+      </p>
+    </footer>
+  </body>
+</html>

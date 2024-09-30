@@ -1,0 +1,36 @@
+@import url(styles.css);
+
+:root{
+    --font-size-title: 3rem;
+    --box-shadow-default:10px 10px 10px #565656;
+}
+.light-theme {
+  --bg-div: #eee;
+  --bg-gradient: linear-gradient(90deg, #fc4668, #3f5efb);
+}
+
+.dark-theme {
+  --bg-div: #444;
+  --bg-gradient: linear-gradient(90deg, #fc4668, #daae51);
+}
+
+.container-theme {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.theme{
+    margin:0 1rem;
+    background-color: var(--bg-div);
+    box-shadow: var( --box-shadow-default);
+}
+.container-theme h1 {
+  background: var(--bg-gradient);
+  font-size: var(--font-size-title);
+  text-align: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
